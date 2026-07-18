@@ -119,6 +119,16 @@ jobs:
             sudo ln -s "$versioned" "/usr/local/bin/$tool"
           done
 
+      # The demo artifacts need only NSIS + the LFS payload, not ripmusic, so
+      # build them before the ~15-minute ripmusic compile below: a broken
+      # payload or NSIS script then fails in about a minute instead of after
+      # the long cross-build.
+      - name: Build the demo installer
+        run: installers/demo/build.sh "${{ steps.version.outputs.version }}"
+
+      - name: Build the demo zip
+        run: installers/demo-zip/build.sh "${{ steps.version.outputs.version }}"
+
       - name: Install cargo-xwin
         run: pipx install cargo-xwin
 
@@ -145,12 +155,6 @@ jobs:
         run: |
           rustup target add i686-pc-windows-msvc
           cargo xwin build --release --target i686-pc-windows-msvc
-
-      - name: Build the demo installer
-        run: installers/demo/build.sh "${{ steps.version.outputs.version }}"
-
-      - name: Build the demo zip
-        run: installers/demo-zip/build.sh "${{ steps.version.outputs.version }}"
 
       - name: Build the full-game patch installer
         run: installers/patch/build.sh "${{ steps.version.outputs.version }}"
