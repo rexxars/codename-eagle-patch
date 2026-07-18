@@ -11,6 +11,13 @@ name: Release
 # auto-increments from the latest v1.50.* tag (starting at 0); set the
 # build_number input to force a specific number.
 #
+# Tick the prerelease input to cut a beta instead: it tags v1.50.N-beta.M for
+# the *upcoming* stable build N (same N the next stable release will use), with
+# M auto-incrementing among that build's betas. Beta releases are published as
+# GitHub prereleases and never marked "Latest", so the stable download players
+# see is untouched. The stable auto-increment ignores beta tags (its regex is
+# anchored), so betas never consume a stable build number.
+#
 # The game payload ships pre-patched from game/ (LFS), so the only compile step
 # is ripmusic.exe (the CD->ogg ripper bundled inside the patch installer),
 # cross-built for 32-bit Windows with cargo-xwin. The provenance tests are NOT
@@ -24,6 +31,11 @@ on:
         description: 'Build number (N). Leave blank to auto-increment from the latest v1.50.* tag.'
         required: false
         type: string
+      prerelease:
+        description: 'Cut a beta prerelease (v1.50.N-beta.M) instead of a stable release.'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: ${{ github.workflow }}
@@ -48,8 +60,10 @@ jobs:
           # in-game version; bump this one line to move to 1.51
           BASE_VERSION: '1.50'
           BUILD_NUMBER: ${{ inputs.build_number }}
+          PRERELEASE: ${{ inputs.prerelease }}
         run: |
           set -euo pipefail
+          esc="${BASE_VERSION//./\\.}"
           if [[ -n "$BUILD_NUMBER" ]]; then
             if [[ ! "$BUILD_NUMBER" =~ ^[0-9]+$ ]]; then
               echo "error: build_number must be a non-negative integer, got '$BUILD_NUMBER'" >&2
@@ -57,7 +71,6 @@ jobs:
             fi
             num=$((10#$BUILD_NUMBER))
           else
-            esc="${BASE_VERSION//./\\.}"
             latest="$(git tag --list "v${BASE_VERSION}.*" \
               | sed -n "s/^v${esc}\.\([0-9][0-9]*\)$/\1/p" \
               | sort -n | tail -1)"
@@ -69,10 +82,21 @@ jobs:
           fi
           build="$num"
           version="${BASE_VERSION}.${build}"
+          if [[ "$PRERELEASE" == "true" ]]; then
+            # M auto-increments among betas cut for this build number.
+            latest_beta="$(git tag --list "v${version}-beta.*" \
+              | sed -n "s/^v${esc}\.${build}-beta\.\([0-9][0-9]*\)$/\1/p" \
+              | sort -n | tail -1)"
+            beta=$(( ${latest_beta:-0} + 1 ))
+            version="${version}-beta.${beta}"
+            echo "resolved beta v${version} (build $build, beta $beta)"
+          else
+            echo "resolved stable v${version} (build $build)"
+          fi
           tag="v${version}"
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
-          echo "resolved $tag (build $build)"
+          echo "prerelease=$PRERELEASE" >> "$GITHUB_OUTPUT"
 
       - name: Install NSIS and LLVM
         # clang-cl + llvm-lib are needed by cargo-xwin to compile ripmusic's
@@ -130,7 +154,8 @@ jobs:
           tag_name: ${{ steps.version.outputs.tag }}
           name: Codename Eagle ${{ steps.version.outputs.version }}
           draft: false
-          make_latest: true
+          prerelease: ${{ steps.version.outputs.prerelease == 'true' }}
+          make_latest: ${{ steps.version.outputs.prerelease != 'true' }}
           fail_on_unmatched_files: true
           files: |
             installers/demo/out/codename-eagle-mp-demo-${{ steps.version.outputs.version }}-setup.exe
