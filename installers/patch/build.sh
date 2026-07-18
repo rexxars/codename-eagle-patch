@@ -44,6 +44,14 @@ fi
 
 version="${1:-1.50}"
 out="${2:-$here/out/codename-eagle-patch-$version.exe}"
+
+# NSIS VIProductVersion must be strictly numeric X.X.X.X. Derive it from the
+# display version: fold a -beta.M suffix into a numeric field (1.50.0-beta.1 ->
+# 1.50.0.1) and pad/truncate to exactly four fields (1.50 -> 1.50.0.0).
+numeric="${version//-beta./.}"
+IFS='.' read -ra viparts <<< "$numeric"
+while [[ ${#viparts[@]} -lt 4 ]]; do viparts+=(0); done
+viversion="${viparts[0]}.${viparts[1]}.${viparts[2]}.${viparts[3]}"
 ripmusic_exe="${RIPMUSIC_EXE:-$repo/ripmusic/target/i686-pc-windows-msvc/release/ripmusic.exe}"
 
 if [[ $stage_only -eq 0 ]]; then
@@ -155,5 +163,6 @@ makensis \
   -DRIPMUSIC_EXE="$ripmusic_exe" \
   -DOUTFILE="$out" \
   -DVERSION="$version" \
+  -DVIVERSION="$viversion" \
   "$here/installer.nsi"
 echo "built: $out"

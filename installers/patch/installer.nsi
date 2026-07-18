@@ -18,7 +18,9 @@
 ;                   File paths resolve against makensis' cwd, not the script)
 ;   RIPMUSIC_EXE    the CD->ogg soundtrack ripper, always dropped in $INSTDIR
 ;   OUTFILE         where to write the patch exe
-;   VERSION         display version, e.g. "1.50"
+;   VERSION         display version, e.g. "1.50.0" or "1.50.0-beta.1"
+;   VIVERSION       strictly-numeric X.X.X.X form of VERSION for the exe's
+;                   VIProductVersion field (build.sh derives it)
 ;
 ; Unlike the demo installer this one ships no game: it upgrades an EXISTING
 ; Codename Eagle install (any version 1.0-1.43, or the old multiplayer demo)
@@ -108,7 +110,10 @@ RequestExecutionLevel admin
 InstallDir "C:\Games\Codename Eagle\"
 InstallDirRegKey HKLM "${UNINST_KEY}" "InstallLocation"
 
-VIProductVersion "${VERSION}.0.0"
+!ifndef VIVERSION
+  !error "VIVERSION not defined - build with build.sh"
+!endif
+VIProductVersion "${VIVERSION}"
 VIAddVersionKey "ProductName" "${APPNAME}"
 VIAddVersionKey "FileVersion" "${VERSION}"
 VIAddVersionKey "FileDescription" "${APPNAME} setup"

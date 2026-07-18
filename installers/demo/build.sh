@@ -41,6 +41,14 @@ fi
 version="${1:-1.50}"
 out="${2:-$here/out/codename-eagle-mp-demo-$version-setup.exe}"
 
+# NSIS VIProductVersion must be strictly numeric X.X.X.X. Derive it from the
+# display version: fold a -beta.M suffix into a numeric field (1.50.0-beta.1 ->
+# 1.50.0.1) and pad/truncate to exactly four fields (1.50 -> 1.50.0.0).
+numeric="${version//-beta./.}"
+IFS='.' read -ra viparts <<< "$numeric"
+while [[ ${#viparts[@]} -lt 4 ]]; do viparts+=(0); done
+viversion="${viparts[0]}.${viparts[1]}.${viparts[2]}.${viparts[3]}"
+
 if [[ $stage_only -eq 0 ]]; then
   command -v makensis >/dev/null || {
     echo "error: makensis not found (brew install makensis)" >&2
@@ -114,6 +122,6 @@ fi
 mkdir -p "$(dirname "$out")"
 makensis -DPAYLOAD_DIR="$payload" -DDGVOODOO_DIR="$dgvoodoo" \
   -DWIZARD_ICON="$wizard_icon" \
-  -DOUTFILE="$out" -DVERSION="$version" \
+  -DOUTFILE="$out" -DVERSION="$version" -DVIVERSION="$viversion" \
   "$here/installer.nsi"
 echo "built: $out"
