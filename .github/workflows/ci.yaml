@@ -18,7 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REGISTRY: ghcr.io
-      IMAGE_NAME: ${{ github.repository }}
+      # Deliberately not ${{ github.repository }}: the repo is named for the
+      # patch, but this image is the dedicated server. GHCR package names are
+      # independent of the repo name (needs `packages: write`, which we have).
+      IMAGE_NAME: rexxars/codename-eagle-dedicated
     permissions:
       contents: read
       packages: write

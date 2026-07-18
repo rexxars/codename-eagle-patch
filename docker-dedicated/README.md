@@ -22,7 +22,7 @@ Or run the prebuilt image from GHCR (published by `.github/workflows/ci.yaml`
 on pushes to `main`; needs `docker login ghcr.io` while the repo is private):
 
 ```sh
-docker run --rm -p 24711:24711/udp -p 4711:4711/udp ghcr.io/rexxars/codename-eagle-patch:latest
+docker run --rm -p 24711:24711/udp -p 4711:4711/udp ghcr.io/rexxars/codename-eagle-dedicated:latest
 ```
 
 **Publish the UDP ports 1:1 - do not remap them to a different host port.** The
