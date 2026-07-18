@@ -35,7 +35,7 @@ jobs:
     permissions:
       contents: write # create the tag + release and upload assets
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # the game payload lives in LFS and must be real files
           lfs: true
@@ -125,7 +125,7 @@ jobs:
           git push origin "$TAG"
 
       - name: Publish the release with artifacts
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           name: Codename Eagle ${{ steps.version.outputs.version }}
