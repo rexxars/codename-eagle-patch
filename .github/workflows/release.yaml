@@ -6,9 +6,9 @@ name: Release
 #   - codename-eagle-mp-demo-<version>.zip        (demo as extract-and-play zip)
 #   - codename-eagle-patch-<version>.exe          (full-game patch installer)
 #
-# Versions are 1.50.NNNN, where NNNN is a zero-padded 4-digit build number and
-# 1.50 is the in-game version. Run the workflow to tag v1.50.NNNN and publish
-# the release. NNNN auto-increments from the latest v1.50.* tag; set the
+# Versions are 1.50.N, where N is a plain build number and 1.50 is the in-game
+# version. Run the workflow to tag v1.50.N and publish the release. N
+# auto-increments from the latest v1.50.* tag (starting at 0); set the
 # build_number input to force a specific number.
 #
 # The game payload ships pre-patched from game/ (LFS), so the only compile step
@@ -21,7 +21,7 @@ on:
   workflow_dispatch:
     inputs:
       build_number:
-        description: 'Build number (NNNN). Leave blank to auto-increment from the latest v1.50.* tag.'
+        description: 'Build number (N). Leave blank to auto-increment from the latest v1.50.* tag.'
         required: false
         type: string
 
@@ -62,12 +62,12 @@ jobs:
               | sed -n "s/^v${esc}\.\([0-9][0-9]*\)$/\1/p" \
               | sort -n | tail -1)"
             if [[ -z "$latest" ]]; then
-              num=1
+              num=0
             else
               num=$((10#$latest + 1))
             fi
           fi
-          build="$(printf '%04d' "$num")"
+          build="$num"
           version="${BASE_VERSION}.${build}"
           tag="v${version}"
           echo "version=$version" >> "$GITHUB_OUTPUT"

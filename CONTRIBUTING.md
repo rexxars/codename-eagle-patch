@@ -71,9 +71,9 @@ The byte-level engineering write-up in [`patch/docs/technical-details.md`](patch
 
 The [release workflow](.github/workflows/release.yaml) builds every distributable on a Linux runner and publishes a GitHub release with the assets attached: the multiplayer demo installer, the demo zip, and the full-game patch installer. You do not need a local toolchain to cut a release.
 
-Releases are versioned `1.50.NNNN`, where `NNNN` is a zero-padded build number (for example `1.50.0001`). The `1.50` base is the in-game version.
+Releases are versioned `1.50.N`, where `N` is a plain build number that increments per release (for example `1.50.0`, `1.50.1`). The `1.50` base is the in-game version.
 
-To cut a release, run the workflow manually from the Actions tab (`workflow_dispatch`). It computes the next build number from the latest existing tag, or you can pass a specific build number to override it. It then tags `v1.50.NNNN`, builds everything, and publishes the release.
+To cut a release, run the workflow manually from the Actions tab (`workflow_dispatch`). It computes the next build number from the latest existing tag, or you can pass a specific build number to override it. It then tags `v1.50.N`, builds everything, and publishes the release.
 
 Two checks cannot run in CI and should be run locally before a release, because they need pristine game installs and a Windows machine:
 
