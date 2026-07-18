@@ -44,6 +44,10 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      # where cargo-xwin splats the MSVC CRT + Windows SDK; cached between runs
+      # so the ~12-minute "Download MSVC CRT" only happens on a cold cache
+      XWIN_CACHE_DIR: ${{ github.workspace }}/.xwin-cache
     permissions:
       contents: write # create the tag + release and upload assets
     steps:
@@ -117,6 +121,19 @@ jobs:
 
       - name: Install cargo-xwin
         run: pipx install cargo-xwin
+
+      - name: Cache the MSVC CRT + Windows SDK (xwin)
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.XWIN_CACHE_DIR }}
+          # bump the -vN suffix to force a fresh download (e.g. after pinning
+          # a different XWIN_* version below)
+          key: xwin-${{ runner.os }}-x86-v1
+
+      - name: Cache Rust registry and ripmusic dependency builds
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ripmusic
 
       - name: Build ripmusic.exe (32-bit Windows, via cargo-xwin)
         working-directory: ripmusic # per-crate .cargo/config.toml - build from the crate dir
