@@ -1,0 +1,3485 @@
+Name:Gwagon_04
+Translation: 7360.38,-214.935,10999.8
+Dof: -1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 -1.68587e-007
+Name:Pbridge_01
+Translation: 3638.03,95.183,5262.92
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Pbridge_02
+Translation: 4438.18,95.183,5262.92
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Pbridge_03
+Translation: 5238.69,95.183,5262.92
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rbridge_01
+Translation: 13996.5,-13.0,12249.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rbridge_02
+Translation: 14796.7,-13.0,12249.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rbridge_03
+Translation: 15596.7,-13.0,12249.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rbridge_04
+Translation: 16396.8,-13.0,12249.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:sb_18
+Translation: 9125.21,5.39333,3908.65
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:sb_19
+Translation: 9157.42,5.39333,3876.2
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:sb_20
+Translation: 9124.79,5.39333,3844.34
+Dof: 0.999848 0.0 0.0174524
+Up: 0.0 1.0 0.0
+Right: -0.0174524 0.0 0.999848
+Name:sb_21
+Translation: 9537.37,5.39333,3296.89
+Dof: 0.0174524 0.0 -0.999848
+Up: 0.0 1.0 0.0
+Right: 0.999848 0.0 0.0174524
+Name:sb_22
+Translation: 9569.23,5.39333,3328.17
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:sb_23
+Translation: 9601.68,5.39333,3296.48
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:rockets_02
+Translation: 51.7955,-11.2744,-865.32
+Dof: 0.937078 -0.00605785 -0.349067
+Up: 0.0142281 0.999681 -0.0208468
+Right: 0.34883 -0.0245017 0.936866
+Name:rockets_03
+Translation: 68.832,-11.3259,-869.166
+Dof: 0.99985 -0.00605785 -0.016242
+Up: 0.00645321 0.999681 -0.0244005
+Right: 0.016089 -0.0245017 0.99957
+Name:gasamo_01
+Translation: 8870.6,3.4164,3653.15
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_04
+Translation: 8874.7,3.4164,3653.15
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:hpacksml_06
+Translation: 12137.9,0.0,8805.53
+Dof: -0.945519 0.0 0.325568
+Up: 0.0 1.0 0.0
+Right: -0.325568 0.0 -0.945519
+Name:hpacksml_07
+Translation: 12133.5,0.0,8805.53
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:grenade_12
+Translation: 12134.7,2.21489,8817.38
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:amopack_13
+Translation: 12141.1,2.21489,8937.88
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:amopack_14
+Translation: 12137.0,2.21489,8937.88
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:grenade_16
+Translation: 12138.8,2.21489,8817.38
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:bridge_13
+Translation: 13841.1,19.9661,13663.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:bridge_14
+Translation: 14290.3,19.9661,13663.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:bridge_15
+Translation: 15527.7,29.7383,13640.6
+Dof: 1.0 2.39237e-006 0.0
+Up: -2.39237e-006 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:bridge_16
+Translation: 15976.9,29.7383,13640.6
+Dof: 1.0 2.39237e-006 0.0
+Up: -2.39237e-006 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:sGuardh_02
+Translation: 5269.31,-94.9738,5310.14
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:Tstation_01
+Translation: 7625.51,-199.307,10620.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tstation_02
+Translation: 7625.55,-199.307,11124.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Gwagon_03
+Translation: 7218.63,-214.935,10999.8
+Dof: -1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 -1.68587e-007
+Name:Spier2_02
+Translation: -540.83,166.162,-2006.51
+Dof: -0.848048 0.0 0.52992
+Up: 0.0 1.0 0.0
+Right: -0.52992 0.0 -0.848048
+Name:Spier3_05
+Translation: -328.95,166.135,-1668.36
+Dof: 0.848048 0.0 -0.529919
+Up: 0.0 1.0 0.0
+Right: 0.529919 0.0 0.848048
+Name:Spier3_06
+Translation: -222.964,166.135,-1498.74
+Dof: 0.848048 0.0 -0.529919
+Up: 0.0 1.0 0.0
+Right: 0.529919 0.0 0.848048
+Name:Spier3_07
+Translation: -116.977,166.135,-1329.13
+Dof: 0.848048 0.0 -0.529919
+Up: 0.0 1.0 0.0
+Right: 0.529919 0.0 0.848048
+Name:Spier3_08
+Translation: -434.937,166.135,-1837.97
+Dof: 0.848048 0.0 -0.529919
+Up: 0.0 1.0 0.0
+Right: 0.529919 0.0 0.848048
+Name:Spier2_03
+Translation: 460.18,169.754,-2105.45
+Dof: -0.52992 0.0 -0.848048
+Up: 0.0 1.0 0.0
+Right: 0.848048 0.0 -0.52992
+Name:Spier3_09
+Translation: 122.092,169.727,-1893.39
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier3_10
+Translation: -47.5221,169.727,-1787.41
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier3_11
+Translation: -217.136,169.727,-1681.42
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier3_12
+Translation: 290.512,169.727,-1999.56
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier2_04
+Translation: 216.352,169.754,-2539.89
+Dof: -0.52992 0.0 -0.848048
+Up: 0.0 1.0 0.0
+Right: 0.848048 0.0 -0.52992
+Name:Spier3_13
+Translation: -122.93,169.727,-2328.02
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier3_14
+Translation: -291.378,169.727,-2221.83
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier3_15
+Translation: -460.992,169.727,-2115.84
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier3_16
+Translation: 46.6843,169.727,-2434.01
+Dof: 0.529919 0.0 0.848048
+Up: 0.0 1.0 0.0
+Right: -0.848048 0.0 0.529919
+Name:Spier2_05
+Translation: 1094.57,169.323,8822.67
+Dof: -0.0436202 0.0 -0.999048
+Up: 0.0 1.0 0.0
+Right: 0.999048 0.0 -0.0436202
+Name:Spier2_06
+Translation: 208.446,166.242,9215.78
+Dof: 0.999048 0.0 -0.0436201
+Up: 0.0 1.0 0.0
+Right: 0.0436201 0.0 0.999048
+Name:Spier3_17
+Translation: 191.306,166.215,8816.22
+Dof: -0.999048 0.0 0.0436192
+Up: 0.0 1.0 0.0
+Right: -0.0436192 0.0 -0.999048
+Name:Spier3_18
+Translation: 182.381,166.215,8616.56
+Dof: -0.999048 0.0 0.0436192
+Up: 0.0 1.0 0.0
+Right: -0.0436192 0.0 -0.999048
+Name:Spier3_19
+Translation: 173.105,166.215,8417.5
+Dof: -0.999048 0.0 0.0436192
+Up: 0.0 1.0 0.0
+Right: -0.0436192 0.0 -0.999048
+Name:Spier3_24
+Translation: 200.022,166.215,9016.0
+Dof: -0.999048 0.0 0.0436192
+Up: 0.0 1.0 0.0
+Right: -0.0436192 0.0 -0.999048
+Name:Spier3_25
+Translation: 695.004,169.297,8839.81
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier3_26
+Translation: 495.347,169.297,8848.74
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier3_27
+Translation: 296.289,169.297,8858.01
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier3_28
+Translation: 894.783,169.297,8831.1
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier2_08
+Translation: 1113.26,169.323,9227.26
+Dof: -0.0436202 0.0 -0.999048
+Up: 0.0 1.0 0.0
+Right: 0.999048 0.0 -0.0436202
+Name:Spier3_29
+Translation: 713.697,169.297,9244.4
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier3_30
+Translation: 514.04,169.297,9253.32
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier3_31
+Translation: 314.981,169.297,9262.6
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:Spier3_32
+Translation: 913.476,169.297,9235.68
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:House3_04
+Translation: 9443.18,4.46461,3555.89
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_06
+Translation: 8930.49,2.65767,2649.54
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_10
+Translation: 9954.16,3.72339,3324.41
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Guardh_06
+Translation: 19626.4,-199.844,12192.9
+Dof: 1.0 0.0 -1.74846e-007
+Up: 0.0 1.0 0.0
+Right: 1.74846e-007 0.0 1.0
+Name:Guardh_07
+Translation: 19750.1,-199.091,12312.3
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:Housed1_06
+Translation: 8041.64,0.390695,15654.4
+Dof: -0.026177 0.0 0.999657
+Up: 0.0 1.0 0.0
+Right: -0.999657 0.0 -0.026177
+Name:House3_15
+Translation: 8540.68,0.557549,14893.5
+Dof: 0.913545 0.0 0.406737
+Up: 0.0 1.0 0.0
+Right: -0.406737 0.0 0.913545
+Name:House3_16
+Translation: 8704.5,0.898692,14715.3
+Dof: 0.71325 0.0 -0.700909
+Up: 0.0 1.0 0.0
+Right: 0.700909 0.0 0.71325
+Name:Housed1_08
+Translation: 8169.45,0.390695,14539.7
+Dof: 0.951056 0.0 0.309017
+Up: 0.0 1.0 0.0
+Right: -0.309017 0.0 0.951056
+Name:Guardh_10
+Translation: 13589.1,1.42081,13608.5
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:sGuardh_11
+Translation: 8939.1,1.60942,5246.98
+Dof: 1.0 0.0 -1.74846e-007
+Up: 0.0 1.0 0.0
+Right: 1.74846e-007 0.0 1.0
+Name:House3_17
+Translation: 8149.32,0.233253,15858.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_18
+Translation: 17451.0,16.7496,13800.0
+Dof: 0.989016 0.0 -0.147809
+Up: 0.0 1.0 0.0
+Right: 0.147809 0.0 0.989016
+Name:House3_01
+Translation: 553.882,41.9243,8080.69
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_19
+Translation: 728.291,41.9243,8082.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_20
+Translation: 903.415,41.924,8082.06
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_21
+Translation: 727.177,41.9243,7889.66
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_22
+Translation: 902.3,41.9243,7889.12
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:House3_23
+Translation: 552.768,41.9243,7887.75
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:housed2_06
+Translation: 12263.2,5.23499,8691.95
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Dele:shed_01
+Translation: 78.72,-7.452,-845.21
+Dof: -0.224951 0.0 -0.97437
+Up: 0.0 1.0 0.0
+Right: 0.97437 0.0 -0.224951
+Name:shed_05
+Translation: 1016.96,40.5633,7987.35
+Dof: 0.00872659 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 0.00872659
+Name:shed_07
+Translation: 8410.88,2.34287,15459.8
+Dof: 0.00872659 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 0.00872659
+Name:shed_08
+Translation: 12172.0,-1.52614,8941.21
+Dof: -0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 -0.00872651
+Name:shed_09
+Translation: 12172.1,-0.815834,8835.31
+Dof: -0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 -0.00872651
+Name:shed_11
+Translation: 8908.8,5.06722,3682.12
+Dof: -0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 -0.00872651
+Name:gasamo_02
+Translation: 12135.6,2.21489,8919.27
+Dof: -0.414693 0.0 0.909961
+Up: 0.0 1.0 0.0
+Right: -0.909961 0.0 -0.414693
+Name:gasamo_03
+Translation: 12135.2,2.21489,8914.42
+Dof: 0.642788 0.0 -0.766044
+Up: 0.0 1.0 0.0
+Right: 0.766044 0.0 0.642788
+Name:Tree1_01
+Translation: 851.255,0.0,274.045
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_01
+Translation: 1970.05,0.0,4073.14
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_02
+Translation: 818.01,0.0,543.807
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_02
+Translation: 2320.91,0.0,4436.39
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_03
+Translation: 397.384,0.0,389.151
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_03
+Translation: 2185.8,0.0,3528.85
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_04
+Translation: 391.428,0.0,1036.39
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_05
+Translation: 953.385,0.0,881.664
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_04
+Translation: 1737.84,0.0,4404.94
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_06
+Translation: 370.839,0.0,-643.491
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_07
+Translation: 500.03,0.0,-580.974
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_05
+Translation: 1801.34,0.0,2592.05
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_08
+Translation: 773.144,0.0,-49.8113
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_15
+Translation: 9054.84,0.0,4788.09
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_16
+Translation: 8894.33,0.0,4745.43
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_17
+Translation: 8872.36,0.0,4944.53
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_18
+Translation: 8888.91,0.0,5173.82
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_19
+Translation: 9090.86,0.0,4979.28
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_20
+Translation: 8876.97,0.0,4537.74
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_21
+Translation: 9077.17,0.0,5182.64
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_22
+Translation: 9066.21,0.0,4373.01
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_23
+Translation: 9076.81,0.0,4588.98
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_24
+Translation: 8896.27,0.0,5594.63
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_25
+Translation: 9077.31,0.0,5555.63
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_26
+Translation: 9098.22,0.0,5400.09
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree5_27
+Translation: 8879.72,0.0,5365.34
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_09
+Translation: 372.708,0.0,6410.67
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_06
+Translation: 2167.0,0.0,3826.29
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_07
+Translation: 2124.51,0.0,3204.87
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_10
+Translation: 879.397,0.0,1530.63
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_11
+Translation: 317.614,0.0,-814.025
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_12
+Translation: 657.705,0.0,6899.11
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_08
+Translation: 2167.99,0.0,4072.73
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_13
+Translation: 271.576,0.0,900.241
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_14
+Translation: 627.271,0.0,1335.42
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_15
+Translation: 961.78,0.0,606.118
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_16
+Translation: 269.775,0.0,104.281
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_17
+Translation: 428.979,0.0,672.81
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_09
+Translation: 1856.89,0.0,4905.16
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_10
+Translation: 1626.34,0.0,2252.14
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_18
+Translation: 591.043,0.0,1178.12
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_19
+Translation: 182.467,0.0,280.956
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_20
+Translation: 1557.55,0.0,5547.01
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_21
+Translation: 1350.03,0.0,6106.91
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_22
+Translation: 302.265,0.0,6985.54
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_11
+Translation: 2080.68,0.0,4801.38
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_23
+Translation: 625.588,0.0,7164.46
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_12
+Translation: 2724.24,0.0,4265.67
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_24
+Translation: 1395.4,0.0,5657.82
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_25
+Translation: 96.3489,0.0,7834.24
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_26
+Translation: 553.037,0.0,7467.73
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_27
+Translation: 879.691,0.0,7210.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_28
+Translation: 383.527,0.0,6111.86
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_13
+Translation: 2452.19,0.0,4486.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_29
+Translation: 145.118,0.0,7271.55
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_30
+Translation: 994.423,0.0,7408.15
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_14
+Translation: 2128.46,0.0,4565.91
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_31
+Translation: 99.4392,0.0,6605.62
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_15
+Translation: 2191.92,0.0,4962.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_32
+Translation: 31.259,0.0,7584.09
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_33
+Translation: 190.005,0.0,7470.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_16
+Translation: 2315.34,0.0,4044.45
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_34
+Translation: 1216.35,0.0,7828.85
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_37
+Translation: 9126.07,0.0,9103.28
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_38
+Translation: 9119.59,0.0,8886.73
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_39
+Translation: 9186.23,0.0,8558.31
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_41
+Translation: 9465.57,0.0,9020.55
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_42
+Translation: 9543.36,0.0,8476.88
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_46
+Translation: 8815.52,0.0,9920.19
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_47
+Translation: 9135.08,0.0,9399.44
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_48
+Translation: 9054.47,0.0,10006.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_20
+Translation: 8082.93,0.0,15407.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_49
+Translation: 10698.9,0.0,10886.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_21
+Translation: 9533.54,0.0,12230.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_50
+Translation: 9030.48,0.0,8661.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_51
+Translation: 8913.38,0.0,10200.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_52
+Translation: 8959.91,0.0,10919.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_54
+Translation: 9800.23,0.0,8647.61
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_22
+Translation: 8168.56,0.0,15630.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_23
+Translation: 9005.14,0.0,11976.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_56
+Translation: 9053.73,0.0,11098.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_57
+Translation: 9003.08,0.0,11281.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_58
+Translation: 8336.22,0.0,14226.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_24
+Translation: 8947.21,0.0,12538.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_25
+Translation: 9014.27,0.0,12346.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_59
+Translation: 11076.8,0.0,11551.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_26
+Translation: 9435.67,0.0,12095.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_60
+Translation: 8734.12,0.0,11098.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_61
+Translation: 8835.22,0.0,14056.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_62
+Translation: 8805.8,0.0,11468.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_63
+Translation: 13424.1,0.0,13600.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_64
+Translation: 13264.1,0.0,13965.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_65
+Translation: 13238.5,0.0,13716.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_66
+Translation: 20103.3,0.0,11809.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_27
+Translation: 17600.4,0.0,13829.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_28
+Translation: 14762.8,0.0,13563.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_67
+Translation: 12494.2,0.0,13989.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_29
+Translation: 9457.17,0.0,13689.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_68
+Translation: 12967.8,0.0,14124.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_69
+Translation: 13475.8,0.0,13843.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_30
+Translation: 7856.44,0.0,5312.64
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_70
+Translation: 8897.42,0.0,1980.81
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_71
+Translation: 8562.16,0.0,2747.34
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_31
+Translation: 5665.54,0.0,5036.79
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_72
+Translation: 9908.62,0.0,5095.11
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_73
+Translation: 8805.92,0.0,2443.17
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_74
+Translation: 8590.26,0.0,3047.01
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_75
+Translation: 10300.1,0.0,3376.84
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_76
+Translation: 8618.52,0.0,2140.18
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_77
+Translation: 9448.82,0.0,2287.24
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_78
+Translation: 9442.26,0.0,1838.41
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_79
+Translation: 9257.35,0.0,2095.66
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_80
+Translation: 9710.11,0.0,3202.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_32
+Translation: 5396.83,0.0,5147.53
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_81
+Translation: 8437.07,0.0,3496.11
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_33
+Translation: 5291.66,0.0,5406.51
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_82
+Translation: 9679.43,0.0,2149.59
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_83
+Translation: 9683.98,0.0,2421.08
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_84
+Translation: 9726.68,0.0,2734.13
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_34
+Translation: 5292.51,0.0,5532.72
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_85
+Translation: 9172.07,0.0,1258.12
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_86
+Translation: 8952.18,0.0,1438.06
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_35
+Translation: 5868.07,0.0,5190.51
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_87
+Translation: 9118.49,0.0,1731.78
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_88
+Translation: 16450.8,0.0,13494.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_36
+Translation: 17697.7,0.0,13481.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_89
+Translation: 16955.8,0.0,12461.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_90
+Translation: 16570.3,0.0,13415.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_91
+Translation: 17799.0,0.0,12065.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_37
+Translation: 17910.1,0.0,13377.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_92
+Translation: 16319.0,0.0,13816.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_93
+Translation: 17355.6,0.0,12494.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_38
+Translation: 17944.0,0.0,13743.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_39
+Translation: 17669.8,0.0,13324.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_94
+Translation: 19885.4,0.0,12500.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_95
+Translation: 18644.2,0.0,12102.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_96
+Translation: 16950.0,0.0,13422.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_97
+Translation: 19587.5,0.0,12414.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_40
+Translation: 18382.0,0.0,13692.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_98
+Translation: 13136.9,0.0,13646.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_99
+Translation: 12886.7,0.0,13709.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_100
+Translation: 12404.5,0.0,14274.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_41
+Translation: 14715.2,0.0,13454.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_42
+Translation: 15048.9,0.0,13482.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_101
+Translation: 12281.4,0.0,11984.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_43
+Translation: 15091.1,0.0,13790.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_102
+Translation: 11985.6,0.0,11839.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_107
+Translation: 825.795,0.0,7592.18
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_47
+Translation: 1545.61,0.0,4637.67
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_121
+Translation: 11034.9,0.0,14531.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_122
+Translation: 11352.0,0.0,14100.0
+Dof: 0.71325 0.0 -0.700909
+Up: 0.0 1.0 0.0
+Right: 0.700909 0.0 0.71325
+Name:Tree2_49
+Translation: 9396.43,0.0,13034.4
+Dof: 0.71325 0.0 -0.700909
+Up: 0.0 1.0 0.0
+Right: 0.700909 0.0 0.71325
+Name:Tree2_50
+Translation: 9036.87,0.0,12958.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_123
+Translation: 8950.23,0.0,14682.3
+Dof: 0.71325 0.0 -0.700909
+Up: 0.0 1.0 0.0
+Right: 0.700909 0.0 0.71325
+Name:Tree1_124
+Translation: 9974.49,0.0,14388.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_125
+Translation: 8856.22,0.0,14942.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_126
+Translation: 9218.83,0.0,14598.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_51
+Translation: 9452.33,0.0,12481.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_52
+Translation: 9471.16,0.0,12687.7
+Dof: -0.67559 0.0 0.737277
+Up: 0.0 1.0 0.0
+Right: -0.737277 0.0 -0.67559
+Name:Tree1_127
+Translation: 8908.0,0.0,13791.4
+Dof: -0.67559 0.0 0.737277
+Up: 0.0 1.0 0.0
+Right: -0.737277 0.0 -0.67559
+Name:Tree2_53
+Translation: 9027.52,0.0,12739.5
+Dof: -0.99863 0.0 0.052336
+Up: 0.0 1.0 0.0
+Right: -0.052336 0.0 -0.99863
+Name:Tree1_128
+Translation: 8518.35,0.0,14088.7
+Dof: -0.67559 0.0 0.737277
+Up: 0.0 1.0 0.0
+Right: -0.737277 0.0 -0.67559
+Name:Tree1_129
+Translation: 8988.24,0.0,13526.4
+Dof: -0.99863 0.0 0.052336
+Up: 0.0 1.0 0.0
+Right: -0.052336 0.0 -0.99863
+Name:Tree1_130
+Translation: 13418.6,0.0,12385.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_131
+Translation: 9426.57,0.0,9141.25
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_54
+Translation: 8145.9,0.0,15495.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_55
+Translation: 12302.9,0.0,8870.23
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_132
+Translation: -21.33,0.0,6960.02
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_133
+Translation: 1695.46,0.0,5351.93
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_134
+Translation: 324.302,0.0,527.194
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_56
+Translation: 2611.2,0.0,3989.38
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_57
+Translation: 2062.81,0.0,2860.56
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_135
+Translation: 8718.0,0.0,7565.24
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_136
+Translation: 8900.17,0.0,7978.8
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree2_58
+Translation: 5647.05,0.0,5406.5
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_137
+Translation: 8731.69,0.0,7184.69
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree2_59
+Translation: 5448.45,0.0,5439.02
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_138
+Translation: 8904.17,0.0,7221.13
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_139
+Translation: 9175.36,0.0,6697.72
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_140
+Translation: 8885.21,0.0,6823.65
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_141
+Translation: 8521.53,0.0,4534.55
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_142
+Translation: 1396.0,0.0,5819.83
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_60
+Translation: 5667.03,0.0,5160.78
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_143
+Translation: 1661.77,0.0,5726.38
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_61
+Translation: 7978.16,0.0,5542.49
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_144
+Translation: 8461.61,0.0,6698.69
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_145
+Translation: 8575.81,0.0,4080.84
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_146
+Translation: 8537.96,0.0,6523.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_147
+Translation: 8839.76,0.0,7818.87
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_148
+Translation: 8441.99,0.0,7205.62
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_149
+Translation: 8984.61,0.0,7477.16
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree2_62
+Translation: 8372.05,0.0,5628.1
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree2_63
+Translation: 7818.76,0.0,5459.49
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree1_150
+Translation: 8976.91,0.0,7051.27
+Dof: -0.737277 0.0 -0.67559
+Up: 0.0 1.0 0.0
+Right: 0.67559 0.0 -0.737277
+Name:Tree2_64
+Translation: 8184.62,-0.845582,5550.99
+Dof: 0.165048 0.0 -0.986286
+Up: 0.0 1.0 0.0
+Right: 0.986286 0.0 0.165048
+Name:Tree1_151
+Translation: 8813.14,0.0,6204.64
+Dof: 0.165048 0.0 -0.986286
+Up: 0.0 1.0 0.0
+Right: 0.986286 0.0 0.165048
+Name:Tree1_152
+Translation: 8683.69,0.0,7065.41
+Dof: 0.165048 0.0 -0.986286
+Up: 0.0 1.0 0.0
+Right: 0.986286 0.0 0.165048
+Name:Tree1_153
+Translation: 10008.2,0.0,4892.23
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_154
+Translation: 9765.15,0.0,4821.92
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_155
+Translation: 10209.6,0.0,5055.34
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_65
+Translation: 5541.16,0.0,5057.67
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_156
+Translation: 10302.6,0.0,5453.97
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_157
+Translation: 9743.98,0.0,4299.53
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_158
+Translation: 9786.45,0.0,3942.64
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_159
+Translation: 10166.9,0.0,4742.29
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_160
+Translation: 9166.25,0.0,6401.86
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_174
+Translation: 8049.9,0.0,13644.4
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_186
+Translation: 12301.7,0.0,11630.2
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_187
+Translation: 11388.2,0.0,11191.5
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_188
+Translation: 20367.4,0.0,11685.9
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree2_77
+Translation: 12390.8,0.0,9215.73
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_189
+Translation: 7351.94,0.0,14217.9
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_190
+Translation: 7645.14,0.0,13968.5
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_191
+Translation: 19959.0,0.0,12038.4
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_192
+Translation: 8210.23,0.0,13781.5
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree2_78
+Translation: 18169.9,0.0,13846.1
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_193
+Translation: 8053.53,0.0,14055.9
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_194
+Translation: 8550.03,0.0,13738.2
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree1_195
+Translation: 7334.09,0.0,14510.7
+Dof: -0.793353 0.0 -0.608761
+Up: 0.0 1.0 0.0
+Right: 0.608761 0.0 -0.793353
+Name:Tree2_17
+Translation: 12062.2,0.0,8988.46
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_196
+Translation: 12867.5,0.0,11881.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree2_18
+Translation: 9512.91,0.0,12900.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_197
+Translation: 10799.9,0.0,11177.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_198
+Translation: 12996.2,0.0,12232.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_199
+Translation: 11391.3,0.0,11500.8
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:Tree1_200
+Translation: 10053.8,0.0,10860.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:amopack_04
+Translation: 8423.45,0.2355,15485.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_05
+Translation: 8418.21,0.2355,15467.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasw_02
+Translation: 8445.33,0.2355,15467.7
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:bazooka_01
+Translation: 12154.3,0.330324,8821.88
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:aagun3_01
+Translation: 9124.79,3.04297,3882.21
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:aagun3_02
+Translation: 9570.82,3.84322,3302.88
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:sb_24
+Translation: 8444.61,2.44181,14506.2
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:sb_25
+Translation: 8411.99,2.44181,14474.4
+Dof: 0.999848 0.0 0.0174524
+Up: 0.0 1.0 0.0
+Right: -0.0174524 0.0 0.999848
+Name:aagun3_03
+Translation: 8411.98,0.776281,14512.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:sb_26
+Translation: 8412.4,2.44181,14538.7
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:nhangar_01
+Translation: 10540.4,4.23202,4437.59
+Dof: -4.21469e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -4.21469e-007
+Name:nhangar_02
+Translation: 9986.98,4.23202,4436.47
+Dof: 4.21469e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 4.21469e-007
+Name:nhangar_03
+Translation: 7326.39,1.56165,15049.7
+Dof: 5.90056e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 5.90056e-007
+Name:nhangar_04
+Translation: 7854.05,1.56165,15049.5
+Dof: -4.21469e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -4.21469e-007
+Name:amobuil_03
+Translation: 8845.47,-189.759,7036.15
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:sb_27
+Translation: 8059.22,2.44181,15234.5
+Dof: 0.0174524 0.0 -0.999848
+Up: 0.0 1.0 0.0
+Right: 0.999848 0.0 0.0174524
+Name:aagun3_05
+Translation: 8097.08,0.776281,15234.5
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:sb_28
+Translation: 8123.52,2.44181,15234.1
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:sb_29
+Translation: 8091.08,2.44181,15201.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:tank3_01
+Translation: 9852.02,-11.2526,3314.55
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:aagun3_06
+Translation: 9015.5,-195.403,11531.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:sb_30
+Translation: 9013.7,-193.366,11588.7
+Dof: -0.999848 0.0 -0.0174523
+Up: 0.0 1.0 0.0
+Right: 0.0174523 0.0 -0.999848
+Name:sb_31
+Translation: 8976.29,-193.366,11493.0
+Dof: 0.656059 0.0 -0.75471
+Up: 0.0 1.0 0.0
+Right: 0.75471 0.0 0.656059
+Name:sb_32
+Translation: 9068.45,-193.366,11538.4
+Dof: 0.233445 0.0 -0.97237
+Up: 0.0 1.0 0.0
+Right: 0.97237 0.0 0.233445
+Name:sb_33
+Translation: 9038.1,-193.366,11477.9
+Dof: 0.942642 0.0 0.333807
+Up: 0.0 1.0 0.0
+Right: -0.333807 0.0 0.942642
+Name:sb_34
+Translation: 8965.99,-193.366,11558.0
+Dof: -0.492424 0.0 -0.870356
+Up: 0.0 1.0 0.0
+Right: 0.870356 0.0 -0.492424
+Name:fence_02
+Translation: 9866.68,7.87964,4101.14
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fence_01
+Translation: 9866.68,7.87964,4232.72
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fence_03
+Translation: 9866.68,7.87964,4495.87
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fence_04
+Translation: 9866.68,7.87964,4364.29
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fence_05
+Translation: 10064.1,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_06
+Translation: 10195.7,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_07
+Translation: 10327.3,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_08
+Translation: 9932.54,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_09
+Translation: 10590.4,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_10
+Translation: 10458.8,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_11
+Translation: 9866.68,7.87964,3706.42
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fence_12
+Translation: 9866.68,7.87964,3969.57
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fence_13
+Translation: 9866.68,7.87964,3837.99
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:torpboat_01
+Translation: 7535.64,116.501,12570.7
+Dof: 0.258819 0.0 0.965926
+Up: 0.0 1.0 0.0
+Right: -0.965926 0.0 0.258819
+Name:fence_14
+Translation: 7179.64,0.0,15242.3
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_15
+Translation: 7179.64,0.0,14979.2
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_16
+Translation: 7179.64,0.0,15110.7
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_17
+Translation: 7243.76,0.0,14913.5
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_18
+Translation: 7179.64,0.0,15768.6
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_19
+Translation: 7179.64,0.0,15505.5
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_20
+Translation: 7179.64,0.0,15637.0
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_21
+Translation: 7179.64,0.0,15373.9
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fence_22
+Translation: 7506.91,0.0,14913.5
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_23
+Translation: 7638.48,0.0,14913.5
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_24
+Translation: 7901.63,0.0,14913.5
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_25
+Translation: 7770.06,0.0,14913.5
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fence_26
+Translation: 7375.33,0.0,14913.5
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:tank_01
+Translation: 8828.83,-201.458,6936.47
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:tank2_02
+Translation: 8448.64,-210.589,10212.5
+Dof: -1.68587e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -1.68587e-007
+Name:amobuil_07
+Translation: 8465.28,-198.889,10312.2
+Dof: 2.52881e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 2.52881e-007
+Name:fence_35
+Translation: 10722.0,7.87964,4561.82
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:torpboat_02
+Translation: 1112.24,116.501,9090.2
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_05
+Translation: 7508.11,-208.36,10633.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rockets_06
+Translation: 7508.11,-208.36,10621.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:snipegun_02
+Translation: 8067.88,-754.637,8391.87
+Dof: 0.136386 -0.959194 0.24768
+Up: 0.822857 0.248907 -0.510835
+Right: -0.551639 0.134134 0.823227
+Name:shed_12
+Translation: 8089.77,-752.159,8425.34
+Dof: 0.533743 -0.0758538 -0.842238
+Up: 0.111811 0.993555 0.0186251
+Right: 0.838222 -0.08423 0.538785
+Name:flamew_02
+Translation: 8905.6,0.752752,3655.96
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:amoclip_04
+Translation: 10600.6,2.98044,3985.92
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:hpacksml_08
+Translation: 10603.6,0.765548,3961.21
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:hpacksml_09
+Translation: 10599.1,0.765548,3961.21
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:shed_13
+Translation: 10566.5,5.13268,3956.95
+Dof: 0.00872668 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 0.00872668
+Name:kpist_03
+Translation: 10569.7,1.52155,3983.11
+Dof: -0.0436195 0.0 -0.999048
+Up: 0.0 1.0 0.0
+Right: 0.999048 0.0 -0.0436195
+Name:amoclip_05
+Translation: 10604.7,2.98044,3985.92
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:hpacklg_02
+Translation: 8869.97,1.24451,3677.77
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:hpacklg_21
+Translation: 17447.0,11.6833,13752.1
+Dof: 0.993572 0.0 -0.113203
+Up: 0.0 1.0 0.0
+Right: 0.113203 0.0 0.993572
+Name:grenade_29
+Translation: 17431.8,10.4796,13755.6
+Dof: 0.496786 0.0 -0.0566016
+Up: 0.0 0.5 0.0
+Right: 0.0566016 0.0 0.496786
+Name:hpacklg_22
+Translation: 17440.3,11.6833,13752.9
+Dof: 0.993572 0.0 -0.113203
+Up: 0.0 1.0 0.0
+Right: 0.113203 0.0 0.993572
+Name:amopack_23
+Translation: 17453.6,11.6833,13751.4
+Dof: 0.993572 0.0 -0.113203
+Up: 0.0 1.0 0.0
+Right: 0.113203 0.0 0.993572
+Name:amopack_24
+Translation: 17460.3,11.6833,13750.6
+Dof: 0.993572 0.0 -0.113203
+Up: 0.0 1.0 0.0
+Right: 0.113203 0.0 0.993572
+Name:hpacksml_10
+Translation: 1015.89,36.8579,8015.34
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:hpacksml_11
+Translation: 1020.34,36.8579,8015.34
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:fueltank_06
+Translation: 1051.52,39.0728,8014.42
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:bazooka_04
+Translation: 1049.72,36.4353,7993.44
+Dof: 0.0436194 0.0 0.999048
+Up: 0.0 1.0 0.0
+Right: -0.999048 0.0 0.0436194
+Name:fueltank_04
+Translation: 56.3233,-11.2744,-845.327
+Dof: 0.937078 -0.00605785 -0.349067
+Up: 0.0142281 0.999681 -0.0208468
+Right: 0.34883 -0.0245017 0.936866
+Name:kpist_05
+Translation: 8403.86,-205.162,10366.6
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_23
+Translation: 8504.12,-201.765,10325.9
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fueltank_18
+Translation: 8504.25,-201.765,10367.8
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:grenade_35
+Translation: 8395.11,-200.693,10292.3
+Dof: 0.0 0.0 -0.5
+Up: 0.0 0.5 0.0
+Right: 0.5 0.0 0.0
+Name:hpacklg_24
+Translation: 8504.12,-201.765,10332.5
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_25
+Translation: 8504.12,-201.765,10319.2
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_26
+Translation: 8504.12,-201.765,10312.5
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:grenade_36
+Translation: 8395.11,-200.693,10286.0
+Dof: 0.0 0.0 -0.5
+Up: 0.0 0.5 0.0
+Right: 0.5 0.0 0.0
+Name:grenade_37
+Translation: 8395.11,-200.693,10279.7
+Dof: 0.0 0.0 -0.5
+Up: 0.0 0.5 0.0
+Right: 0.5 0.0 0.0
+Name:hpacklg_25
+Translation: 8881.13,-192.834,7053.8
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:bazooka_02
+Translation: 7626.42,-213.448,10619.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_26
+Translation: 8881.13,-192.834,7047.11
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fueltank_21
+Translation: 8881.41,-191.794,7089.07
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_27
+Translation: 8881.13,-192.834,7040.41
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_28
+Translation: 8881.13,-192.834,7033.72
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:grenade_43
+Translation: 8774.86,-193.301,7058.94
+Dof: 0.0 0.0 -0.5
+Up: 0.0 0.5 0.0
+Right: 0.5 0.0 0.0
+Name:fueltank_23
+Translation: 7695.22,-208.839,11092.0
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_29
+Translation: 7735.75,-208.971,10617.6
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_30
+Translation: 7735.75,-208.971,10610.9
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_29
+Translation: 7575.88,-208.971,11128.1
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_31
+Translation: 7735.75,-208.971,11121.5
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_32
+Translation: 7735.75,-208.971,11114.8
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_30
+Translation: 7575.88,-208.971,11134.8
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_31
+Translation: 8088.53,-758.381,8405.82
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_33
+Translation: 8084.72,-757.434,8396.75
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_34
+Translation: 8077.11,-756.665,8394.82
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_32
+Translation: 8075.68,-756.309,8405.6
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:car_04
+Translation: 9815.24,-11.2526,3598.56
+Dof: -0.00872668 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 -0.00872668
+Name:car_05
+Translation: 9815.24,-11.2526,3552.84
+Dof: -0.00872668 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 -0.00872668
+Name:plane3_01
+Translation: 10008.6,-11.2526,4436.88
+Dof: 0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872651
+Name:plane3_02
+Translation: 10499.4,-11.2526,4438.05
+Dof: -0.00872634 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 -0.00872634
+Name:plane_03
+Translation: 7347.84,-11.2526,15049.2
+Dof: 0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872651
+Name:plane_04
+Translation: 7823.19,-11.2526,15049.0
+Dof: -0.00872634 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 -0.00872634
+Name:car2_03
+Translation: 7933.35,-11.2526,14473.9
+Dof: 0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872651
+Name:car2_06
+Translation: 7933.35,-11.2526,14436.5
+Dof: 0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872651
+Name:car2_07
+Translation: 7527.64,-11.2526,14571.7
+Dof: -0.999962 0.0 -0.00872651
+Up: 0.0 1.0 0.0
+Right: 0.00872651 0.0 -0.999962
+Name:car2_08
+Translation: 7565.01,-11.2526,14571.7
+Dof: -0.999962 0.0 -0.00872651
+Up: 0.0 1.0 0.0
+Right: 0.00872651 0.0 -0.999962
+Name:fueltank_33
+Translation: 7263.0,-1.98352,15000.7
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fueltank_34
+Translation: 7914.94,-2.07855,14998.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_40
+Translation: 7260.56,-1.98325,15085.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_39
+Translation: 7260.56,-1.98325,15078.6
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_39
+Translation: 7920.3,-0.113366,15092.0
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_41
+Translation: 7920.3,-0.113366,15085.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_40
+Translation: 7920.3,-0.113366,15078.6
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_07
+Translation: 7508.11,-208.36,11130.6
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rockets_08
+Translation: 7508.11,-208.36,11118.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rockets_10
+Translation: 1041.98,39.0728,7967.86
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rockets_09
+Translation: 1026.13,39.0728,7967.83
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamAPos
+Translation: 7799.26,-5.13623,14413.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamAPos
+Translation: 7581.59,-5.13623,14709.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamAPos
+Translation: 8075.85,-5.13623,15691.0
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamAPos
+Translation: 8459.52,-5.13623,15218.3
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:flagbase_1
+Translation: 8185.89,1.69434,14974.1
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamBPos
+Translation: 8809.7,-21.2733,3539.2
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:flagbase_2
+Translation: 9371.06,3.63802,3491.28
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamBPos
+Translation: 9874.14,-21.2733,3615.85
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamBPos
+Translation: 10586.8,-21.2733,3877.23
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:tank3_02
+Translation: 8156.96,-11.2526,15791.8
+Dof: 0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872651
+Name:gasamo_05
+Translation: 8878.93,3.4164,3653.15
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:hpacklg_43
+Translation: 8876.22,1.24451,3677.75
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:hpacklg_48
+Translation: 7260.56,-1.98325,15105.7
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:motorcyc_01
+Translation: 7996.37,-11.2526,15037.6
+Dof: 0.00872651 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872651
+Name:amopack_47
+Translation: 8434.98,0.2355,15485.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:kpist_07
+Translation: 8446.15,0.2355,15485.5
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:motorcyc_02
+Translation: 8889.58,-11.2526,3769.14
+Dof: -0.999962 0.0 -0.00872662
+Up: 0.0 1.0 0.0
+Right: 0.00872662 0.0 -0.999962
+Name:toolbox_06
+Translation: 7899.63,-2.07855,14998.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:toolbox_08
+Translation: 7275.36,-1.98352,15000.7
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amobuil_100
+Translation: 7837.79,1.1432,14466.2
+Dof: -1.0 0.0 2.62162e-007
+Up: 0.0 1.0 1.7171e-006
+Right: -2.62162e-007 -1.7171e-006 -1.0
+Name:hpacklg_100
+Translation: 7852.24,-13.5699,14434.1
+Dof: -0.622515 0.0 -0.782608
+Up: 0.0 1.0 0.0
+Right: 0.782608 0.0 -0.622515
+Name:rockets_100
+Translation: 7839.85,-4.80614,14400.0
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:amopack_101
+Translation: 7781.82,-13.2294,14450.4
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:amopack_102
+Translation: 7781.63,-13.2294,14455.8
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fueltank_100
+Translation: 7830.36,-13.5555,14399.8
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:hylla_02
+Translation: 7780.83,-1.81188,14449.4
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:hylla_03
+Translation: 7835.43,-1.81579,14398.5
+Dof: -1.68587e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -1.68587e-007
+Name:rtable_03
+Translation: 7816.89,-2.07641,14449.9
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:rtable_04
+Translation: 7850.99,-2.07641,14449.6
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:fackla_101
+Translation: 7777.92,-20.782,14422.3
+Dof: 1.0 0.0 -1.74846e-007
+Up: 0.0 1.0 0.0
+Right: 1.74846e-007 0.0 1.0
+Name:amopack_100
+Translation: 7781.95,-4.55932,14445.0
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:kpist_100
+Translation: 7817.75,-14.3694,14438.3
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:rockets_101
+Translation: 7832.78,-4.80614,14400.0
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:amopack_103
+Translation: 7781.95,-4.55932,14453.0
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:rockets_102
+Translation: 7839.64,-13.5166,14400.0
+Dof: -1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 -1.0
+Name:rtable_05
+Translation: 7542.37,-2.07641,14693.0
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hpacklg_101
+Translation: 7526.58,-13.5699,14657.6
+Dof: -0.782608 0.0 0.622515
+Up: 0.0 1.0 0.0
+Right: -0.622515 0.0 -0.782608
+Name:rockets_103
+Translation: 7492.52,-4.80614,14670.0
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_104
+Translation: 7542.93,-13.2294,14728.1
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_105
+Translation: 7548.34,-13.2294,14728.2
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fueltank_101
+Translation: 7492.31,-13.5555,14679.5
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hylla_04
+Translation: 7541.92,-1.81188,14729.0
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hylla_05
+Translation: 7491.01,-1.81579,14674.4
+Dof: -1.0 0.0 1.68587e-007
+Up: 0.0 1.0 0.0
+Right: -1.68587e-007 0.0 -1.0
+Name:amopack_106
+Translation: 7537.46,-4.55932,14727.9
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rtable_06
+Translation: 7542.15,-2.07641,14658.9
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fackla_102
+Translation: 7514.84,-20.782,14732.0
+Dof: -1.68587e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -1.68587e-007
+Name:toolbox_101
+Translation: 7557.31,-13.5581,14656.9
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:kpist_101
+Translation: 7530.76,-14.3694,14692.1
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_104
+Translation: 7492.52,-4.80614,14677.1
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_107
+Translation: 7545.46,-4.55932,14727.9
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_105
+Translation: 7492.52,-13.5166,14670.2
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amobuil_101
+Translation: 7558.71,1.1432,14672.1
+Dof: 3.37175e-007 0.0 1.0
+Up: -1.7171e-006 1.0 0.0
+Right: -1.0 -1.7171e-006 3.37175e-007
+Name:hylla_06
+Translation: 8475.64,-1.81579,15177.9
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:tank2_03
+Translation: 8423.86,-11.2526,15280.7
+Dof: -0.00872668 0.0 0.999962
+Up: 0.0 1.0 0.0
+Right: -0.999962 0.0 -0.00872668
+Name:rtable_07
+Translation: 8424.28,-2.07641,15159.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_102
+Translation: 8440.07,-13.5699,15194.7
+Dof: 0.782608 0.0 -0.622515
+Up: 0.0 1.0 0.0
+Right: 0.622515 0.0 0.782608
+Name:rockets_106
+Translation: 8474.13,-4.80614,15182.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_108
+Translation: 8423.72,-13.2294,15124.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_109
+Translation: 8418.31,-13.2294,15124.1
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fueltank_102
+Translation: 8474.34,-13.5555,15172.8
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hylla_07
+Translation: 8424.73,-1.81188,15123.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_110
+Translation: 8429.19,-4.55932,15124.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rtable_08
+Translation: 8424.5,-2.07641,15193.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fackla_103
+Translation: 8451.8,-20.782,15120.4
+Dof: 0.0 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 0.0
+Name:grenade_102
+Translation: 8435.89,-14.3694,15160.2
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_107
+Translation: 8474.13,-4.80614,15175.2
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_111
+Translation: 8421.18,-4.55932,15124.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_108
+Translation: 8474.13,-13.5166,15182.1
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amobuil_102
+Translation: 8407.94,1.1432,15180.2
+Dof: -1.68587e-007 0.0 -1.0
+Up: 1.7171e-006 1.0 0.0
+Right: 1.0 -1.7171e-006 -1.68587e-007
+Name:amopack_112
+Translation: 7920.3,-0.113366,15071.3
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_113
+Translation: 7920.3,-0.113366,15064.0
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_110
+Translation: 7920.3,-0.113366,15047.0
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_111
+Translation: 7920.3,-0.113366,15038.7
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_112
+Translation: 7920.3,-0.113366,15030.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_114
+Translation: 7260.56,-1.98325,15091.9
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_115
+Translation: 7260.56,-1.98325,15098.4
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_113
+Translation: 7260.56,-1.98325,15064.7
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_114
+Translation: 7260.56,-1.98325,15057.9
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_115
+Translation: 7260.56,-1.98325,15051.0
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rtable_09
+Translation: 8845.79,1.05145,3488.83
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hpacklg_103
+Translation: 8830.22,-10.4421,3487.57
+Dof: -0.782608 0.0 0.622515
+Up: 0.0 1.0 0.0
+Right: -0.622515 0.0 -0.782608
+Name:grenade_103
+Translation: 8829.27,-11.2415,3525.83
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_116
+Translation: 8796.16,-1.67829,3499.97
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amobuil_103
+Translation: 8862.35,4.27105,3502.02
+Dof: 3.37175e-007 0.0 1.0
+Up: -1.7171e-006 1.0 0.0
+Right: -1.0 -1.7171e-006 3.37175e-007
+Name:car_09
+Translation: 8832.65,-8.12474,3406.46
+Dof: -0.999962 0.0 -0.00872651
+Up: 0.0 1.0 0.0
+Right: 0.00872651 0.0 -0.999962
+Name:amopack_116
+Translation: 8846.57,-10.1015,3557.99
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hylla_08
+Translation: 8845.56,1.31597,3558.99
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:car_10
+Translation: 8870.03,-8.12474,3406.46
+Dof: -0.999962 0.0 -0.00872651
+Up: 0.0 1.0 0.0
+Right: 0.00872651 0.0 -0.999962
+Name:rtable_10
+Translation: 8846.01,1.05145,3522.93
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_117
+Translation: 8851.98,-10.1015,3558.18
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fackla_104
+Translation: 8818.48,-17.6541,3561.89
+Dof: -1.68587e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -1.68587e-007
+Name:fueltank_103
+Translation: 8795.95,-10.4277,3509.46
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_118
+Translation: 8841.1,-1.43146,3557.87
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hylla_09
+Translation: 8794.65,1.31207,3504.38
+Dof: -1.0 0.0 1.68587e-007
+Up: 0.0 1.0 0.0
+Right: -1.68587e-007 0.0 -1.0
+Name:rockets_117
+Translation: 8796.16,-1.67829,3507.04
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_119
+Translation: 8849.1,-1.43146,3557.87
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_118
+Translation: 8796.16,-10.3888,3500.18
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:toolbox_104
+Translation: 8883.87,-10.4302,2882.52
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rtable_11
+Translation: 8868.71,1.05145,2884.55
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hpacklg_104
+Translation: 8853.14,-10.4421,2883.29
+Dof: -0.782608 0.0 0.622515
+Up: 0.0 1.0 0.0
+Right: -0.622515 0.0 -0.782608
+Name:kpist_104
+Translation: 8857.32,-11.2415,2917.79
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_119
+Translation: 8819.07,-1.67829,2895.69
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amobuil_104
+Translation: 8885.27,4.27105,2897.74
+Dof: 3.37175e-007 0.0 1.0
+Up: -1.7171e-006 1.0 0.0
+Right: -1.0 -1.7171e-006 3.37175e-007
+Name:amopack_120
+Translation: 8869.49,-10.1015,2953.71
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hylla_10
+Translation: 8868.48,1.31597,2954.71
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:TeamBPos
+Translation: 8832.62,-21.2733,2934.93
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:rtable_12
+Translation: 8868.93,1.05145,2918.65
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_121
+Translation: 8874.9,-10.1015,2953.91
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:fackla_105
+Translation: 8841.4,-17.6541,2957.62
+Dof: -1.68587e-007 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 -1.68587e-007
+Name:fueltank_104
+Translation: 8818.86,-10.4277,2905.18
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_122
+Translation: 8864.02,-1.43146,2953.59
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:hylla_11
+Translation: 8817.57,1.31207,2900.11
+Dof: -1.0 0.0 1.68587e-007
+Up: 0.0 1.0 0.0
+Right: -1.68587e-007 0.0 -1.0
+Name:rockets_120
+Translation: 8819.07,-1.67829,2902.76
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:amopack_123
+Translation: 8872.02,-1.43146,2953.59
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_121
+Translation: 8819.07,-10.3888,2895.9
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:tank_04
+Translation: 8873.36,-11.2526,2799.16
+Dof: 0.00872668 0.0 -0.999962
+Up: 0.0 1.0 0.0
+Right: 0.999962 0.0 0.00872668
+Name:rtable_13
+Translation: 9933.04,1.05145,3579.53
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:rtable_14
+Translation: 9898.94,1.05145,3579.76
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:hpacklg_105
+Translation: 9897.68,-10.4421,3595.33
+Dof: 0.622515 0.0 0.782608
+Up: 0.0 1.0 0.0
+Right: -0.782608 0.0 0.622515
+Name:kpist_105
+Translation: 9932.17,-11.2415,3591.15
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:fackla_106
+Translation: 9972.0,-17.6541,3607.06
+Dof: -1.0 0.0 1.68587e-007
+Up: 0.0 1.0 0.0
+Right: -1.68587e-007 0.0 -1.0
+Name:amopack_124
+Translation: 9968.29,-10.1015,3573.56
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:amopack_125
+Translation: 9968.1,-10.1015,3578.97
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:hylla_12
+Translation: 9969.1,1.31597,3579.98
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:amopack_126
+Translation: 9967.98,-1.43146,3576.44
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:fueltank_105
+Translation: 9919.56,-10.4277,3629.6
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:amopack_127
+Translation: 9967.98,-1.43146,3584.45
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:amobuil_105
+Translation: 9912.13,4.27105,3563.19
+Dof: 1.0 0.0 -3.37175e-007
+Up: 0.0 1.0 -1.7171e-006
+Right: 3.37175e-007 -1.7171e-006 1.0
+Name:hylla_13
+Translation: 9914.49,1.31207,3630.89
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:rockets_122
+Translation: 9917.15,-1.67829,3629.39
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:rockets_123
+Translation: 9910.07,-1.67829,3629.39
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:rockets_124
+Translation: 9910.29,-10.3888,3629.39
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:kpist_103
+Translation: 8861.4,-11.2415,3520.46
+Dof: 1.68587e-007 0.0 1.0
+Up: 0.0 1.0 0.0
+Right: -1.0 0.0 1.68587e-007
+Name:snipegun_106
+Translation: 9929.5,-11.2415,3563.34
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:hpacklg_106
+Translation: 10606.4,2.62078,4480.75
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_128
+Translation: 10606.4,2.62078,4474.06
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_129
+Translation: 10606.4,2.62078,4467.36
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_130
+Translation: 10606.4,2.62078,4460.05
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_131
+Translation: 10606.4,2.62078,4452.74
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_125
+Translation: 10606.4,2.62078,4435.78
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_126
+Translation: 10606.4,2.62078,4427.47
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_127
+Translation: 10606.4,2.62078,4419.15
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fueltank_106
+Translation: 10598.9,3.01383,4387.14
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:toolbox_106
+Translation: 10592.0,3.01383,4387.14
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:hpacklg_107
+Translation: 9919.22,3.01383,4480.75
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_132
+Translation: 9919.22,3.01383,4474.06
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_133
+Translation: 9919.22,3.01383,4452.74
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_134
+Translation: 9919.22,3.01383,4460.05
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_128
+Translation: 9919.22,3.01383,4427.47
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_129
+Translation: 9919.22,3.01383,4419.15
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_130
+Translation: 9919.22,3.01383,4435.78
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:toolbox_107
+Translation: 9920.65,3.01383,4387.14
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:fueltank_107
+Translation: 9927.58,3.01383,4387.14
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_135
+Translation: 9919.22,3.01383,4467.36
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:gasamo_100
+Translation: 9874.87,3.80203,3328.74
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:gasamo_101
+Translation: 9874.87,3.80203,3321.97
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:gasamo_102
+Translation: 9874.87,3.80203,3315.2
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:gasamo_103
+Translation: 9874.87,3.80203,3308.43
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:gasamo_104
+Translation: 9874.87,3.80203,3301.66
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:gasamo_105
+Translation: 9874.87,3.80203,3294.89
+Dof: 1.0 0.0 -1.68587e-007
+Up: 0.0 1.0 0.0
+Right: 1.68587e-007 0.0 1.0
+Name:gasamo_106
+Translation: 8106.54,-2.68293,15815.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_107
+Translation: 8121.92,-2.68293,15815.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_108
+Translation: 8137.31,-2.68293,15815.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_109
+Translation: 8152.69,-2.68293,15815.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_110
+Translation: 8168.08,-2.68293,15815.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_111
+Translation: 8183.47,-2.68293,15815.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamAPos
+Translation: 7597.03,-5.13623,14955.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:TeamBPos
+Translation: 10264.5,-21.2733,4522.02
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_112
+Translation: 8883.22,3.4164,3653.15
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_113
+Translation: 8422.97,0.2355,15467.4
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_114
+Translation: 8427.72,0.2355,15467.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:gasamo_115
+Translation: 8432.47,0.2355,15467.3
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:car_01
+Translation: 910.373,34.8347,7985.98
+Dof: 1.0 0.0 0.0
+Up: 0.0 1.0 0.0
+Right: 0.0 0.0 1.0
+Name:toolbox_136
+Translation: 17470.8,11.6833,13749.0
+Dof: 0.993572 0.0 -0.113203
+Up: 0.0 1.0 0.0
+Right: 0.113203 0.0 0.993572
+Name:amopack_136
+Translation: 7735.75,-208.971,10625.8
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:amopack_137
+Translation: 7735.75,-208.971,10634.0
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_50
+Translation: 8773.2,-192.834,7092.98
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_131
+Translation: 8773.2,-192.834,7085.77
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_132
+Translation: 8773.2,-192.834,7078.56
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:rockets_133
+Translation: 8773.2,-192.834,7071.34
+Dof: 0.0 0.0 -1.0
+Up: 0.0 1.0 0.0
+Right: 1.0 0.0 0.0
+Name:gasamo_116
+Translation: 12139.3,2.21489,8918.73
+Dof: -0.414693 0.0 0.909961
+Up: 0.0 1.0 0.0
+Right: -0.909961 0.0 -0.414693
+Name:gasamo_117
+Translation: 12138.8,2.21489,8913.88
+Dof: 0.642788 0.0 -0.766044
+Up: 0.0 1.0 0.0
+Right: 0.766044 0.0 0.642788
+Name:gasamo_118
+Translation: 12142.9,2.21489,8918.18
+Dof: -0.414693 0.0 0.909961
+Up: 0.0 1.0 0.0
+Right: -0.909961 0.0 -0.414693
+Name:gasamo_119
+Translation: 12142.4,2.21489,8913.33
+Dof: 0.642788 0.0 -0.766044
+Up: 0.0 1.0 0.0
+Right: 0.766044 0.0 0.642788
+Name:motorcyc_03
+Translation: 12247.4,-17.0926,8932.19
+Dof: -0.999962 0.0 -0.00872662
+Up: 0.0 1.0 0.0
+Right: 0.00872662 0.0 -0.999962
+Name:gggun_01
+Translation: 9774.514648,-383.831421,7516.549316
+Dof: -0.660066 0.000000 0.751208
+Up: 0.000000 1.000000 0.000000
+Right: -0.751208 0.000000 -0.660066
+Name:gggun_01
+Translation: 10264.650391,-437.826752,12013.941406
+Dof: -0.751741 0.000000 0.659459
+Up: 0.000000 1.000000 0.000000
+Right: -0.659459 0.000000 -0.751741
+Name:car2_01
+Translation: 17374.720703,8.906694,13815.085938
+Dof: -0.989052 0.000000 0.147570
+Up: 0.000000 1.000000 0.000000
+Right: -0.147570 0.000000 -0.989052
+Name:zeppelin_01
+Translation: -161.928268,-310.107788,866.361572
+Dof: 0.999242 0.000000 -0.038928
+Up: 0.000000 1.000000 0.000000
+Right: 0.038928 0.000000 0.999242
+Name:zeppelin_01
+Translation: 18773.146484,-463.734070,12721.967773
+Dof: -0.351123 0.000000 0.936329
+Up: 0.000000 1.000000 0.000000
+Right: -0.936329 0.000000 -0.351123
+Dele:ramp_01
+Translation: 18961.398438,-394.592194,12793.250000
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Dele:ramp_01
+Translation: 18976.039063,-385.792206,12799.188477
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Dele:ramp_01
+Translation: 18993.982422,-375.592194,12806.035156
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Dele:ramp_01
+Translation: 19013.255859,-364.792145,12813.853516
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Dele:ramp_01
+Translation: 19026.970703,-356.592133,12819.416992
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Dele:ramp_01
+Translation: 19051.619141,-342.192078,12829.415039
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Dele:ramp_01
+Translation: 19069.966797,-331.792023,12836.858398
+Dof: 0.375900 0.000000 -0.926660
+Up: 0.000000 1.000000 0.000000
+Right: 0.926660 0.000000 0.375900
+Name:ramp_01
+Translation: 18952.060547,-376.949402,12725.588867
+Dof: -0.949388 0.000000 -0.314105
+Up: 0.000000 1.000000 0.000000
+Right: 0.314105 0.000000 -0.949388
+Name:ramp_01
+Translation: 18917.693359,-377.234863,12828.018555
+Dof: 0.946841 0.000000 0.321703
+Up: 0.000000 1.000000 0.000000
+Right: -0.321703 0.000000 0.946841
+Dele:shed_01
+Translation: 19824.279297,-198.801346,12361.860352
+Dof: 0.999999 0.000000 0.001278
+Up: 0.000000 1.000000 0.000000
+Right: -0.001278 0.000000 0.999999
+Name:shed_01
+Translation: 19814.099609,-197.150757,12345.881836
+Dof: 0.999850 0.000000 0.017305
+Up: 0.000000 1.000000 0.000000
+Right: -0.017305 0.000000 0.999850
+Name:hylla_01
+Translation: 19842.314453,-198.680206,12326.558594
+Dof: -0.999861 0.000000 -0.016665
+Up: 0.000000 1.000000 0.000000
+Right: 0.016665 0.000000 -0.999861
+Name:parachu_01
+Translation: 19841.064453,-212.550781,12321.285156
+Dof: 0.037969 0.000000 -0.999279
+Up: 0.000000 1.000000 0.000000
+Right: 0.999279 0.000000 0.037969
+Name:parachu_01
+Translation: 19840.851563,-212.550781,12326.880859
+Dof: 0.037969 0.000000 -0.999279
+Up: 0.000000 1.000000 0.000000
+Right: 0.999279 0.000000 0.037969
+Name:parachu_01
+Translation: 19840.662109,-212.550781,12331.877930
+Dof: 0.037969 0.000000 -0.999279
+Up: 0.000000 1.000000 0.000000
+Right: 0.999279 0.000000 0.037969
+Name:amopack_01
+Translation: 19841.773438,-201.350784,12320.111328
+Dof: 0.037969 0.000000 -0.999279
+Up: 0.000000 1.000000 0.000000
+Right: 0.999279 0.000000 0.037969
+Name:amopack_01
+Translation: 19841.537109,-201.350784,12326.306641
+Dof: 0.037969 0.000000 -0.999279
+Up: 0.000000 1.000000 0.000000
+Right: 0.999279 0.000000 0.037969
+Name:amopack_01
+Translation: 19841.294922,-201.350784,12332.702148
+Dof: 0.037969 0.000000 -0.999279
+Up: 0.000000 1.000000 0.000000
+Right: 0.999279 0.000000 0.037969
+Name:rockets_01
+Translation: 19843.017578,-219.150772,12321.673828
+Dof: 0.003368 0.000000 -0.999994
+Up: 0.000000 1.000000 0.000000
+Right: 0.999994 0.000000 0.003368
+Name:rockets_01
+Translation: 19842.990234,-219.150772,12330.074219
+Dof: 0.003368 0.000000 -0.999994
+Up: 0.000000 1.000000 0.000000
+Right: 0.999994 0.000000 0.003368
+Name:snipegun_01
+Translation: 19837.927734,-200.286026,12346.195313
+Dof: 0.012020 0.000000 -0.999928
+Up: 0.000000 1.000000 0.000000
+Right: 0.999928 0.000000 0.012020
+Name:gasw_01
+Translation: 19842.181641,-200.550781,12310.127930
+Dof: 0.012020 0.000000 -0.999928
+Up: 0.000000 1.000000 0.000000
+Right: 0.999928 0.000000 0.012020
+Name:gasamo_01
+Translation: 19836.091797,-200.267288,12309.562500
+Dof: -0.993752 0.000000 -0.111614
+Up: 0.000000 1.000000 0.000000
+Right: 0.111614 0.000000 -0.993752
+Name:gasamo_01
+Translation: 19834.105469,-200.267288,12309.339844
+Dof: -0.993752 0.000000 -0.111614
+Up: 0.000000 1.000000 0.000000
+Right: 0.111614 0.000000 -0.993752
+Name:gasamo_01
+Translation: 19831.917969,-200.267288,12309.093750
+Dof: -0.993752 0.000000 -0.111614
+Up: 0.000000 1.000000 0.000000
+Right: 0.111614 0.000000 -0.993752
+Name:grenade_01
+Translation: 19828.119141,-200.509293,12313.764648
+Dof: -0.999036 0.000000 -0.043889
+Up: 0.000000 1.000000 0.000000
+Right: 0.043889 0.000000 -0.999036
+Name:grenade_01
+Translation: 19826.498047,-200.507172,12313.706055
+Dof: -0.999379 0.000000 -0.035243
+Up: 0.000000 1.000000 0.000000
+Right: 0.035243 0.000000 -0.999379
+Name:grenade_01
+Translation: 19824.898438,-200.507172,12313.650391
+Dof: -0.999379 0.000000 -0.035243
+Up: 0.000000 1.000000 0.000000
+Right: 0.035243 0.000000 -0.999379
+Name:grenade_01
+Translation: 19823.298828,-200.507172,12313.593750
+Dof: -0.999379 0.000000 -0.035243
+Up: 0.000000 1.000000 0.000000
+Right: 0.035243 0.000000 -0.999379
+Name:grenade_01
+Translation: 19821.701172,-200.507172,12313.537109
+Dof: -0.999379 0.000000 -0.035243
+Up: 0.000000 1.000000 0.000000
+Right: 0.035243 0.000000 -0.999379
+Name:house4_01
+Translation: 58.130726,-10.660426,-856.183044
+Dof: 0.193773 0.000000 0.981046
+Up: 0.000000 1.000000 0.000000
+Right: -0.981046 0.000000 0.193773
+Name:shed_01
+Translation: 61.023212,-11.250792,-737.942322
+Dof: 0.984842 0.000000 -0.173452
+Up: 0.000000 1.000000 0.000000
+Right: 0.173452 0.000000 0.984842
+Name:hylla_01
+Translation: 86.216370,-11.650791,-758.886475
+Dof: -0.980136 0.000000 0.198329
+Up: 0.000000 1.000000 0.000000
+Right: -0.198329 0.000000 -0.980136
+Name:parachu_01
+Translation: 84.895378,-25.450783,-757.899658
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:parachu_01
+Translation: 83.742767,-25.450783,-763.991577
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:parachu_01
+Translation: 85.936447,-25.450783,-752.397278
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:amopack_01
+Translation: 86.196396,-14.250789,-752.446411
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:amopack_01
+Translation: 84.969421,-14.250789,-758.931335
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:amopack_01
+Translation: 83.742447,-14.250789,-765.416321
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:rockets_01
+Translation: 87.701019,-32.250782,-765.309265
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:rockets_01
+Translation: 89.820335,-32.250782,-754.107971
+Dof: -0.185905 0.000000 -0.982568
+Up: 0.000000 1.000000 0.000000
+Right: 0.982568 0.000000 -0.185905
+Name:snipegun_01
+Translation: 84.147537,-13.650787,-740.171631
+Dof: -0.194400 0.000000 -0.980922
+Up: 0.000000 1.000000 0.000000
+Right: 0.980922 0.000000 -0.194400
+Name:gasw_01
+Translation: 79.277390,-13.050788,-775.313660
+Dof: -0.194400 0.000000 -0.980922
+Up: 0.000000 1.000000 0.000000
+Right: 0.980922 0.000000 -0.194400
+Name:gasamo_01
+Translation: 72.691490,-13.050788,-773.850098
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:gasamo_01
+Translation: 70.718666,-13.050788,-773.521484
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:gasamo_01
+Translation: 68.943123,-13.050788,-773.225769
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:gasamo_01
+Translation: 66.773018,-13.050788,-772.864319
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:grenade_01
+Translation: 64.022408,-12.850788,-772.040771
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:grenade_01
+Translation: 61.655018,-12.850788,-771.646484
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:grenade_01
+Translation: 59.287632,-12.850788,-771.252136
+Dof: -0.986412 0.000000 0.164293
+Up: 0.000000 1.000000 0.000000
+Right: -0.164293 0.000000 -0.986412
+Name:bazooka_01
+Translation: 39.973621,-14.423656,-754.222046
+Dof: -0.983421 0.000000 0.181338
+Up: 0.000000 1.000000 0.000000
+Right: -0.181338 0.000000 -0.983421
+Name:bazooka_01
+Translation: 19796.439453,-201.829849,12329.363281
+Dof: -0.999957 0.000000 0.009292
+Up: 0.000000 1.000000 0.000000
+Right: -0.009292 0.000000 -0.999957
+Name:ramp_01
+Translation: -170.759415,-230.022690,665.936584
+Dof: -0.999379 0.000000 0.035243
+Up: 0.000000 1.000000 0.000000
+Right: -0.035243 0.000000 -0.999379
+Name:parachu_01
+Translation: 7276.253906,-3.816238,15007.892578
+Dof: -0.045976 0.000000 0.998943
+Up: 0.000000 1.000000 0.000000
+Right: -0.998943 0.000000 -0.045976
+Name:parachu_01
+Translation: 7905.242676,-1.638656,15007.291992
+Dof: -0.005285 0.000000 -0.999986
+Up: 0.000000 1.000000 0.000000
+Right: 0.999986 0.000000 -0.005285
+Name:parachu_01
+Translation: 9923.789063,0.580695,4395.684082
+Dof: 0.057808 0.000000 0.998328
+Up: 0.000000 1.000000 0.000000
+Right: -0.998328 0.000000 0.057808
+Name:parachu_01
+Translation: 10589.904297,0.580695,4398.846680
+Dof: -0.005285 0.000000 -0.999986
+Up: 0.000000 1.000000 0.000000
+Right: 0.999986 0.000000 -0.005285
+Name:helicopter_01
+Translation: 10585.446289,-11.819304,4049.792480
+Dof: -0.038608 0.000000 0.999254
+Up: 0.000000 1.000000 0.000000
+Right: -0.999254 0.000000 -0.038608
+Name:helicopter_01
+Translation: 7267.114746,-23.589830,15400.956055
+Dof: 0.029322 0.000000 -0.999570
+Up: 0.000000 1.000000 0.000000
+Right: 0.999570 0.000000 0.029322
+Name:jacket2_01
+Translation: 9898.471680,-9.985465,3563.703857
+Dof: 0.999629 0.000000 -0.027233
+Up: 0.000000 1.000000 0.000000
+Right: 0.027233 0.000000 0.999629
+Name:jacket1_01
+Translation: 8861.944336,-10.185464,3488.002441
+Dof: 0.004646 0.000000 0.999989
+Up: 0.000000 1.000000 0.000000
+Right: -0.999989 0.000000 0.004646
+Name:jacket2_01
+Translation: 8407.672852,-13.113316,15193.433594
+Dof: 0.004645 0.000000 -0.999989
+Up: 0.000000 1.000000 0.000000
+Right: 0.999989 0.000000 0.004645
+Name:jacket1_01
+Translation: 7851.069824,-12.913319,14465.041016
+Dof: -0.999882 0.000000 0.015389
+Up: 0.000000 1.000000 0.000000
+Right: -0.015389 0.000000 -0.999882

@@ -1,0 +1,153 @@
+float g0;
+
+float g1;
+
+float g2;
+
+float g3;
+
+float g4;
+
+float g5;
+
+float g6;
+
+float g7;
+
+float g8;
+
+float g9;
+
+float g10;
+
+float g11;
+
+float g12;
+
+float g13;
+
+Startup() {
+  g7 = 0;
+  g1 = MYSELF;
+  g9 = 0;
+  g10 = 0;
+  g11 = 0;
+}
+
+PlayerCreated() {
+  REFGetProject(g0, "gun", 0);
+  REFAddItem(MYSELF, g0);
+  REFGetProject(g0, "kpist", 0);
+  REFAddItem(MYSELF, g0);
+  REFGetProject(g0, "detonat", 0);
+  REFAddItem(MYSELF, g0);
+  REFGetPlayerNr(MYSELF, g12);
+  REFChangePlayer(g12, AMMO, 50);
+  REFChangePlayer(g12, SHELLS, 20);
+  REFCallScript("", 0, "AddParachute", 0.4000000059604645);
+  REFGetPlayerPro(g13);
+  g5 = -99999;
+}
+
+Forward() {
+  if ((g1 == MYSELF)) {
+    return;
+  }
+  REFGetProVect(g13, DOF, g2, g3, g4);
+  REFApplyForce(g13, 0, 0, 0, (g2 * 0.15000000596046448), (g3 * 0.15000000596046448), (g4 * 0.15000000596046448));
+  REFGetPosition(g13, g2, g3, g4);
+  if ((885 < g3)) {
+    if (!g10) {
+      g10 = 1;
+      g9 = (g9 + 1);
+    }
+    REFCallScript("", 0, "RemoveParachute");
+  }
+  REFCallScript("", 0, "forward", 0);
+}
+
+AddParachute() {
+  REFGetProject(g1, "aparach", 1);
+  REFAlignProject(g13, g1, 0, -3, MYSELF);
+  REFSetProjectVars(g1, ROTATE, OFF);
+  REFSetProjectVars(g1, MOVE, OFF);
+  REFSetProjectVars(g1, VISIBLE, OFF);
+  REFSetProjectVars(g1, LANDCOLLISION, OFF);
+  REFAddChild(g13, g1);
+  REFParachute(g1, 1);
+  REFPlayFX(MYSELF, "OPARAOUT", 0.699999988079071, 0.30000001192092896, 0);
+  REFCallScript("", 0, "forward");
+}
+
+RemoveParachute() {
+  if ((g1 == MYSELF)) {
+    return;
+  }
+  if ((g9 < 2)) {
+    return;
+  }
+  REFParachute(g1, 0);
+  REFRemoveChild(g1);
+  REFSetProjectVars(g1, MOVE, ON);
+  REFSetTTL(g1, 4);
+  g1 = MYSELF;
+}
+
+GameLoaded() {
+  if ((g1 != MYSELF)) {
+    REFParachute(g1, 1);
+  }
+}
+
+TouchedGround(object) {
+  if ((g1 == MYSELF)) {
+    return;
+  }
+  if (g11) {
+    return;
+  }
+  g9 = (g9 + 2);
+  g11 = 1;
+  REFCallScript("", 0, "RemoveParachute");
+}
+
+PlaySRYOUMUS() {
+  REFPlayDlg("SRYOUMUS", MYSELF, 1, 0.8999999761581421, 0.20000000298023224, g6);
+  REFShowMessage("You must evacuate the village immediately!", 1);
+  REFShowMessage("The allies are sending a squadron of planes to bomb", 1);
+  REFShowMessage("the factories and the deadly gas will spread rapidly.", 1);
+  REFCallScript("", 0, "CallOldman", 8);
+}
+
+CallOldman() {
+  if (!g7) {
+    REFCallScript("Oldman", 0, "PlayS3OFCOUR");
+  }
+}
+
+SetoldmanDead() {
+  REFStopDlg(MYSELF, "SRYOUMUS");
+  g7 = 1;
+}
+
+Killed() {
+  REFStopDlg(MYSELF, "SRYOUMUS");
+  REFCallScript("Oldman", 0, "SetRedDead");
+}
+
+DelayedGasMask() {
+  REFGasMask(MYSELF, 1);
+  REFPlayFX(MYSELF, "OPARAOUT", 0.699999988079071, 0.30000001192092896, 0);
+  REFGetProject(g0, "gasmask", 0);
+  REFSetItemTextureNr(g0, 39);
+  REFSetProjectVars(g0, ITEM, ON);
+  REFAddItem(MYSELF, g0);
+}
+
+AddGasMask() {
+  REFCallScript("", 0, "DelayedGasMask", 2);
+}
+
+ToInsideView() {
+  REFSetViewMode(INSIDE, 0, 0, 0);
+}

@@ -1,0 +1,138 @@
+name: Release
+
+# Manual "cut a release" action. Builds every player-facing artifact on Linux
+# and publishes them as one GitHub release:
+#   - codename-eagle-mp-demo-<version>-setup.exe  (demo installer)
+#   - codename-eagle-mp-demo-<version>.zip        (demo as extract-and-play zip)
+#   - codename-eagle-patch-<version>.exe          (full-game patch installer)
+#
+# Versions are 1.50.NNNN, where NNNN is a zero-padded 4-digit build number and
+# 1.50 is the in-game version. Run the workflow to tag v1.50.NNNN and publish
+# the release. NNNN auto-increments from the latest v1.50.* tag; set the
+# build_number input to force a specific number.
+#
+# The game payload ships pre-patched from game/ (LFS), so the only compile step
+# is ripmusic.exe (the CD->ogg ripper bundled inside the patch installer),
+# cross-built for 32-bit Windows with cargo-xwin. The provenance tests are NOT
+# run here - they need pristine local game installs; run them locally before
+# releasing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      build_number:
+        description: 'Build number (NNNN). Leave blank to auto-increment from the latest v1.50.* tag.'
+        required: false
+        type: string
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # create the tag + release and upload assets
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # the game payload lives in LFS and must be real files
+          lfs: true
+          # need the full tag history to auto-increment the build number
+          fetch-depth: 0
+
+      - name: Resolve version
+        id: version
+        env:
+          # in-game version; bump this one line to move to 1.51
+          BASE_VERSION: '1.50'
+          BUILD_NUMBER: ${{ inputs.build_number }}
+        run: |
+          set -euo pipefail
+          if [[ -n "$BUILD_NUMBER" ]]; then
+            if [[ ! "$BUILD_NUMBER" =~ ^[0-9]+$ ]]; then
+              echo "error: build_number must be a non-negative integer, got '$BUILD_NUMBER'" >&2
+              exit 1
+            fi
+            num=$((10#$BUILD_NUMBER))
+          else
+            esc="${BASE_VERSION//./\\.}"
+            latest="$(git tag --list "v${BASE_VERSION}.*" \
+              | sed -n "s/^v${esc}\.\([0-9][0-9]*\)$/\1/p" \
+              | sort -n | tail -1)"
+            if [[ -z "$latest" ]]; then
+              num=1
+            else
+              num=$((10#$latest + 1))
+            fi
+          fi
+          build="$(printf '%04d' "$num")"
+          version="${BASE_VERSION}.${build}"
+          tag="v${version}"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "resolved $tag (build $build)"
+
+      - name: Install NSIS and LLVM
+        # clang-cl + llvm-lib are needed by cargo-xwin to compile ripmusic's
+        # bundled C encoder (aoTuV); Ubuntu ships them versioned, so symlink
+        # unversioned names if absent.
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nsis clang lld llvm clang-tools
+          for tool in clang-cl llvm-lib; do
+            command -v "$tool" >/dev/null && continue
+            versioned="$(ls /usr/bin/${tool}-* 2>/dev/null | sort -V | tail -1)"
+            if [[ -z "$versioned" ]]; then
+              echo "error: $tool not found (needed to build ripmusic)" >&2
+              exit 1
+            fi
+            sudo ln -s "$versioned" "/usr/local/bin/$tool"
+          done
+
+      - name: Install cargo-xwin
+        run: pipx install cargo-xwin
+
+      - name: Build ripmusic.exe (32-bit Windows, via cargo-xwin)
+        working-directory: ripmusic # per-crate .cargo/config.toml - build from the crate dir
+        env:
+          XWIN_ARCH: x86
+          # recent clang makes -Wincompatible-pointer-types a hard error, which
+          # breaks aoTuV's mdct.c; see ripmusic/.cargo/config.toml
+          CL: '-Wno-error=incompatible-pointer-types -Wno-incompatible-pointer-types'
+        run: |
+          rustup target add i686-pc-windows-msvc
+          cargo xwin build --release --target i686-pc-windows-msvc
+
+      - name: Build the demo installer
+        run: installers/demo/build.sh "${{ steps.version.outputs.version }}"
+
+      - name: Build the demo zip
+        run: installers/demo-zip/build.sh "${{ steps.version.outputs.version }}"
+
+      - name: Build the full-game patch installer
+        run: installers/patch/build.sh "${{ steps.version.outputs.version }}"
+
+      - name: Create the release tag
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" -m "Codename Eagle ${{ steps.version.outputs.version }}"
+          git push origin "$TAG"
+
+      - name: Publish the release with artifacts
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Codename Eagle ${{ steps.version.outputs.version }}
+          draft: false
+          make_latest: true
+          fail_on_unmatched_files: true
+          files: |
+            installers/demo/out/codename-eagle-mp-demo-${{ steps.version.outputs.version }}-setup.exe
+            installers/demo-zip/out/codename-eagle-mp-demo-${{ steps.version.outputs.version }}.zip
+            installers/patch/out/codename-eagle-patch-${{ steps.version.outputs.version }}.exe

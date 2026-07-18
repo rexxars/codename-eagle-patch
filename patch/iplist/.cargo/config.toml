@@ -1,0 +1,12 @@
+# Cross-compile to 64-bit Windows from macOS via mingw-w64.
+#   rustup target add x86_64-pc-windows-gnu
+#   brew install mingw-w64
+#   cargo build --release --target x86_64-pc-windows-gnu
+#
+# (32-bit i686-pc-windows-gnu doesn't link against Homebrew's mingw-w64 — an
+# unwinding-model mismatch with Rust's precompiled 32-bit std. 64-bit uses SEH and
+# links cleanly; the target box is 64-bit Windows and a 64-bit helper spawns fine
+# from the 32-bit game under WOW64.)
+[target.x86_64-pc-windows-gnu]
+linker = "x86_64-w64-mingw32-gcc"
+ar = "x86_64-w64-mingw32-ar"

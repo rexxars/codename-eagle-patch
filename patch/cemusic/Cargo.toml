@@ -1,0 +1,23 @@
+[package]
+name = "cemusic"
+version = "0.1.0"
+edition = "2021"
+description = "File-based Ogg Vorbis music for Codename Eagle (loaded into ce.exe by ce-patch)"
+
+[lib]
+name = "cemusic"
+crate-type = ["cdylib"]
+
+[dependencies]
+# rodio bundles cpal (WASAPI output) + decoders; default features include the
+# pure-Rust Vorbis decoder (lewton). No C codec, no patented format.
+rodio = "0.19"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+# Note: not panic="abort" - it can't link cleanly against stable's prebuilt std on
+# *-windows-gnu (undefined _Unwind_Resume). The exports below catch_unwind instead,
+# so a panic never unwinds across the FFI boundary into ce.exe.

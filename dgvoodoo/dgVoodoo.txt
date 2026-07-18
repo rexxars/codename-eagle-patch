@@ -1,0 +1,27 @@
+dgVoodoo
+========
+
+This install includes dgVoodoo, a third-party graphics wrapper by Dege. It
+translates the game's old DirectX calls to modern Direct3D, which fixes
+rendering problems on modern versions of Windows and lets you enable options
+like anti-aliasing. To configure it, run dgVoodooCpl.exe in this folder.
+
+dgVoodoo is not part of the Codename Eagle patch and has its own terms of use.
+Homepage and redistribution terms:
+
+    https://dege.freeweb.hu/dgVoodoo2/ReadmeGeneral/
+
+Files included:
+
+    dgVoodooCpl.exe   the dgVoodoo control panel
+    dgVoodoo.conf     dgVoodoo settings
+    dgVoodoo.txt      this file
+    D3D8.dll          Direct3D 8 wrapper
+    D3D9.dll          Direct3D 9 wrapper
+    D3DImm.dll        Direct3D immediate-mode wrapper
+    DDraw.dll         DirectDraw wrapper
+
+To disable dgVoodoo, delete D3D8.dll, D3D9.dll, D3DImm.dll and DDraw.dll from
+your Codename Eagle folder. The game then uses the system's own DirectX. You can
+also delete dgVoodooCpl.exe and dgVoodoo.conf; they are only the control panel
+and its settings. And this file, of course.

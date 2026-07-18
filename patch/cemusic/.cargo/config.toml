@@ -1,0 +1,15 @@
+# cemusic.dll loads into 32-bit ce.exe, so it must be i686. Homebrew's i686 mingw
+# is SjLj (incompatible with Rust's i686-pc-windows-gnu / Dwarf-2), so build the
+# MSVC target via cargo-xwin. cargo-xwin defaults to x86_64+aarch64 SDK libs, so
+# XWIN_ARCH=x86 is required (the [env] table here is NOT read by cargo-xwin; pass
+# it as a real env var or via --xwin-arch x86):
+#
+#   XWIN_ARCH=x86 cargo xwin build --release --target i686-pc-windows-msvc
+
+# Statically link the MSVC C runtime (VCRUNTIME140 + UCRT) into the DLL so it loads
+# into ce.exe on a clean Windows install with no VC++ redistributable (else
+# LoadLibrary fails with "VCRUNTIME140.dll was not found"). Safe for a cdylib: the
+# DLL gets its own self-contained CRT state, which is fine here (cemusic owns its
+# audio/file objects and shares no CRT allocations across the ce.exe boundary).
+[target.i686-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

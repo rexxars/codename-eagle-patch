@@ -1,0 +1,31 @@
+[package]
+name = "ce-iplist"
+version = "0.1.0"
+edition = "2021"
+description = "Codename Eagle server prober — GameSpy \\status\\ -> menu row (drop-in iplist.exe)"
+
+[[bin]]
+name = "iplist"
+path = "src/main.rs"
+
+[dependencies]
+# Fetch the central server list (the LAN-sweep invocation pulls it from Sanity).
+# rustls (ureq default) is pure-Rust TLS so it cross-compiles cleanly and works
+# on older Windows.
+serde_json = "1"
+ureq = "2"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = [
+  "Win32_Foundation",
+  "Win32_System_Threading",
+  "Win32_Storage_FileSystem",
+  "Win32_System_IO",
+] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1

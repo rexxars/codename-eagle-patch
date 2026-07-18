@@ -1,0 +1,2949 @@
+Name:bridge_01
+Translation: 2172.98,176.579,1751.78
+Dof: 0.942648 1.58848e-005 -0.333787
+Up: -1.22254e-005 1 -1.3064e-005
+Right: 0.333787 -8.23407e-006 0.942648
+Name:Housed2_01
+Translation: -3642.35,151.403,-158.224
+Dof: 1 0 2.34614e-007
+Up: 0 1 0
+Right: -2.34614e-007 0 1
+Name:Housed1_02
+Translation: -3111.88,157.195,-170.868
+Dof: 0.325568 0 0.945519
+Up: 0 1 0
+Right: -0.945519 0 0.325568
+Name:Tstation_01
+Translation: -7622.42,151.056,-255.634
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rbridge_01
+Translation: 2517.52,328.39,-378.226
+Dof: 1 -6.07014e-007 0
+Up: 6.07014e-007 1 0
+Right: 0 0 1
+Name:bridge_02
+Translation: 2596.06,176.579,1601.96
+Dof: 0.942648 1.58849e-005 -0.333787
+Up: 0.00101856 0.999995 -0.00292411
+Right: 0.333786 -0.00309639 0.942644
+Name:bridge_03
+Translation: 3019.14,176.579,1452.15
+Dof: 0.942648 1.58846e-005 -0.333787
+Up: -1.22249e-005 1 -1.30646e-005
+Right: 0.333787 -8.23478e-006 0.942648
+Name:bridge_04
+Translation: 3442.22,176.579,1302.34
+Dof: 0.942648 1.58846e-005 -0.333787
+Up: -1.22249e-005 1 -1.30646e-005
+Right: 0.333787 -8.23478e-006 0.942648
+Name:rbridge_02
+Translation: 3317.61,328.39,-378.226
+Dof: 1 -6.07014e-007 0
+Up: 6.07014e-007 1 0
+Right: 0 0 1
+Name:bridge_05
+Translation: -1276.06,66.0744,-286.051
+Dof: -0.0436194 0 -0.999048
+Up: 0 1 0
+Right: 0.999048 0 -0.0436194
+Name:bridge_06
+Translation: -1256.49,65.9956,162.35
+Dof: -0.0436194 0 -0.999048
+Up: 0 1 0
+Right: 0.999048 0 -0.0436194
+Name:bridge_07
+Translation: -1295.64,65.9956,-734.453
+Dof: -0.0436194 0 -0.999048
+Up: 0 1 0
+Right: 0.999048 0 -0.0436194
+Name:powstat_04
+Translation: -7217.51,151.024,761.352
+Dof: 1.68587e-007 0 1
+Up: 0 1 0
+Right: -1 0 1.68587e-007
+Name:nbarack_01
+Translation: -6641.48,150.79,860.872
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:Housed1_11
+Translation: -3932.08,151.553,-193.958
+Dof: 0.725374 0 -0.688355
+Up: 0 1 0
+Right: 0.688355 0 0.725374
+Name:barn_01
+Translation: -4711.43,149.657,1440.77
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:palace_01
+Translation: 9275.75,150.074,-568.511
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:Tstation_02
+Translation: 4139.38,152.034,-508.613
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:paldoor_01
+Translation: 9068.23,120.337,-534.873
+Dof: -0.887011 0 0.461749
+Up: 0 1 0
+Right: -0.461749 0 -0.887011
+Name:paldoor_02
+Translation: 9066.78,120.337,-596.466
+Dof: -0.930418 0 -0.366501
+Up: 0 1 0
+Right: 0.366501 0 -0.930418
+Name:palradr_01
+Translation: 5881.88,-58.7,123.753
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:praddor_1
+Translation: 5890.72,-95.7725,226.59
+Dof: 0.00872659 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872659
+Name:Housed1_12
+Translation: -3008.44,156.3,396.029
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:Housed1_13
+Translation: -4876.5,151.868,227.029
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:Housed2_09
+Translation: -4680.05,152.61,-112.351
+Dof: 1 0 2.34614e-007
+Up: 0 1 0
+Right: -2.34614e-007 0 1
+Name:paltron_01
+Translation: 9511.89,144.069,-569.1
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:Housed1_14
+Translation: -4299.36,151.56,-149.169
+Dof: 0.999848 0 -0.0174524
+Up: 0 1 0
+Right: 0.0174524 0 0.999848
+Name:Housed1_15
+Translation: -5424.79,150.702,-653.214
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:Housed2_10
+Translation: -4800.59,150.727,-746.183
+Dof: 0.861629 0 0.507539
+Up: 0 1 0
+Right: -0.507539 0 0.861629
+Name:Housed2_11
+Translation: -3306.74,151.956,129.447
+Dof: 0.147809 0 -0.989016
+Up: 0 1 0
+Right: 0.989016 0 0.147809
+Name:tall_01
+Translation: -7022.78,0,4364.04
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:tall_02
+Translation: -6740.14,0,3923.36
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:oak_01
+Translation: 1563.79,0,2201.53
+Dof: 0.052336 0 0.99863
+Up: 0 1 0
+Right: -0.99863 0 0.052336
+Name:tall_03
+Translation: -7153.22,0,3931.05
+Dof: 0.317305 0 0.948324
+Up: 0 1 0
+Right: -0.948324 0 0.317305
+Name:tall_04
+Translation: -7317.94,0,3655.35
+Dof: 0.0697565 0 -0.997564
+Up: 0 1 0
+Right: 0.997564 0 0.0697565
+Name:tall_83
+Translation: -6949.17,0,3204.43
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:tall_87
+Translation: -7018.6,0,2916.35
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:tall_89
+Translation: -6955.78,0,2346.16
+Dof: 0.317305 0 0.948324
+Up: 0 1 0
+Right: -0.948324 0 0.317305
+Name:tall_17
+Translation: -7602.3,0,2636.55
+Dof: 0.0697565 0 -0.997564
+Up: 0 1 0
+Right: 0.997564 0 0.0697565
+Name:tall_81
+Translation: -430.423,0,-533.146
+Dof: 0.833886 0 -0.551937
+Up: 0 1 0
+Right: 0.551937 0 0.833886
+Name:tall_82
+Translation: 987.335,0,28.6487
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:tall_05
+Translation: 724.819,0,203.881
+Dof: -0.390731 0 -0.920505
+Up: 0 1 0
+Right: 0.920505 0 -0.390731
+Name:tall_06
+Translation: 155.644,0,-226.232
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_07
+Translation: 159.518,0,-683.843
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:tall_85
+Translation: -463.621,0,4.95789
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:tall_88
+Translation: 1171.79,0,-575.259
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_08
+Translation: 1409.71,0,-187.334
+Dof: 0.515038 0 -0.857167
+Up: 0 1 0
+Right: 0.857167 0 0.515038
+Name:tall_09
+Translation: 976.896,0,-752.273
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:tall_10
+Translation: -1109.72,0,-558.229
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:tall_11
+Translation: 1993.42,0,-642.398
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:tall_86
+Translation: 1278.96,0,-861.369
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:tall_90
+Translation: 1896.94,0,-95.068
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:tall_93
+Translation: -197.961,0,-175.499
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:tall_13
+Translation: 506.352,0,-1263.64
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:tall_91
+Translation: 625.649,0,-753.683
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_14
+Translation: -3021.2,0,-1499.3
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:tall_92
+Translation: -2581.99,0,-1548.42
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_95
+Translation: -2766.77,0,-1829.78
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:tall_97
+Translation: -3698.72,0,-1476.74
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:tall_99
+Translation: -4647.01,0,-2442.49
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:tall_100
+Translation: -4882.35,0,-2234.12
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:tall_101
+Translation: -5315.67,0,-2198.05
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:tall_102
+Translation: -4665.72,0,-1851.11
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_102
+Translation: -2542.46,0,3.20325
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:tall_16
+Translation: -2175.86,0,-145.824
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:tall_19
+Translation: -1523.13,0,-109.3
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:oak_02
+Translation: 1002.28,0,2351.46
+Dof: 0.422618 0 -0.906308
+Up: 0 1 0
+Right: 0.906308 0 0.422618
+Name:oak_03
+Translation: 237.693,0,2446.8
+Dof: 0.902585 0 -0.430511
+Up: 0 1 0
+Right: 0.430511 0 0.902585
+Name:oak_04
+Translation: 780.731,0,1931.51
+Dof: 0.99863 0 -0.0523359
+Up: 0 1 0
+Right: 0.0523359 0 0.99863
+Name:oak_05
+Translation: -984.179,0,2039.23
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:oak_06
+Translation: -913.159,0,2215.57
+Dof: 0.882948 0 -0.469472
+Up: 0 1 0
+Right: 0.469472 0 0.882948
+Name:oak_07
+Translation: -1483.39,0,1069.58
+Dof: 0.898794 0 -0.438371
+Up: 0 1 0
+Right: 0.438371 0 0.898794
+Name:oak_08
+Translation: -700.388,0,1659.25
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:tall_15
+Translation: -8640.44,0,306.608
+Dof: 0.317305 0 0.948324
+Up: 0 1 0
+Right: -0.948324 0 0.317305
+Name:tall_18
+Translation: -7097.67,0,2181.61
+Dof: 0.0697565 0 -0.997564
+Up: 0 1 0
+Right: 0.997564 0 0.0697565
+Name:tall_12
+Translation: -8387.74,0,1410.13
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:tall_96
+Translation: -8596.19,0,919.037
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:tall_98
+Translation: -9050.88,0,981.908
+Dof: 0.0697565 0 -0.997564
+Up: 0 1 0
+Right: 0.997564 0 0.0697565
+Name:tall_80
+Translation: -6654.92,0,3355.81
+Dof: 0.317305 0 0.948324
+Up: 0 1 0
+Right: -0.948324 0 0.317305
+Name:tall_94
+Translation: -7852.05,0,2150.84
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:leaftr_24
+Translation: -3785.95,0,2369.97
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:leaftr_20
+Translation: -5689.22,0,1598.38
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:leaftr_21
+Translation: -3862.54,0,1182.77
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:leaftr_25
+Translation: -3689.8,0,483.343
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:leaftr_26
+Translation: -5579.25,0,1071.47
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:leaftr_27
+Translation: -5179.71,0,1621.22
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:leaftr_22
+Translation: -3377.09,0,1983.52
+Dof: 0.0958456 0 -0.995396
+Up: 0 1 0
+Right: 0.995396 0 0.0958456
+Name:leaftr_23
+Translation: -4863.51,0,863.806
+Dof: -0.894934 0 -0.446198
+Up: 0 1 0
+Right: 0.446198 0 -0.894934
+Name:leaftr_28
+Translation: -4599.18,0,2399.01
+Dof: 0.446198 0 -0.894934
+Up: 0 1 0
+Right: 0.894934 0 0.446198
+Name:leaftr_01
+Translation: -5472.63,0,1986.33
+Dof: -0.782608 0 -0.622515
+Up: 0 1 0
+Right: 0.622515 0 -0.782608
+Name:leaftr_29
+Translation: -4965.39,0,1942.35
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:leaftr_30
+Translation: -5362.66,0,1459.43
+Dof: -0.0174524 0 -0.999848
+Up: 0 1 0
+Right: 0.999848 0 -0.0174524
+Name:leaftr_31
+Translation: -3487.02,0,1403.89
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:leaftr_25
+Translation: -4832,0,625.038
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:leaftr_26
+Translation: -3767.75,0,1632.66
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_27
+Translation: 4455.52,0,126.548
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_01
+Translation: 5684.69,0,1546.81
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:pines1_28
+Translation: 3879.59,0,1037.38
+Dof: -0.894934 0 -0.446198
+Up: 0 1 0
+Right: 0.446198 0 -0.894934
+Name:pines1_33
+Translation: 4944.46,0,-784.865
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_29
+Translation: 4160.48,0,1491.77
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:pines1_30
+Translation: 5428.29,0,1558.88
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_03
+Translation: 4704.12,-6.46465,1323.38
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:pines1_31
+Translation: 4140.72,0,-950.089
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:pines1_32
+Translation: 5408.53,0,-882.976
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_35
+Translation: 5207.94,0,-1341.99
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_36
+Translation: 4561.34,0,-714.567
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:pines1_37
+Translation: 5631.52,0,-1139.65
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:Housed1_16
+Translation: -6550.13,150.207,-1771.46
+Dof: 0.999848 0 -0.0174524
+Up: 0 1 0
+Right: 0.0174524 0 0.999848
+Name:Housed1_17
+Translation: -6865.11,152.643,-2174.05
+Dof: -0.0418756 0 0.999123
+Up: 0 1 0
+Right: -0.999123 0 -0.0418756
+Name:Housed2_12
+Translation: -6302.82,145.541,-1773.27
+Dof: 0.147809 0 -0.989016
+Up: 0 1 0
+Right: 0.989016 0 0.147809
+Name:Housed2_13
+Translation: -7162.88,160.091,-2229.07
+Dof: -0.988228 0 0.152985
+Up: 0 1 0
+Right: -0.152985 0 -0.988228
+Name:Housed1_18
+Translation: -7500.12,150.9,-1788.79
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:Housed2_14
+Translation: -6492.69,149.634,-2143.98
+Dof: -0.997185 0 -0.0749791
+Up: 0 1 0
+Right: 0.0749791 0 -0.997185
+Name:amobuil_03
+Translation: -7768,150.826,156.662
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:palpil_01
+Translation: 9156.76,92.5071,-463.847
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:palpil_02
+Translation: 9306.84,92.5071,-464.498
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:palpil_03
+Translation: 9456.25,92.5071,-463.889
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:palpil_04
+Translation: 9456.9,92.5071,-672.015
+Dof: -0.00872651 0 0.999962
+Up: 0 1 0
+Right: -0.999962 0 -0.00872651
+Name:palpil_05
+Translation: 9306.85,92.5071,-672.599
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:palpil_06
+Translation: 9157.43,92.5071,-673.24
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:pines1_38
+Translation: 8012.67,-6.46465,-318.464
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_06
+Translation: 8283.29,-6.46465,-318.464
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_42
+Translation: 8553.91,-6.46465,-318.464
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_44
+Translation: 8824.53,-6.46465,-318.464
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_46
+Translation: 8283.29,-6.46465,-799.01
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_48
+Translation: 8553.91,-6.46465,-799.01
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_50
+Translation: 8824.53,-6.46465,-799.01
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_51
+Translation: 8012.67,-6.46465,-799.01
+Dof: -0.130526 0 -0.991445
+Up: 0 1 0
+Right: 0.991445 0 -0.130526
+Name:pines1_52
+Translation: 4320.14,0,-237.658
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_53
+Translation: 4564.57,0,-121.289
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:pines1_02
+Translation: 4226.61,0,553.152
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_54
+Translation: 4032.23,0,918.117
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_55
+Translation: 4058.44,0,1390.62
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:pines1_34
+Translation: 4371.49,0,1376.26
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_04
+Translation: 4124.08,0,1098.08
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_05
+Translation: 4596.54,0,-1004.72
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:pines1_56
+Translation: 4267.75,0,-1190
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:pines1_57
+Translation: 4823.53,0,-1083.17
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pole3_01
+Translation: 7880.37,0,-608.219
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_02
+Translation: 8080.37,0,-608.219
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_03
+Translation: 8280.38,0,-608.219
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_04
+Translation: 8480.39,0,-608.219
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_05
+Translation: 8680.39,0,-608.219
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_06
+Translation: 8880.4,0,-608.219
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_07
+Translation: 4763.5,0,-363.728
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:pole3_08
+Translation: 4763.5,0,36.1376
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:pole3_09
+Translation: 4763.5,0,436.003
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:pole3_10
+Translation: 4763.5,0,835.869
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:pole3_11
+Translation: 4711.84,0,1194.92
+Dof: 0.766044 0 0.642788
+Up: 0 1 0
+Right: -0.642788 0 0.766044
+Name:pole3_12
+Translation: 5868.24,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_13
+Translation: 5467.62,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_14
+Translation: 3915.79,0,1280.9
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:pole3_15
+Translation: 4315.65,0,1280.9
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:pole3_16
+Translation: -7069.98,0,3329.66
+Dof: 0.951057 0 -0.309017
+Up: 0 1 0
+Right: 0.309017 0 0.951057
+Name:pole3_17
+Translation: -6957.79,0,3708.83
+Dof: 0.96363 0 -0.267238
+Up: 0 1 0
+Right: 0.267238 0 0.96363
+Name:pole3_18
+Translation: -6855.12,0,4099.14
+Dof: 0.976296 0 -0.21644
+Up: 0 1 0
+Right: 0.21644 0 0.976296
+Name:pole3_19
+Translation: -7260.61,0,2963.84
+Dof: 0.93358 0 -0.358368
+Up: 0 1 0
+Right: 0.358368 0 0.93358
+Name:pole3_20
+Translation: -7664.73,0,1755.4
+Dof: 0.951057 0 -0.309017
+Up: 0 1 0
+Right: 0.309017 0 0.951057
+Name:pole3_21
+Translation: -7501.9,0,2137.02
+Dof: 0.951057 0 -0.309017
+Up: 0 1 0
+Right: 0.309017 0 0.951057
+Name:pole3_22
+Translation: -7342.68,0,2500.33
+Dof: 0.97237 0 -0.233445
+Up: 0 1 0
+Right: 0.233445 0 0.97237
+Name:pole3_23
+Translation: -6766.86,0,4495.78
+Dof: 0.994522 0 -0.104528
+Up: 0 1 0
+Right: 0.104528 0 0.994522
+Name:pole3_24
+Translation: -7815.64,0,1358.07
+Dof: 0.951057 0 -0.309017
+Up: 0 1 0
+Right: 0.309017 0 0.951057
+Name:pole3_25
+Translation: -7755.88,0,973.085
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_26
+Translation: -7355.81,0,967.637
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_27
+Translation: -6989.83,0,958.836
+Dof: -0.587785 0 -0.809017
+Up: 0 1 0
+Right: 0.809017 0 -0.587785
+Name:pole3_28
+Translation: -6968.02,0,560.713
+Dof: 0.999962 0 0.00872651
+Up: 0 1 0
+Right: -0.00872651 0 0.999962
+Name:pole3_29
+Translation: -6969.01,0,159.429
+Dof: 0.999962 0 0.00872651
+Up: 0 1 0
+Right: -0.00872651 0 0.999962
+Name:pole3_30
+Translation: -7185.11,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_31
+Translation: -7586.46,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_32
+Translation: -7987.37,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_33
+Translation: -6784.8,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_34
+Translation: -6384.92,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_35
+Translation: -5983.39,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_36
+Translation: -5581.63,0,-33.8145
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_37
+Translation: -5159.94,0,-41.0997
+Dof: -0.566406 0 -0.824126
+Up: 0 1 0
+Right: 0.824126 0 -0.566406
+Name:pole3_38
+Translation: -5142.02,0,-449.473
+Dof: -0.999391 0 -0.0348995
+Up: 0 1 0
+Right: 0.0348995 0 -0.999391
+Name:pole3_39
+Translation: -5142.02,0,-851.019
+Dof: -0.999391 0 -0.0348995
+Up: 0 1 0
+Right: 0.0348995 0 -0.999391
+Name:pole3_40
+Translation: -5142.02,0,-1252.17
+Dof: -0.999657 0 -0.0261769
+Up: 0 1 0
+Right: 0.0261769 0 -0.999657
+Name:pole3_41
+Translation: -5142.02,0,-1652.93
+Dof: -0.999657 0 0.0261769
+Up: 0 1 0
+Right: -0.0261769 0 -0.999657
+Name:pole3_42
+Translation: 4668.15,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_43
+Translation: 5068.77,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_44
+Translation: 3869.54,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_45
+Translation: 4270.15,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:leaftr_58
+Translation: -5240.62,0,150.669
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:leaftr_59
+Translation: -5425.4,0,-130.69
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Dele:leaftr_60
+Translation: -6357.35,0,222.349
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:leaftr_21
+Translation: -5679.82,0,199.791
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:tall_61
+Translation: -1866.32,0,-521.416
+Dof: 0.608761 0 -0.793353
+Up: 0 1 0
+Right: 0.793353 0 0.608761
+Name:tall_38
+Translation: -1047.5,9.37911,-186.62
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:tall_62
+Translation: -793.076,0,-517.101
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:tall_63
+Translation: -608.297,0,-235.742
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:pole3_46
+Translation: -5142.02,0,1154.04
+Dof: -0.999391 0 -0.0348995
+Up: 0 1 0
+Right: 0.0348995 0 -0.999391
+Name:pole3_47
+Translation: -5142.02,0,752.885
+Dof: -0.999657 0 -0.0261769
+Up: 0 1 0
+Right: 0.0261769 0 -0.999657
+Name:pole3_48
+Translation: -5142.02,0,352.126
+Dof: -0.999657 0 0.0261769
+Up: 0 1 0
+Right: -0.0261769 0 -0.999657
+Name:pole3_49
+Translation: -5066.89,0,1575.02
+Dof: -0.782608 0 0.622515
+Up: 0 1 0
+Right: -0.622515 0 -0.782608
+Name:pole3_50
+Translation: -4788.99,0,1697.93
+Dof: 0.113203 0 0.993572
+Up: 0 1 0
+Right: -0.993572 0 0.113203
+Name:rtable_01
+Translation: 5792.87,-186.3,200.042
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rstol_01
+Translation: 5810.19,-186.867,192.251
+Dof: 0.803857 0 -0.594823
+Up: 0 1 0
+Right: 0.594823 0 0.803857
+Name:rstol_02
+Translation: 5814.05,-186.867,210.483
+Dof: 0.898794 0 0.438371
+Up: 0 1 0
+Right: -0.438371 0 0.898794
+Name:radionw_01
+Translation: 5791.32,-199.599,187.356
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:fackla_02
+Translation: 5843.15,-102.57,61.3236
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:fackla_01
+Translation: 5915.65,-102.57,61.3236
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:fackla_03
+Translation: 5915.61,-211.266,221.583
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:fackla_04
+Translation: 5843.11,-211.266,221.583
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:fackla_05
+Translation: 9457.39,106.024,-472.02
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:fackla_06
+Translation: 9457.39,106.023,-663.535
+Dof: 1.68587e-007 0 1
+Up: 0 1 0
+Right: -1 0 1.68587e-007
+Name:fackla_07
+Translation: 9306.76,106.024,-472.564
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:fackla_08
+Translation: 9307.21,106.023,-664.443
+Dof: 1.68587e-007 0 1
+Up: 0 1 0
+Right: -1 0 1.68587e-007
+Name:fackla_09
+Translation: 9156.28,106.024,-472.02
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:fackla_10
+Translation: 9157.92,106.023,-665.119
+Dof: 1.68587e-007 0 1
+Up: 0 1 0
+Right: -1 0 1.68587e-007
+Name:fackla_11
+Translation: 9522.22,106.024,-555.018
+Dof: -1 0 1.68587e-007
+Up: 0 1 0
+Right: -1.68587e-007 0 -1
+Name:fackla_12
+Translation: 9522.22,106.024,-582.327
+Dof: -1 0 1.68587e-007
+Up: 0 1 0
+Right: -1.68587e-007 0 -1
+Name:pole3_51
+Translation: -5564.96,0,-2032.82
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_52
+Translation: -5163.2,0,-2032.82
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_53
+Translation: -5966.49,0,-2032.82
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_54
+Translation: -6768.08,0,-2036.92
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_55
+Translation: -6366.32,0,-2036.92
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_56
+Translation: -7169.61,0,-2036.92
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_57
+Translation: -7987.37,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_58
+Translation: -7586.46,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_59
+Translation: -7185.11,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_60
+Translation: -6784.8,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_61
+Translation: -6384.92,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_62
+Translation: -5983.39,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_63
+Translation: -5581.63,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_64
+Translation: -4777.58,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_65
+Translation: -4376.67,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_66
+Translation: -3975.33,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_67
+Translation: -3575.01,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_68
+Translation: -3175.13,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_69
+Translation: -2773.6,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_70
+Translation: -2371.84,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_71
+Translation: -2021.03,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_72
+Translation: -1620.12,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_73
+Translation: -1218.78,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_74
+Translation: -818.469,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_75
+Translation: -418.583,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_76
+Translation: -17.0547,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_77
+Translation: 384.708,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_78
+Translation: 790.02,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_79
+Translation: 1190.93,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_80
+Translation: 1592.27,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:pole3_81
+Translation: 1992.59,0,-458.167
+Dof: 0.00872651 0 -0.999962
+Up: 0 1 0
+Right: 0.999962 0 0.00872651
+Name:praddor_2
+Translation: 5970.48,-199.882,130.158
+Dof: 0.0871558 0 -0.996195
+Up: 0 1 0
+Right: 0.996195 0 0.0871558
+Name:pines1_69
+Translation: 3787.09,0,-48.5214
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_64
+Translation: 4153.85,0,-142.774
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:pines1_40
+Translation: 3928.45,0,-267.953
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_65
+Translation: 3685.19,0,-229.75
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pole3_82
+Translation: -4008.28,0,1224
+Dof: -0.999657 0 -0.0261769
+Up: 0 1 0
+Right: 0.0261769 0 -0.999657
+Name:pole3_83
+Translation: -4008.28,0,823.236
+Dof: -0.999657 0 0.0261769
+Up: 0 1 0
+Right: -0.0261769 0 -0.999657
+Name:pole3_84
+Translation: -4008.28,0,1625.15
+Dof: -0.999391 0 -0.0348995
+Up: 0 1 0
+Right: 0.0348995 0 -0.999391
+Name:pole3_85
+Translation: -4008.28,0,424.956
+Dof: -0.999657 0 0.0261769
+Up: 0 1 0
+Right: -0.0261769 0 -0.999657
+Name:tank3_01
+Translation: 5824.88,130.638,303.312
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:pole3_86
+Translation: 1506.19,0,2002.73
+Dof: 0.25038 0 0.968148
+Up: 0 1 0
+Right: -0.968148 0 0.25038
+Name:pole3_87
+Translation: 1119.06,0,2102.85
+Dof: 0.25038 0 0.968148
+Up: 0 1 0
+Right: -0.968148 0 0.25038
+Name:pole3_88
+Translation: 731.931,0,2202.97
+Dof: 0.25038 0 0.968148
+Up: 0 1 0
+Right: -0.968148 0 0.25038
+Name:pole3_89
+Translation: 1893.32,0,1902.61
+Dof: 0.25038 0 0.968148
+Up: 0 1 0
+Right: -0.968148 0 0.25038
+Name:oak_09
+Translation: 753.89,0,2380.92
+Dof: 0.939693 0 0.34202
+Up: 0 1 0
+Right: -0.34202 0 0.939693
+Name:oak_10
+Translation: 1305.98,0,1820.64
+Dof: 0.406737 0 -0.913545
+Up: 0 1 0
+Right: 0.913545 0 0.406737
+Name:oak_11
+Translation: 1354.17,0,2306.99
+Dof: 0.559193 0 0.829038
+Up: 0 1 0
+Right: -0.829038 0 0.559193
+Name:oak_12
+Translation: 1108.22,0,1748.42
+Dof: 0.870356 0 0.492424
+Up: 0 1 0
+Right: -0.492424 0 0.870356
+Name:oak_13
+Translation: 1171.87,0,2563.04
+Dof: 0.422618 0 -0.906308
+Up: 0 1 0
+Right: 0.906308 0 0.422618
+Name:oak_14
+Translation: 636.366,0,2579.26
+Dof: 0.559193 0 0.829038
+Up: 0 1 0
+Right: -0.829038 0 0.559193
+Name:oak_15
+Translation: -1416.23,0,1372.28
+Dof: 0.898794 0 -0.438371
+Up: 0 1 0
+Right: 0.438371 0 0.898794
+Name:oak_16
+Translation: -1444.87,0,543.406
+Dof: 0.898794 0 -0.438371
+Up: 0 1 0
+Right: 0.438371 0 0.898794
+Name:oak_17
+Translation: -1450.65,0,862.544
+Dof: 0.898794 0 -0.438371
+Up: 0 1 0
+Right: 0.438371 0 0.898794
+Name:oak_18
+Translation: -1440.77,0,1634.36
+Dof: 0.882948 0 -0.469472
+Up: 0 1 0
+Right: 0.469472 0 0.882948
+Name:oak_41
+Translation: -1177.14,0,1973.77
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:oak_42
+Translation: -982.339,0,1140.85
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:oak_43
+Translation: -1481.64,0,1224.86
+Dof: -0.62932 0 -0.777146
+Up: 0 1 0
+Right: 0.777146 0 -0.62932
+Name:oak_66
+Translation: -1263.2,0,1630.66
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:oak_44
+Translation: -565.687,0,1850.03
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_45
+Translation: 571.781,0,238.861
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:tall_46
+Translation: 1825.35,0,339.942
+Dof: -0.390731 0 -0.920505
+Up: 0 1 0
+Right: 0.920505 0 -0.390731
+Name:tall_47
+Translation: 837.441,0,58.4042
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:tall_67
+Translation: 327.881,0,-236.716
+Dof: 0.190809 0 -0.981627
+Up: 0 1 0
+Right: 0.981627 0 0.190809
+Name:tall_68
+Translation: 1929.2,177.01,-204.589
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:tall_48
+Translation: 1936.93,0,1219.47
+Dof: -0.390731 0 -0.920505
+Up: 0 1 0
+Right: 0.920505 0 -0.390731
+Name:tall_49
+Translation: 650.136,0,893.536
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:tall_50
+Translation: 1636.17,0,1215.71
+Dof: -0.390731 0 -0.920505
+Up: 0 1 0
+Right: 0.920505 0 -0.390731
+Name:tall_51
+Translation: 777.064,0,1229.09
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:tall_69
+Translation: 1597.11,0,1465.29
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:tall_70
+Translation: 1814.9,0,1031.29
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:tall_71
+Translation: 1754.14,0,1344.03
+Dof: 0.991445 0 -0.130526
+Up: 0 1 0
+Right: 0.130526 0 0.991445
+Name:tall_52
+Translation: 1864.27,0,924.824
+Dof: 0.515038 0 -0.857167
+Up: 0 1 0
+Right: 0.857167 0 0.515038
+Name:leaftr_72
+Translation: -3179.63,0,531.357
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:leaftr_53
+Translation: -3162.29,0,827.843
+Dof: -0.894934 0 -0.446198
+Up: 0 1 0
+Right: 0.446198 0 -0.894934
+Name:leaftr_54
+Translation: -3266.7,0,1196.99
+Dof: -0.965926 0 -0.258819
+Up: 0 1 0
+Right: 0.258819 0 -0.965926
+Name:leaftr_55
+Translation: -2946.71,0,1637.98
+Dof: 0.0958456 0 -0.995396
+Up: 0 1 0
+Right: 0.995396 0 0.0958456
+Name:leaftr_56
+Translation: -4672.81,0,1056.05
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:leaftr_57
+Translation: -3595.27,0,849.623
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pole3_90
+Translation: 7454.77,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_91
+Translation: 7054.16,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_92
+Translation: 6254.69,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_93
+Translation: 6655.3,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_94
+Translation: 7714.21,0,-636.13
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_95
+Translation: 7714.21,0,-464.459
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:pole3_96
+Translation: 5737.73,-58.7,54.1377
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:pole3_97
+Translation: 5737.97,-58.7,207.672
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:pole3_98
+Translation: 5886.58,-58.7,280.752
+Dof: 1.68587e-007 0 1
+Up: 0 1 0
+Right: -1 0 1.68587e-007
+Name:pines1_70
+Translation: 6408.47,0,-883.365
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_71
+Translation: 6904.29,0,-691.823
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:pines1_72
+Translation: 6622.38,0,-411.58
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:pines1_73
+Translation: 5765.22,0,-107.68
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_74
+Translation: 6188.8,0,94.6595
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Name:pines1_76
+Translation: 5992.9,0,374.248
+Dof: -0.333807 0 -0.942641
+Up: 0 1 0
+Right: 0.942641 0 -0.333807
+Name:amopack_01
+Translation: -7698.94,147.306,134.997
+Dof: 0.976296 0 -0.21644
+Up: 0 1 0
+Right: 0.21644 0 0.976296
+Name:amopack_02
+Translation: -7698.94,147.306,127.445
+Dof: 0.998135 0 -0.0610485
+Up: 0 1 0
+Right: 0.0610485 0 0.998135
+Name:amopack_03
+Translation: -7698.94,147.306,119.893
+Dof: 0.987688 0 0.156434
+Up: 0 1 0
+Right: -0.156434 0 0.987688
+Name:jacket1_01
+Translation: -7749.49,137.578,163.399
+Dof: 0.00872659 0 0.999962
+Up: 0 1 0
+Right: -0.999962 0 0.00872659
+Name:radar_01
+Translation: 5808.04,-382.733,4.57535
+Dof: 0.587785 0 -0.809017
+Up: 0 1 0
+Right: 0.809017 0 0.587785
+Name:hpacklg_01
+Translation: 5793.39,-198.069,201.669
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:hpacklg_02
+Translation: 5793.46,-198.069,212.329
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_04
+Translation: 5832.68,-186.885,215.706
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_02
+Translation: 5841.56,-186.885,215.283
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_01
+Translation: 5849.68,-186.979,215.318
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:jacket2_02
+Translation: 5796.12,-186.3,141.129
+Dof: -0.461749 0 0.887011
+Up: 0 1 0
+Right: -0.887011 0 -0.461749
+Name:hpacklg_04
+Translation: -7750.11,137.237,141.52
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rtable_02
+Translation: -7747.42,148.401,159.652
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:gasamo_01
+Translation: -7051.24,144.697,629.208
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:gasamo_02
+Translation: -7043.98,144.697,629.208
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:gasamo_03
+Translation: -7036.72,144.697,629.208
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:gasamo_04
+Translation: -7029.46,144.697,629.208
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:pines1_77
+Translation: 7110.82,0,-897.515
+Dof: 0.760406 0 -0.649448
+Up: 0 1 0
+Right: 0.649448 0 0.760406
+Name:pines1_78
+Translation: 7200.34,0,-303.769
+Dof: 0.594823 0 -0.803857
+Up: 0 1 0
+Right: 0.803857 0 0.594823
+Dele:car_01
+Translation: 8103.78,139.418,-13.7908
+Dof: -0.0174524 0 0.999848
+Up: 0 1 0
+Right: -0.999848 0 -0.0174524
+Name:rockets_03
+Translation: 4277.99,142.495,-540.651
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:toolbox_01
+Translation: -1312.28,51.8989,426.401
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:toolbox_02
+Translation: -1371.22,47.3626,-985.55
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:toolbox_03
+Translation: -7748.34,137.578,175.198
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_05
+Translation: 5826.55,-186.979,215.706
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_06
+Translation: 5820.43,-186.885,215.706
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:toolbox_04
+Translation: 5862.51,-186.984,215.318
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:PowGen_01
+Translation: -7094.61,149.069,770.79
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:PowGen_02
+Translation: -7206.08,149.069,770.153
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:powrgen_01
+Translation: -7150.06,140.675,693.326
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_07
+Translation: -6679.22,147.306,125.632
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:amopack_08
+Translation: -6686.78,147.306,125.632
+Dof: -0.0610484 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610484
+Name:amopack_09
+Translation: -6694.33,147.306,125.631
+Dof: 0.156435 0 -0.987688
+Up: 0 1 0
+Right: 0.987688 0 0.156435
+Name:hpacklg_05
+Translation: -6672.7,137.237,176.799
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:rtable_03
+Translation: -6654.57,148.401,174.111
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:toolbox_05
+Translation: -6639.02,137.578,175.037
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:amobuil_04
+Translation: -6657.56,150.826,194.693
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:jacket1_04
+Translation: -6648.74,137.578,-162.01
+Dof: 0.999962 0 -0.00872773
+Up: 0 1 0
+Right: 0.00872773 0 0.999962
+Name:hpacklg_06
+Translation: -6670.62,137.237,-161.392
+Dof: -1.26441e-006 0 -1
+Up: 0 1 0
+Right: 1 0 -1.26441e-006
+Name:toolbox_06
+Translation: -6636.94,137.578,-163.155
+Dof: -1.26441e-006 0 -1
+Up: 0 1 0
+Right: 1 0 -1.26441e-006
+Name:rtable_04
+Translation: -6652.49,148.401,-164.079
+Dof: -1.26441e-006 0 -1
+Up: 0 1 0
+Right: 1 0 -1.26441e-006
+Name:amopack_10
+Translation: -6692.25,147.306,-212.56
+Dof: 0.156433 0 -0.987689
+Up: 0 1 0
+Right: 0.987689 0 0.156433
+Name:amopack_11
+Translation: -6684.69,147.306,-212.559
+Dof: -0.0610493 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610493
+Name:amopack_12
+Translation: -6677.14,147.306,-212.559
+Dof: -0.216441 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.216441
+Name:amobuil_05
+Translation: -6655.48,150.826,-143.499
+Dof: -1 0 1.23366e-006
+Up: 0 1 0
+Right: -1.23366e-006 0 -1
+Name:rtable_05
+Translation: 8210.62,146.226,-29.1997
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:toolbox_07
+Translation: 8195.07,135.403,-30.125
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:hpacklg_07
+Translation: 8227.62,135.063,-31.5134
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:amopack_13
+Translation: 8250.37,145.131,19.2798
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:amopack_14
+Translation: 8242.82,145.131,19.2798
+Dof: 0.0610485 0 0.998135
+Up: 0 1 0
+Right: -0.998135 0 0.0610485
+Name:amopack_15
+Translation: 8235.27,145.131,19.2798
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:amobuil_06
+Translation: 8213.6,148.651,-49.7812
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:hpacklg_08
+Translation: 8230.29,135.063,-1046.4
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:kpist_03
+Translation: 8267.42,141.659,-997.282
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:rtable_06
+Translation: 8213.69,146.226,-1044.1
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:toolbox_08
+Translation: 8198.15,135.403,-1045.03
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:amopack_16
+Translation: 8253.45,145.131,-995.625
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:amopack_17
+Translation: 8245.9,145.131,-995.625
+Dof: 0.0610485 0 0.998135
+Up: 0 1 0
+Right: -0.998135 0 0.0610485
+Name:amopack_18
+Translation: 8238.35,145.131,-995.625
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:amobuil_07
+Translation: 8216.68,148.651,-1064.69
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Dele:car_02
+Translation: 8103.78,139.418,-56.0819
+Dof: -2.52881e-007 0 1
+Up: 0 1 0
+Right: -1 0 -2.52881e-007
+Name:amopack_19
+Translation: -1200.8,42.2425,406.075
+Dof: 1 -4.48085e-007 -9.91821e-005
+Up: 4.48143e-007 1 -5.83887e-007
+Right: 9.91821e-005 -5.83932e-007 1
+Name:amopack_20
+Translation: -1185.7,41.6401,419.173
+Dof: 1 -4.48085e-007 -9.91821e-005
+Up: 4.48143e-007 1 -5.83887e-007
+Right: 9.91821e-005 -5.83932e-007 1
+Name:amopack_21
+Translation: -1186.05,41.501,403.804
+Dof: 1 -4.48085e-007 -9.91821e-005
+Up: 4.48143e-007 1 -5.83887e-007
+Right: 9.91821e-005 -5.83932e-007 1
+Name:rockets_04
+Translation: -1201.12,41.9461,420.46
+Dof: 1 -4.48085e-007 -9.91821e-005
+Up: 4.48143e-007 1 -5.83887e-007
+Right: 9.91821e-005 -5.83932e-007 1
+Name:hpacklg_09
+Translation: 8779.6,134.574,-31.8877
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:jacket1_07
+Translation: 8757.72,134.822,-31.269
+Dof: -0.999962 0 0.00872659
+Up: 0 1 0
+Right: -0.00872659 0 -0.999962
+Name:rtable_07
+Translation: 8761.47,146.226,-29.1997
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:toolbox_09
+Translation: 8745.92,135.403,-30.125
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:tank_03
+Translation: 8658.66,139.418,-31.3615
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_22
+Translation: 8801.22,145.131,19.2798
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:amopack_23
+Translation: 8793.9,145.131,18.1572
+Dof: 0.0610485 0 0.998135
+Up: 0 1 0
+Right: -0.998135 0 0.0610485
+Name:amopack_24
+Translation: 8785.31,145.131,18.1572
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:amobuil_08
+Translation: 8764.46,148.651,-49.7812
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:grenade_07
+Translation: 8644.45,134.004,-1061.63
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rtable_08
+Translation: 8653.07,146.226,-1058.98
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:toolbox_10
+Translation: 8668.62,135.403,-1058.05
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:hpacklg_10
+Translation: 8634.94,134.719,-1056.29
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:amopack_25
+Translation: 8617.1,145.131,-1103.12
+Dof: 0.156434 0 -0.987688
+Up: 0 1 0
+Right: 0.987688 0 0.156434
+Name:amopack_26
+Translation: 8627.9,145.131,-1102.98
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:amopack_27
+Translation: 8641.22,145.131,-1102.98
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:tank_02
+Translation: 8751.13,139.418,-1051.3
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:amobuil_09
+Translation: 8650.08,148.651,-1038.4
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:car_07
+Translation: 8109.64,139.418,-1074.72
+Dof: -2.52881e-007 0 1
+Up: 0 1 0
+Right: -1 0 -2.52881e-007
+Name:car_08
+Translation: 8109.64,139.418,-1032.43
+Dof: -2.52881e-007 0 1
+Up: 0 1 0
+Right: -1 0 -2.52881e-007
+Name:rockets_05
+Translation: -7704.77,147.306,448.059
+Dof: 0.976296 0 -0.216439
+Up: 0 1 0
+Right: 0.216439 0 0.976296
+Name:rockets_06
+Translation: -7704.77,147.306,438.423
+Dof: 0.998135 0 -0.0610484
+Up: 0 1 0
+Right: 0.0610484 0 0.998135
+Name:rockets_07
+Translation: -7704.21,147.306,428.726
+Dof: 0.987688 0 0.156434
+Up: 0 1 0
+Right: -0.156434 0 0.987688
+Name:jacket1_09
+Translation: -7750.02,137.578,485.679
+Dof: 0.00872659 0 0.999962
+Up: 0 1 0
+Right: -0.999962 0 0.00872659
+Name:hpacklg_11
+Translation: -7750.64,137.237,463.801
+Dof: 1 0 3.55242e-007
+Up: 0 1 0
+Right: -3.55242e-007 0 1
+Name:rtable_09
+Translation: -7747.95,148.401,481.933
+Dof: 1 0 3.55242e-007
+Up: 0 1 0
+Right: -3.55242e-007 0 1
+Name:toolbox_11
+Translation: -7748.87,137.578,497.477
+Dof: 1 0 3.55242e-007
+Up: 0 1 0
+Right: -3.55242e-007 0 1
+Name:amobuil_10
+Translation: -7768.53,150.826,478.943
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:tank2_05
+Translation: -7755.07,139.418,579.752
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:tank2_04
+Translation: -7756.74,139.418,263.352
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:TeamAPos
+Translation: -6624.42,136.733,-192.645
+Dof: -1 0 1.20159e-006
+Up: 0 1 0
+Right: -1.20159e-006 0 -1
+Name:TeamAPos
+Translation: -7724.53,136.733,513.456
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:TeamAPos
+Translation: -6691.5,136.733,209.6
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:TeamAPos
+Translation: -7786.52,136.733,124.065
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamAPos
+Translation: -7485.49,136.733,-254.506
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:kpist_02
+Translation: -7742.93,135.242,475.158
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:rockets_08
+Translation: -7722.55,147.306,206.469
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:rockets_09
+Translation: -7712.42,147.306,205.954
+Dof: 0.0610485 0 0.998135
+Up: 0 1 0
+Right: -0.998135 0 0.0610485
+Name:rockets_10
+Translation: -7700.6,147.306,205.838
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:TeamBPos
+Translation: 8182.44,136.733,-3.18549
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamBPos
+Translation: 8732.39,136.733,-2.80299
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamBPos
+Translation: 8618.85,136.733,-1014.86
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamBPos
+Translation: 8252.01,136.733,-1084.81
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:rockets_13
+Translation: 8697.49,145.131,-1103.9
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:rockets_12
+Translation: 8684.18,145.131,-1103.9
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:rockets_11
+Translation: 8673.37,145.131,-1104.03
+Dof: 0.156434 0 -0.987688
+Up: 0 1 0
+Right: 0.987688 0 0.156434
+Name:rockets_14
+Translation: 8787.79,145.131,-81.9147
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:rockets_16
+Translation: 8811.64,145.131,-82.0633
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:rockets_15
+Translation: 8799.23,145.131,-80.8705
+Dof: 0.0610485 0 0.998135
+Up: 0 1 0
+Right: -0.998135 0 0.0610485
+Name:flagbase_1
+Translation: -7187.68,149.011,214.829
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:flagbase_2
+Translation: 8449.47,146.864,-528.84
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:hpacklg_12
+Translation: -4905.43,147.287,1503.25
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:jacket2_09
+Translation: -4884.89,148.454,1349.31
+Dof: -0.461749 0 0.887011
+Up: 0 1 0
+Right: -0.887011 0 -0.461749
+Name:hpacklg_13
+Translation: -4905.35,147.287,1513.91
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_17
+Translation: -4789.05,148.454,1350.52
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_18
+Translation: -4780.93,148.454,1350.55
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_28
+Translation: -4835.76,148.454,1350.2
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_29
+Translation: -4841.89,148.454,1350.2
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_30
+Translation: -4848.01,148.454,1350.2
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:toolbox_12
+Translation: -4825.31,148.454,1533.21
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:motorcyc_04
+Translation: -7471.95,139.418,789.508
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:motorcyc_01
+Translation: -4873.82,139.418,1575
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:toolbox_13
+Translation: 4024.61,140.858,-497.052
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:toolbox_14
+Translation: 4024.84,140.858,-516.231
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_19
+Translation: 4095.46,140.858,-482.03
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_31
+Translation: 4095.13,140.858,-499.296
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_32
+Translation: 4094.54,140.858,-514.877
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_33
+Translation: 4093.43,140.858,-531.471
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:kpist_01
+Translation: 8654.82,133.276,-1055.54
+Dof: -1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 -1.68587e-007
+Name:amopack_34
+Translation: 8212.47,134.951,-25.975
+Dof: 0.0610485 0 0.998135
+Up: 0 1 0
+Right: -0.998135 0 0.0610485
+Name:amopack_35
+Translation: 8204.92,134.951,-25.975
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:kpist_05
+Translation: 8220.02,133.405,-25.975
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:kpist_04
+Translation: -6660.66,135.506,170.49
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:kpist_10
+Translation: -6658.75,134.871,-166.605
+Dof: 0.999962 0 -0.00872773
+Up: 0 1 0
+Right: 0.00872773 0 0.999962
+Name:truck_01
+Translation: -5277.41,139.418,-602.859
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:truck_02
+Translation: 4886.89,139.418,-250.986
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:grenade_05
+Translation: -7743.34,135.211,151.632
+Dof: 0.00872659 0 0.999962
+Up: 0 1 0
+Right: -0.999962 0 0.00872659
+Name:kpist_06
+Translation: 8222.37,133.517,-1039.49
+Dof: 1.68587e-007 0 -1
+Up: 0 1 0
+Right: 1 0 1.68587e-007
+Name:kpist_11
+Translation: 8767.74,132.841,-24.5286
+Dof: -0.999962 0 0.00872659
+Up: 0 1 0
+Right: -0.00872659 0 -0.999962
+Name:TeamAPos
+Translation: -6683.73,136.733,-132.824
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamBPos
+Translation: 8184.3,136.733,-1018.78
+Dof: -1 0 0
+Up: 0 1 0
+Right: 0 0 -1
+Name:TeamBPos
+Translation: 8239.7,136.733,-62.622
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamAPos
+Translation: -6632.72,136.733,152.669
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_36
+Translation: -1264.51,44.9663,-1008.87
+Dof: 0.998679 -0.0490437 -0.0153543
+Up: 0.0486126 0.998445 0.0272933
+Right: 0.016669 0.0265108 0.99951
+Name:amopack_37
+Translation: -1264.83,45.768,-1024.44
+Dof: 0.998679 -0.0490437 -0.0153543
+Up: 0.0486126 0.998445 0.0272933
+Right: 0.016669 0.0265108 0.99951
+Name:amopack_38
+Translation: -1250.7,45.3256,-1025.31
+Dof: 0.998679 -0.0490437 -0.0153543
+Up: 0.0486126 0.998445 0.0272933
+Right: 0.016669 0.0265108 0.99951
+Name:rockets_20
+Translation: -1249.53,45.7983,-1005.92
+Dof: 0.998679 -0.0490437 -0.0153543
+Up: 0.0486126 0.998445 0.0272933
+Right: 0.016669 0.0265108 0.99951
+Name:motorcyc_03
+Translation: 7913.62,130.638,-318.288
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:grenade_06
+Translation: -6648.73,135.506,177.767
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:shed_01
+Translation: -296.123,-245.536,1030.63
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:shed_02
+Translation: -3021.99,-247.893,-1276.82
+Dof: -0.999962 0 0.00872652
+Up: 0 1 0
+Right: -0.00872652 0 -0.999962
+Name:bazooka_01
+Translation: -271.857,-251.039,998.069
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:hpacklg_03
+Translation: -287.724,-248.508,998.137
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_26
+Translation: -271.808,-248.508,1012.7
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:hpacklg_14
+Translation: -3046.69,-248.896,-1256.89
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amoclip_02
+Translation: -3030.24,-248.896,-1243.47
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:snipegun_02
+Translation: -3046.52,-251.427,-1242.4
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_39
+Translation: 9208.12,144.215,-567.902
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:amopack_40
+Translation: 9216.65,144.215,-567.383
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:amopack_41
+Translation: 9209.35,144.215,-560.322
+Dof: 0.156434 0 -0.987688
+Up: 0 1 0
+Right: 0.987688 0 0.156434
+Name:gasamo_21
+Translation: 9264.39,144.215,-568.82
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:gasamo_22
+Translation: 9253.59,144.215,-568.953
+Dof: 0.156434 0 -0.987688
+Up: 0 1 0
+Right: 0.987688 0 0.156434
+Name:gasamo_23
+Translation: 9255.25,144.215,-559.994
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:amopack_42
+Translation: 9217.37,144.215,-560.005
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:gasamo_24
+Translation: 9264.38,144.215,-559.793
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:kpist_43
+Translation: 9231.54,142.389,-564.99
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:grenade_08
+Translation: 5871.14,-188.433,215.661
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:rockets_25
+Translation: -7704.77,147.306,458.408
+Dof: 0.976296 0 -0.216439
+Up: 0 1 0
+Right: 0.216439 0 0.976296
+Name:amopack_43
+Translation: -6669.61,147.306,-212.56
+Dof: -0.216441 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.216441
+Name:amopack_44
+Translation: -6700,147.306,-212.561
+Dof: 0.156433 0 -0.987689
+Up: 0 1 0
+Right: 0.987689 0 0.156433
+Name:amopack_45
+Translation: -6671.08,147.306,125.637
+Dof: -0.0610484 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610484
+Name:amopack_46
+Translation: -6702.93,147.306,125.899
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:amopack_47
+Translation: -7698.97,147.306,143.137
+Dof: 0.976296 0 -0.21644
+Up: 0 1 0
+Right: 0.21644 0 0.976296
+Name:amopack_48
+Translation: -7698.6,147.306,111.094
+Dof: 0.987688 0 0.156434
+Up: 0 1 0
+Right: -0.156434 0 0.987688
+Name:jacket1_10
+Translation: -7621.49,140.593,-253.224
+Dof: -0.999962 0 0.00872659
+Up: 0 1 0
+Right: -0.00872659 0 -0.999962
+Name:kpist_07
+Translation: -7611.48,137.886,-248.628
+Dof: -0.999962 0 0.00872659
+Up: 0 1 0
+Right: -0.00872659 0 -0.999962
+Name:hpacklg_15
+Translation: -7599.61,140.252,-253.842
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:toolbox_15
+Translation: -7633.29,140.593,-252.08
+Dof: 0 0 1
+Up: 0 1 0
+Right: -1 0 0
+Name:tank3_02
+Translation: -4696.32,139.418,1390.01
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:amopack_49
+Translation: -6711.72,147.306,126.351
+Dof: -0.21644 0 -0.976296
+Up: 0 1 0
+Right: 0.976296 0 -0.21644
+Name:amopack_50
+Translation: -6708.96,147.306,-212.737
+Dof: 0.156433 0 -0.987689
+Up: 0 1 0
+Right: 0.987689 0 0.156433
+Name:amopack_51
+Translation: 8259.73,145.131,-995.625
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:amopack_52
+Translation: 8229.67,145.131,-995.625
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:amopack_53
+Translation: 8222.42,145.131,-995.625
+Dof: 0.21644 0 0.976296
+Up: 0 1 0
+Right: -0.976296 0 0.21644
+Name:amopack_54
+Translation: 8259.04,145.131,19.2798
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:amopack_55
+Translation: 8267.34,145.131,19.2798
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:amopack_56
+Translation: 8226.42,145.131,19.2798
+Dof: -0.156434 0 0.987688
+Up: 0 1 0
+Right: -0.987688 0 -0.156434
+Name:TeamBPos
+Translation: 9447.51,136.733,-567.364
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:TeamAPos
+Translation: -7214.97,136.733,653.887
+Dof: 0 0 -1
+Up: 0 1 0
+Right: 1 0 0
+Name:gasw_01
+Translation: 9275.89,144.215,-562.675
+Dof: -0.0610487 0 -0.998135
+Up: 0 1 0
+Right: 0.998135 0 -0.0610487
+Name:gasw_25
+Translation: -7062.88,144.697,629.636
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1
+Name:gggun_01
+Translation: 5614.66,-41.8231,79.9733
+Dof: -0.302495 0 0.953151
+Up: 0 1 0
+Right: -0.953151 0 -0.302495
+Name:sb_01
+Translation: 5587.34,-35.3902,100.585
+Dof: 0.133217 0 -0.991087
+Up: 0 1 0
+Right: 0.991087 0 0.133217
+Name:sb_01
+Translation: 5593.77,-36.5174,50.8243
+Dof: 0.133217 0 -0.991087
+Up: 0 1 0
+Right: 0.991087 0 0.133217
+Name:sb_01
+Translation: -3021.48,156.706,119.046
+Dof: -0.210096 0 -0.977681
+Up: 0 1 0
+Right: 0.977681 0 -0.210096
+Name:sb_01
+Translation: -3048.72,156.707,84.0597
+Dof: -0.896392 0 -0.443263
+Up: 0 1 0
+Right: 0.443263 0 -0.896392
+Name:sb_01
+Translation: -3094.64,156.714,84.4278
+Dof: -0.889173 0 0.457572
+Up: 0 1 0
+Right: -0.457572 0 -0.889173
+Name:sb_01
+Translation: -3032.51,156.716,162.814
+Dof: 0.64843 0 -0.761274
+Up: 0 1 0
+Right: 0.761274 0 0.64843
+Name:sb_01
+Translation: -3074.4,156.761,180.644
+Dof: 0.998166 0 0.060532
+Up: 0 1 0
+Right: -0.060532 0 0.998166
+Name:gggun_01
+Translation: -3069.79,155.492,128.777
+Dof: -0.252184 0 -0.967679
+Up: 0 1 0
+Right: 0.967679 0 -0.252184
+Name:car2_01
+Translation: -6545.21,146.107,-180.426
+Dof: 0.004646 0 -0.999989
+Up: 0 1 0
+Right: 0.999989 0 0.004646
+Name:car2_01
+Translation: -6545.4,146.224,-137.745
+Dof: 0.004646 0 -0.999989
+Up: 0 1 0
+Right: 0.999989 0 0.004646
+Dele:car2_01
+Translation: -6546.8,146.593,160.419
+Dof: 0.004646 0 -0.999989
+Up: 0 1 0
+Right: 0.999989 0 0.004646
+Dele:car2_01
+Translation: -6547,146.635,203.1
+Dof: 0.004646 0 -0.999989
+Up: 0 1 0
+Right: 0.999989 0 0.004646
+
+Name:nhangar_01
+Translation: 9214.814453,149.661545,-1477.188110
+Dof: -0.006269 0.000000 -0.999980
+Up: 0.000000 1.000000 0.000000
+Right: 0.999980 0.000000 -0.006269
+Name:nhangar_01
+Translation: 9208.916016,149.539978,-1788.221191
+Dof: -0.006269 0.000000 -0.999980
+Up: 0.000000 1.000000 0.000000
+Right: 0.999980 0.000000 -0.006269
+Name:helicopter_01
+Translation: 9150.297852,133.661530,-1188.016846
+Dof: -0.025438 0.000000 0.999676
+Up: 0.000000 1.000000 0.000000
+Right: -0.999676 0.000000 -0.025438
+Name:plane3_01
+Translation: 9192.244141,133.825684,-1475.367432
+Dof: -0.026715 0.000000 0.999643
+Up: 0.000000 1.000000 0.000000
+Right: -0.999643 0.000000 -0.026715
+Name:plane3_01
+Translation: 9178.632813,133.697723,-1783.948608
+Dof: -0.026715 0.000000 0.999643
+Up: 0.000000 1.000000 0.000000
+Right: -0.999643 0.000000 -0.026715Name:plane2_01
+Translation: 9076.902344,134.262604,-219.969254
+Dof: -0.017771 0.000000 0.999842
+Up: 0.000000 1.000000 0.000000
+Right: -0.999842 0.000000 -0.017771
+Name:rtable_01
+Translation: 8653.959961,146.394455,-1034.339478
+Dof: 0.016838 0.000000 0.999858
+Up: 0.000000 1.000000 0.000000
+Right: -0.999858 0.000000 0.016838
+Name:jacket2_01
+Translation: 8668.281250,135.394470,-1033.233398
+Dof: -0.999423 0.000000 0.033966
+Up: 0.000000 1.000000 0.000000
+Right: -0.033966 0.000000 -0.999423
+Name:rockets_01
+Translation: 8661.967773,145.394470,-1104.582886
+Dof: 0.002916 0.000000 -0.999996
+Up: 0.000000 1.000000 0.000000
+Right: 0.999996 0.000000 0.002916
+Name:rockets_01
+Translation: 8651.368164,145.394470,-1104.613892
+Dof: 0.002916 0.000000 -0.999996
+Up: 0.000000 1.000000 0.000000
+Right: 0.999996 0.000000 0.002916
+Name:tank_01
+Translation: 8115.297852,133.604813,-37.581867
+Dof: 1 0 0
+Up: 0 1 0
+Right: 0 0 1Name:parachu_01
+Translation: 8642.843750,132.994461,-1032.763184
+Dof: -0.999145 0.000000 0.041335
+Up: 0.000000 1.000000 0.000000
+Right: -0.041335 0.000000 -0.999145
+Name:parachu_01
+Translation: 8774.511719,143.794464,17.600376
+Dof: 0.999937 0.000000 0.011209
+Up: 0.000000 1.000000 0.000000
+Right: -0.011209 0.000000 0.999937
+Name:parachu_01
+Translation: 8220.952148,132.594467,-1045.957642
+Dof: 0.999621 0.000000 0.027527
+Up: 0.000000 1.000000 0.000000
+Right: -0.027527 0.000000 0.999621
+Name:fueltank_01
+Translation: 8212.040039,134.594467,-1045.263794
+Dof: -0.002435 0.000000 -0.999997
+Up: 0.000000 1.000000 0.000000
+Right: 0.999997 0.000000 -0.002435
+Name:fueltank_01
+Translation: 8651.933594,134.994461,-1062.402466
+Dof: 0.033449 0.000000 -0.999440
+Up: 0.000000 1.000000 0.000000
+Right: 0.999440 0.000000 0.033449
+Name:fueltank_01
+Translation: 8772.018555,134.794464,-27.462933
+Dof: 0.998796 0.000000 -0.049047
+Up: 0.000000 1.000000 0.000000
+Right: 0.049047 0.000000 0.998796
+Dele:nhangar_01
+Translation: -6203.985840,152.468948,1241.179443
+Dof: 0.999980 0.000000 0.006390
+Up: 0.000000 1.000000 0.000000
+Right: -0.006390 0.000000 0.999980
+Dele:nhangar_01
+Translation: -5888.187500,152.207993,1243.325562
+Dof: 0.999980 0.000000 0.006390
+Up: 0.000000 1.000000 0.000000
+Right: -0.006390 0.000000 0.999980
+Dele:plane_01
+Translation: -6202.061035,137.220428,1217.885742
+Dof: -0.999982 0.000000 0.005950
+Up: 0.000000 1.000000 0.000000
+Right: -0.005950 0.000000 -0.999982
+Dele:plane_01
+Translation: -5887.614746,136.971375,1225.166260
+Dof: -0.999982 0.000000 0.005950
+Up: 0.000000 1.000000 0.000000
+Right: -0.005950 0.000000 -0.999982
+Name:helicopter_01
+Translation: -7161.367188,134.255569,494.122833
+Dof: -0.999994 0.000000 0.003392
+Up: 0.000000 1.000000 0.000000
+Right: -0.003392 0.000000 -0.999994
+Name:tank2_01
+Translation: -6559.007813,134.876068,175.627090
+Dof: -0.999333 0.000000 -0.036521
+Up: 0.000000 1.000000 0.000000
+Right: 0.036521 0.000000 -0.999333
+Name:rtable_01
+Translation: -6654.509766,148.369461,198.921341
+Dof: 0.010741 0.000000 0.999942
+Up: 0.000000 1.000000 0.000000
+Right: -0.999942 0.000000 0.010741
+Name:jacket2_01
+Translation: -6642.134277,137.369461,199.043060
+Dof: -0.999145 0.000000 0.041334
+Up: 0.000000 1.000000 0.000000
+Right: -0.041334 0.000000 -0.999145
+Name:parachu_01
+Translation: -6669.308594,134.769470,198.920410
+Dof: -0.996423 0.000000 0.084508
+Up: 0.000000 1.000000 0.000000
+Right: -0.084508 0.000000 -0.996423
+Name:fueltank_01
+Translation: -6654.192871,136.769470,174.978821
+Dof: -0.002728 0.000000 -0.999996
+Up: 0.000000 1.000000 0.000000
+Right: 0.999996 0.000000 -0.002728
+Name:rockets_01
+Translation: -6602.518066,147.969452,126.296272
+Dof: -0.028682 0.000000 -0.999589
+Up: 0.000000 1.000000 0.000000
+Right: 0.999589 0.000000 -0.028682
+Name:rockets_01
+Translation: -6614.015137,147.969452,126.685768
+Dof: -0.047253 0.000000 -0.998883
+Up: 0.000000 1.000000 0.000000
+Right: 0.998883 0.000000 -0.047253
+Name:rockets_01
+Translation: -6624.403809,147.969452,127.177200
+Dof: -0.047253 0.000000 -0.998883
+Up: 0.000000 1.000000 0.000000
+Right: 0.998883 0.000000 -0.047253
+Name:rockets_01
+Translation: -6633.992676,147.969452,127.630829
+Dof: -0.047253 0.000000 -0.998883
+Up: 0.000000 1.000000 0.000000
+Right: 0.998883 0.000000 -0.047253
+Name:rockets_01
+Translation: -6643.981934,147.969452,128.103363
+Dof: -0.047253 0.000000 -0.998883
+Up: 0.000000 1.000000 0.000000
+Right: 0.998883 0.000000 -0.047253
+Name:rockets_01
+Translation: -7735.973633,147.969452,206.053772
+Dof: -0.013937 0.000000 0.999903
+Up: 0.000000 1.000000 0.000000
+Right: -0.999903 0.000000 -0.013937
+Name:rockets_01
+Translation: -7749.973633,147.969452,205.858673
+Dof: -0.013937 0.000000 0.999903
+Up: 0.000000 1.000000 0.000000
+Right: -0.999903 0.000000 -0.013937
+Name:parachu_01
+Translation: -7748.108398,134.969467,148.806763
+Dof: -0.020032 0.000000 -0.999799
+Up: 0.000000 1.000000 0.000000
+Right: 0.999799 0.000000 -0.020032
+Name:nhangar_01
+Translation: -6295.082031,151.833511,1186.673828
+Dof: 0.999999 0.000000 0.001279
+Up: 0.000000 1.000000 0.000000
+Right: -0.001279 0.000000 0.999999
+Name:nhangar_01
+Translation: -5997.408203,151.578003,1187.151978
+Dof: 0.999999 0.000000 0.001279
+Up: 0.000000 1.000000 0.000000
+Right: -0.001279 0.000000 0.999999
+Name:plane_01
+Translation: -6299.029785,137.199142,1182.265747
+Dof: -0.999930 0.000000 -0.011849
+Up: 0.000000 1.000000 0.000000
+Right: 0.011849 0.000000 -0.999930
+Name:plane_01
+Translation: -6000.165039,136.949478,1183.005249
+Dof: -0.999930 0.000000 -0.011849
+Up: 0.000000 1.000000 0.000000
+Right: 0.011849 0.000000 -0.999930
+Dele:nhangar_01
+Translation: -434.854919,-243.227325,1215.589722
+Dof: -0.042439 0.000000 0.999099
+Up: 0.000000 1.000000 0.000000
+Right: -0.999099 0.000000 -0.042439
+Name:plane_01
+Translation: -401.792053,-263.408295,1216.189331
+Dof: -0.002769 0.000000 -0.999996
+Up: 0.000000 1.000000 0.000000
+Right: 0.999996 0.000000 -0.002769
+Name:fueltank_01
+Translation: -2374.250244,-251.089920,-1205.981812
+Dof: 0.999850 0.000000 -0.017305
+Up: 0.000000 1.000000 0.000000
+Right: 0.017305 0.000000 0.999850
+Name:toolbox_01
+Translation: -2360.228516,-249.873642,-1204.744751
+Dof: 0.999850 0.000000 -0.017305
+Up: 0.000000 1.000000 0.000000
+Right: 0.017305 0.000000 0.999850
+Name:kpist_01
+Translation: 9282.808594,146.718933,-1828.361084
+Dof: 0.999963 0.000000 -0.008652
+Up: 0.000000 1.000000 0.000000
+Right: 0.008652 0.000000 0.999963
+Name:amopack_01
+Translation: 9283.304688,148.318939,-1817.295898
+Dof: 0.999963 0.000000 -0.008652
+Up: 0.000000 1.000000 0.000000
+Right: 0.008652 0.000000 0.999963
+Name:amopack_01
+Translation: 9283.394531,148.318939,-1806.896240
+Dof: 0.999963 0.000000 -0.008652
+Up: 0.000000 1.000000 0.000000
+Right: 0.008652 0.000000 0.999963
+Name:parachu_01
+Translation: 9282.738281,146.118942,-1790.354492
+Dof: 0.999963 0.000000 -0.008652
+Up: 0.000000 1.000000 0.000000
+Right: 0.008652 0.000000 0.999963
+Name:kpist_01
+Translation: 9285.849609,146.637299,-1514.698486
+Dof: 0.999872 0.000000 -0.016027
+Up: 0.000000 1.000000 0.000000
+Right: 0.016027 0.000000 0.999872
+Name:amopack_01
+Translation: 9286.055664,148.237305,-1501.831177
+Dof: 0.999872 0.000000 -0.016027
+Up: 0.000000 1.000000 0.000000
+Right: 0.016027 0.000000 0.999872
+Name:amopack_01
+Translation: 9286.242188,148.237305,-1490.232666
+Dof: 0.999872 0.000000 -0.016027
+Up: 0.000000 1.000000 0.000000
+Right: 0.016027 0.000000 0.999872
+Name:parachu_01
+Translation: 9286.541992,146.437302,-1471.499634
+Dof: 0.999872 0.000000 -0.016027
+Up: 0.000000 1.000000 0.000000
+Right: 0.016027 0.000000 0.999872
+Name:kpist_01
+Translation: -5964.810547,150.970764,1259.608276
+Dof: -0.031238 0.000000 0.999512
+Up: 0.000000 1.000000 0.000000
+Right: -0.999512 0.000000 -0.031238
+Name:amopack_01
+Translation: -5976.273926,151.770767,1259.250000
+Dof: -0.031238 0.000000 0.999512
+Up: 0.000000 1.000000 0.000000
+Right: -0.999512 0.000000 -0.031238
+Name:amopack_01
+Translation: -5987.667969,151.770767,1258.893921
+Dof: -0.031238 0.000000 0.999512
+Up: 0.000000 1.000000 0.000000
+Right: -0.999512 0.000000 -0.031238
+Name:parachu_01
+Translation: -6004.995117,149.570770,1258.352295
+Dof: -0.031238 0.000000 0.999512
+Up: 0.000000 1.000000 0.000000
+Right: -0.999512 0.000000 -0.031238
+Name:kpist_01
+Translation: -6267.935059,150.819580,1259.432373
+Dof: -0.013937 0.000000 0.999903
+Up: 0.000000 1.000000 0.000000
+Right: -0.999903 0.000000 -0.013937
+Name:amopack_01
+Translation: -6281.203125,152.019669,1259.291626
+Dof: -0.013937 0.000000 0.999903
+Up: 0.000000 1.000000 0.000000
+Right: -0.999903 0.000000 -0.013937
+Name:amopack_01
+Translation: -6292.602051,152.019699,1259.144653
+Dof: -0.013937 0.000000 0.999903
+Up: 0.000000 1.000000 0.000000
+Right: -0.999903 0.000000 -0.013937
+Name:parachu_01
+Translation: -6311.535645,149.819809,1258.933350
+Dof: -0.013937 0.000000 0.999903
+Up: 0.000000 1.000000 0.000000
+Right: -0.999903 0.000000 -0.013937
+Dele:aagun3_01
+Translation: -7443.056152,149.233322,293.563568
+Dof: -0.089138 0.000000 -0.996019
+Up: 0.000000 1.000000 0.000000
+Right: 0.996019 0.000000 -0.089138
+Dele:aagun3_01
+Translation: 7981.631836,149.031219,-687.955933
+Dof: -0.023866 0.000000 0.999715
+Up: 0.000000 1.000000 0.000000
+Right: -0.999715 0.000000 -0.023866
+Name:plane4_01
+Translation: -6471.412109,135.419373,717.182373
+Dof: -0.005324 0.000000 -0.999986
+Up: 0.000000 1.000000 0.000000
+Right: 0.999986 0.000000 -0.005324
+Name:nhangar_01
+Translation: -439.754211,-248.405182,1219.573853
+Dof: 0.050151 0.000000 0.998742
+Up: 0.000000 1.000000 0.000000
+Right: -0.998742 0.000000 0.050151
+Name:sb_01
+Translation: 7945.320801,149.510971,-708.234314
+Dof: 0.822107 0.000000 -0.569332
+Up: 0.000000 1.000000 0.000000
+Right: 0.569332 0.000000 0.822107
+Name:sb_01
+Translation: 7986.982910,149.601395,-737.089294
+Dof: 0.822107 0.000000 -0.569332
+Up: 0.000000 1.000000 0.000000
+Right: 0.569332 0.000000 0.822107
+Dele:sb_01
+Translation: 7947.806641,149.447372,-672.395081
+Dof: -0.572622 0.000000 -0.819820
+Up: 0.000000 1.000000 0.000000
+Right: 0.819820 0.000000 -0.572622
+Dele:sb_01
+Translation: 7976.830566,149.453156,-630.836426
+Dof: -0.572622 0.000000 -0.819820
+Up: 0.000000 1.000000 0.000000
+Right: 0.819820 0.000000 -0.572622
+Name:sb_01
+Translation: 7939.739258,149.428940,-665.768921
+Dof: -0.565507 0.000000 -0.824744
+Up: 0.000000 1.000000 0.000000
+Right: 0.824744 0.000000 -0.565507
+Name:sb_01
+Translation: 7968.785645,149.434006,-623.407776
+Dof: -0.565507 0.000000 -0.824744
+Up: 0.000000 1.000000 0.000000
+Right: 0.824744 0.000000 -0.565507
+Name:aagun3_01
+Translation: 7987.411133,148.617737,-676.908508
+Dof: -0.236643 0.000000 0.971597
+Up: 0.000000 1.000000 0.000000
+Right: -0.971597 0.000000 -0.236643
+Name:sb_01
+Translation: -7418.848145,149.399139,331.091400
+Dof: -0.422913 0.000000 0.906170
+Up: 0.000000 1.000000 0.000000
+Right: -0.906170 0.000000 -0.422913
+Name:sb_01
+Translation: -7396.842285,149.343567,283.950806
+Dof: -0.422913 0.000000 0.906170
+Up: 0.000000 1.000000 0.000000
+Right: -0.906170 0.000000 -0.422913
+Name:sb_01
+Translation: -7412.213867,149.268723,237.413345
+Dof: 0.888874 0.000000 0.458152
+Up: 0.000000 1.000000 0.000000
+Right: -0.458152 0.000000 0.888874
+Name:sb_01
+Translation: -7458.451660,149.277786,213.579041
+Dof: 0.888874 0.000000 0.458152
+Up: 0.000000 1.000000 0.000000
+Right: -0.458152 0.000000 0.888874
+Name:aagun3_01
+Translation: -7459.371094,148.635208,275.197235
+Dof: -0.259314 0.000000 -0.965793
+Up: 0.000000 1.000000 0.000000
+Right: 0.965793 0.000000 -0.259314

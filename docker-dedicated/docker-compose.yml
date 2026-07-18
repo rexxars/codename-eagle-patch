@@ -1,0 +1,22 @@
+services:
+  ce-server:
+    build:
+      context: ..
+      dockerfile: docker-dedicated/Dockerfile
+    image: ce-dedicated:1.50
+    platform: linux/amd64
+    ports:
+      - '24711:24711/udp' # game/session traffic
+      - '4711:4711/udp' # GameSpy status queries
+    environment:
+      CE_HOSTNAME: 'CE Dedicated'
+      CE_MAP: 'No mans land'
+      CE_MAXPLAYERS: '16'
+      CE_GAME: deathmatch
+      # CE_LOG_ERROR: '1'  # also stream the noisy engine error.log ([error])
+    volumes:
+      - wineprefix:/wineprefix
+    restart: unless-stopped
+
+volumes:
+  wineprefix:

@@ -1,0 +1,8 @@
+# Cross-compile to 64-bit Windows from macOS via mingw-w64.
+#   rustup target add x86_64-pc-windows-gnu
+#   brew install mingw-w64
+#   cargo build --release --target x86_64-pc-windows-gnu
+# (64-bit helper edits the 32-bit game binaries fine; its own bitness is irrelevant.)
+[target.x86_64-pc-windows-gnu]
+linker = "x86_64-w64-mingw32-gcc"
+ar = "x86_64-w64-mingw32-ar"

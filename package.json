@@ -1,0 +1,30 @@
+{
+  "name": "@rexxars/codename-eagle-patch",
+  "version": "1.0.0",
+  "description": "Community patches for **Codename Eagle**, the 1999 game by Refraction Games.",
+  "homepage": "https://github.com/rexxars/codename-eagle-patch#readme",
+  "bugs": {
+    "url": "https://github.com/rexxars/codename-eagle-patch/issues"
+  },
+  "license": "MIT",
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexxars/codename-eagle-patch.git"
+  },
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "docs": "node scripts/generate-docs.js",
+    "docs:check": "node scripts/generate-docs.js --check"
+  },
+  "devDependencies": {
+    "cnetool": "^1.0.0",
+    "oxfmt": "^0.58.0",
+    "resedit": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

@@ -1,0 +1,17 @@
+# Built via cargo-xwin for 32-bit Windows (the ripper is Windows-only). The C
+# Vorbis encoder (vorbis_rs/aoTuV) needs LLVM's clang-cl + llvm-lib on PATH:
+#   PATH="$(brew --prefix llvm)/bin:$PATH" XWIN_ARCH=x86 \
+#     CL="-Wno-error=incompatible-pointer-types -Wno-incompatible-pointer-types" \
+#     cargo xwin build --release --target i686-pc-windows-msvc
+#
+# The CL= flag is needed with recent clang: it promoted -Wincompatible-pointer-types
+# to a hard error, which breaks aoTuV's mdct.c (_mm_prefetch passed a float*). clang-cl
+# honors the MSVC-style CL env var; passing the flag via CFLAGS_<target> does not work
+# because cargo-xwin overwrites that variable with its own value.
+
+# Statically link the MSVC C runtime (VCRUNTIME140 + UCRT) so the ripper runs on a
+# clean Windows install with no VC++ redistributable (else it fails at load with
+# "VCRUNTIME140.dll was not found"). The cc crate compiles the bundled C (aoTuV)
+# with /MT to match automatically when this feature is set.
+[target.i686-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

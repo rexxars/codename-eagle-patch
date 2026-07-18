@@ -1,0 +1,18 @@
+[package]
+name = "patch"
+version = "0.1.0"
+edition = "2021"
+description = "One installer for the CE multiplayer/tidiness fixes (master redirect, cneagle:// handler, logs/screenshots confinement, player.txt removal) + iplist.exe"
+
+[[bin]]
+name = "patch"
+path = "src/main.rs"
+
+# No dependencies - pure std, single self-contained exe.
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1
