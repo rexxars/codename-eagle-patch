@@ -13,6 +13,9 @@
     "url": "git+https://github.com/rexxars/codename-eagle-patch.git"
   },
   "type": "module",
+  "publishConfig": {
+    "access": "restricted"
+  },
   "scripts": {
     "format": "oxfmt",
     "format:check": "oxfmt --check",
