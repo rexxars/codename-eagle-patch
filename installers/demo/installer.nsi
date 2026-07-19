@@ -41,11 +41,17 @@
 !ifndef VERSION
   !error "VERSION not defined - build with build.sh"
 !endif
+!ifndef MENUINFO_NICK_EXE
+  !error "MENUINFO_NICK_EXE not defined - build with build.sh"
+!endif
 
 Unicode true
 !include "MUI2.nsh"
 !include "LogicLib.nsh"
 !include "FileFunc.nsh"
+!include "WinMessages.nsh"
+!include "WordFunc.nsh"
+!include "nsDialogs.nsh"
 
 !define APPNAME "Codename Eagle Multiplayer Demo"
 !define PUBLISHER "Codename Eagle Nation"
@@ -88,6 +94,8 @@ VIAddVersionKey "LegalCopyright" "${PUBLISHER}"
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
+; Custom page: pick the multiplayer name written into menuinfo.dat post-copy.
+Page custom NickPageCreate NickPageLeave
 !insertmacro MUI_PAGE_INSTFILES
 !define MUI_FINISHPAGE_RUN
 !define MUI_FINISHPAGE_RUN_TEXT "Play Codename Eagle now"
@@ -106,8 +114,41 @@ Function LaunchGame
   Exec '"$WINDIR\explorer.exe" "$INSTDIR\ce.exe"'
 FunctionEnd
 
+; The multiplayer name the player types; menuinfo-nick.exe writes it into
+; menuinfo.dat after the payload is copied. Defaults to the shipped "CEDemo".
+Var Nickname
+Var NickTextBox
+
+Function NickPageCreate
+  !insertmacro MUI_HEADER_TEXT "Multiplayer name" "Choose the name other players see when you join or host games."
+  nsDialogs::Create 1018
+  Pop $0
+  ${If} $0 == error
+    Abort
+  ${EndIf}
+
+  ${NSD_CreateLabel} 0 0 100% 24u "Up to 10 characters (letters and numbers). Leave it as CEDemo if you're not sure - you can change it in-game later."
+  Pop $0
+
+  ${NSD_CreateText} 0 30u 100% 12u "$Nickname"
+  Pop $NickTextBox
+  ; Cap typed input at the 10 chars the game broadcasts into multiplayer.
+  SendMessage $NickTextBox ${EM_SETLIMITTEXT} 10 0
+
+  nsDialogs::Show
+FunctionEnd
+
+Function NickPageLeave
+  ${NSD_GetText} $NickTextBox $Nickname
+  ; Strip double-quotes so the name can't break the quoted command-line argument
+  ; passed to menuinfo-nick.exe; the exe does the rest of the normalization
+  ; (non-ASCII, length, empty -> CEDemo).
+  ${WordReplace} "$Nickname" '"' "" "+" $Nickname
+FunctionEnd
+
 Function .onInit
   SetShellVarContext all
+  StrCpy $Nickname "CEDemo"
 FunctionEnd
 
 Function un.onInit
@@ -118,6 +159,19 @@ Section "Game files (required)" SecGame
   SectionIn RO
   SetOutPath "$INSTDIR"
   File /r "${PAYLOAD_DIR}/*"
+
+  ; Write the chosen multiplayer name into the just-copied menuinfo.dat. The
+  ; helper runs from $PLUGINSDIR and is never installed into the game folder
+  ; (it's an install-time tool, not a game file). Non-fatal: on any failure the
+  ; shipped default name (CEDemo) simply stays, rather than aborting the install.
+  InitPluginsDir
+  File "/oname=$PLUGINSDIR\menuinfo-nick.exe" "${MENUINFO_NICK_EXE}"
+  DetailPrint "Setting multiplayer name to $Nickname..."
+  nsExec::ExecToLog '"$PLUGINSDIR\menuinfo-nick.exe" "$INSTDIR\menuinfo.dat" "$Nickname"'
+  Pop $0
+  ${If} $0 <> 0
+    DetailPrint "Could not set the multiplayer name (code $0) - keeping the default."
+  ${EndIf}
 
   ; Pre-authorize the networked binaries in Windows Firewall. Without this,
   ; hosting the first game pops the firewall consent dialog, which minimizes the

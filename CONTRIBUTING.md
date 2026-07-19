@@ -5,7 +5,7 @@ This repository holds the tooling and source that produce the Codename Eagle 1.5
 ## Repository layout
 
 - [`game/`](game/) is the payload that the releases ship. It splits into `common/` (shipped by everything), `demo/` (multiplayer demo builds and the Docker image), and `full/` (the full-game patcher only). See [`game/README.md`](game/README.md) for the details of the split.
-- [`patch/`](patch/) is the development tool that produces the pre-patched binaries in `game/common/`. It is never run on user machines. It also houses the `iplist/`, `menudll/` and `cemusic/` subprojects, which only work together with its byte patches. See [`patch/README.md`](patch/README.md).
+- [`patch/`](patch/) is the development tool that produces the pre-patched binaries in `game/common/`. It is never run on user machines. It also houses the `iplist/`, `menudll/` and `cemusic/` subprojects, which only work together with its byte patches, and the standalone [`menuinfo-nick/`](patch/menuinfo-nick/) install-time helper that sets the multiplayer name inside `menuinfo.dat` (bundled by the demo installer, compiled fresh like `ripmusic`, never committed). See [`patch/README.md`](patch/README.md).
 - [`ripmusic/`](ripmusic/) is the CD-to-Ogg soundtrack ripper. See [`ripmusic/README.md`](ripmusic/README.md).
 - [`installers/`](installers/) holds the NSIS setup wizards (`demo/` and `patch/`) and the extract-and-play `demo-zip/`.
 - [`dgvoodoo/`](dgvoodoo/) holds the bundled dgVoodoo graphics wrapper (third-party), kept on its own so it can be updated as a drop-in.

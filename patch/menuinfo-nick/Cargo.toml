@@ -1,0 +1,25 @@
+[package]
+name = "ce-menuinfo-nick"
+version = "0.1.0"
+edition = "2021"
+description = "Set the multiplayer player name inside Codename Eagle's menuinfo.dat (install-time tool)"
+
+[[bin]]
+name = "menuinfo-nick"
+path = "src/main.rs"
+
+[lib]
+name = "menuinfo_nick"
+path = "src/lib.rs"
+
+[dependencies]
+# Pure-Rust zlib (no C), so it cross-compiles to windows-gnu as cleanly as it
+# builds natively for the tests.
+miniz_oxide = "0.8"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1

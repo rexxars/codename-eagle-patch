@@ -25,6 +25,10 @@ dgvoodoo_src="$repo/dgvoodoo"
 # The setup/uninstall exe's own icon. Not shipped in the payload (the game's
 # icon is embedded in ce.exe); this is the source .ico for the NSIS wizard.
 wizard_icon="$repo/patch/assets/ce.ico"
+# Install-time helper that writes the player's chosen name into menuinfo.dat.
+# Compiled fresh (never committed), like ripmusic.exe; the installer runs it
+# from $PLUGINSDIR and never installs it into the game folder.
+menuinfo_nick_exe="${MENUINFO_NICK_EXE:-$repo/patch/menuinfo-nick/target/x86_64-pc-windows-gnu/release/menuinfo-nick.exe}"
 
 stage_only=0
 if [[ "${1:-}" == "--stage-only" ]]; then
@@ -54,6 +58,16 @@ if [[ $stage_only -eq 0 ]]; then
     echo "error: makensis not found (brew install makensis)" >&2
     exit 1
   }
+  # Only the makensis step bundles the nickname helper; --stage-only (the demo
+  # zip's path) doesn't need it, so the zip build stays toolchain-free.
+  if [[ ! -f "$menuinfo_nick_exe" ]]; then
+    echo "error: $menuinfo_nick_exe missing - build it with:" >&2
+    echo '  cd patch/menuinfo-nick && rustup target add x86_64-pc-windows-gnu \' >&2
+    echo '    && cargo build --release --target x86_64-pc-windows-gnu' >&2
+    echo "(see patch/menuinfo-nick/README.md; needs mingw-w64)" >&2
+    echo "or point MENUINFO_NICK_EXE at an existing build" >&2
+    exit 1
+  fi
 fi
 for f in ce.exe lobby.exe; do
   [[ -f "$game_dir/common/$f" ]] || {
@@ -121,7 +135,7 @@ fi
 
 mkdir -p "$(dirname "$out")"
 makensis -DPAYLOAD_DIR="$payload" -DDGVOODOO_DIR="$dgvoodoo" \
-  -DWIZARD_ICON="$wizard_icon" \
+  -DWIZARD_ICON="$wizard_icon" -DMENUINFO_NICK_EXE="$menuinfo_nick_exe" \
   -DOUTFILE="$out" -DVERSION="$version" -DVIVERSION="$viversion" \
   "$here/installer.nsi"
 echo "built: $out"

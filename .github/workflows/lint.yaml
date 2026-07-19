@@ -27,3 +27,21 @@ jobs:
       # The change descriptions are generated from docs/changes.js; fail if the
       # generated documents are out of date.
       - run: npm run docs:check
+
+  # Codec correctness for the menuinfo-nick install-time helper. Tests run
+  # natively (no cross-compile) against a committed real menuinfo.dat fixture.
+  menuinfo-nick:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    defaults:
+      run:
+        working-directory: patch/menuinfo-nick
+    steps:
+      - uses: actions/checkout@v7
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: patch/menuinfo-nick
+      - run: cargo fmt --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo test

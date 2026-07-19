@@ -108,7 +108,8 @@ jobs:
         # unversioned names if absent.
         run: |
           sudo apt-get update
-          sudo apt-get install -y nsis clang lld llvm clang-tools
+          # gcc-mingw-w64-x86-64: linker for menuinfo-nick.exe (x86_64-pc-windows-gnu)
+          sudo apt-get install -y nsis clang lld llvm clang-tools gcc-mingw-w64-x86-64
           for tool in clang-cl llvm-lib; do
             command -v "$tool" >/dev/null && continue
             versioned="$(ls /usr/bin/${tool}-* 2>/dev/null | sort -V | tail -1)"
@@ -119,10 +120,25 @@ jobs:
             sudo ln -s "$versioned" "/usr/local/bin/$tool"
           done
 
-      # The demo artifacts need only NSIS + the LFS payload, not ripmusic, so
-      # build them before the ~15-minute ripmusic compile below: a broken
-      # payload or NSIS script then fails in about a minute instead of after
-      # the long cross-build.
+      # menuinfo-nick.exe is a small pure-Rust (no C) helper the demo installer
+      # bundles to set the player's multiplayer name; cross-built via mingw. It
+      # compiles in seconds, so building it before the demo installer keeps the
+      # fast-fail below intact.
+      - name: Cache Rust registry and menuinfo-nick builds
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: patch/menuinfo-nick
+
+      - name: Build menuinfo-nick.exe (64-bit Windows, via mingw)
+        working-directory: patch/menuinfo-nick # per-crate .cargo/config.toml
+        run: |
+          rustup target add x86_64-pc-windows-gnu
+          cargo build --release --target x86_64-pc-windows-gnu
+
+      # The demo artifacts need only NSIS + the LFS payload + menuinfo-nick, not
+      # ripmusic, so build them before the ~15-minute ripmusic compile below: a
+      # broken payload or NSIS script then fails in about a minute instead of
+      # after the long cross-build.
       - name: Build the demo installer
         run: installers/demo/build.sh "${{ steps.version.outputs.version }}"
 

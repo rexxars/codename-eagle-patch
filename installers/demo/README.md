@@ -23,6 +23,14 @@ optional component; the main file copy skips them. Pass `--stage-only` as the
 first argument to stage and verify the payload without running makensis (the
 staging dir is printed and kept for inspection).
 
+The wizard also bundles [`menuinfo-nick.exe`](../../patch/menuinfo-nick), the
+helper that writes the player's chosen multiplayer name into `menuinfo.dat`. It
+is compiled fresh (never committed); `build.sh` picks it up from
+`patch/menuinfo-nick/target/x86_64-pc-windows-gnu/release/`, or from
+`MENUINFO_NICK_EXE`, and errors with the build recipe if it's absent. It is only
+needed for the makensis step, so `--stage-only` (and the demo zip) don't require
+it.
+
 ## What the setup.exe does
 
 1. Copies the payload to the install folder - default `C:\Games\Codename Eagle`,
@@ -44,6 +52,14 @@ advfirewall`. This is why the installer requests elevation: without the
 4. Creates Start Menu shortcuts (plus an optional Desktop one) using `ce.exe`'s
    embedded icon, with the game folder as the working directory, writes the
    Add/Remove Programs entry, and drops an uninstaller.
+
+A **Multiplayer name** wizard page (between the directory and install pages)
+asks for a name of up to 10 characters, prefilled with `CEDemo`. After the
+payload is copied, `menuinfo-nick.exe` (run from `$PLUGINSDIR`, never installed
+into the game folder) writes that name into `menuinfo.dat`, so a fresh install
+shows the player's own name in-game. The name is normalized (printable ASCII,
+`"` removed, trimmed to 10, empty falls back to `CEDemo`), and a failure here is
+non-fatal — the install continues with the default name.
 
 The components page offers the **dgVoodoo graphics wrapper (recommended)** as a
 separate component, checked by default. It bundles the six dgVoodoo files
