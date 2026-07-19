@@ -48,6 +48,7 @@ Want to run a server for others? There is a ready-made [dedicated server Docker 
 - **The aiming crosshair scales with resolution.** The screen-center crosshair now scales with screen height, so it stays visible and the same apparent size at 1080p, 1200p and beyond instead of being a tiny fixed 8-pixel sprite.
 - **The sniper scope is smoother.** The sniper scope overlay is a 32-bit texture with real antialiased alpha, giving a smooth lens edge and clean reticle lines instead of hard staircase pixels when upscaled.
 - **dgVoodoo graphics wrapper included.** The dgVoodoo graphics wrapper is bundled to fix rendering issues on modern versions of Windows and to make options like anti-aliasing easy to enable. Run dgVoodooCpl.exe to configure it.
+- **Multiplayer-demo menu options show their selected state.** On the old multiplayer demo, several menu options never showed a checkmark when selected, so you could not tell they were active. The demo was missing the graphics those states use; the patch adds them back from the full game, so the affected options display correctly again. The full game was never affected.
 
 ### Single player (full game)
 

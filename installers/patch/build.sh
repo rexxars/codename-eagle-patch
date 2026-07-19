@@ -12,10 +12,13 @@
 # The payload is game/common/ (both variants) plus game/full/ (written only
 # when the target is a full-game install), shipped as-is: the binaries are
 # already patched, so there is no patch step here or at install time. The
-# three config files (default.cfg, keyconf.dat, menuinfo.dat) and the two
-# levels.nfo variants are staged separately because the installer writes them
-# conditionally, not via the blanket File /r. The dgVoodoo files come from the
-# repo's dgvoodoo/ dir and are staged separately too: they are an optional
+# three config files (default.cfg, keyconf.dat, menuinfo.dat), the two
+# levels.nfo variants, and the demo menu/menupics.dat are staged separately
+# because the installer writes them conditionally, not via the blanket File /r.
+# (menupics.dat is written to demo installs only, to add back the menu textures
+# the demo repack trimmed; a full-game install keeps its own complete copy.)
+# The dgVoodoo files come from the repo's dgvoodoo/ dir and are staged
+# separately too: they are an optional
 # component (checked by default) the user can uncheck, so a dedicated section
 # installs them instead of the blanket copy.
 #
@@ -62,7 +65,7 @@ if [[ $stage_only -eq 0 ]]; then
 fi
 for f in common/ce.exe common/lobby.exe common/default.cfg \
   common/keyconf.dat common/menuinfo.dat \
-  full/levels.nfo demo/levels.nfo; do
+  full/levels.nfo demo/levels.nfo demo/menu/menupics.dat; do
   [[ -f "$game_dir/$f" ]] || {
     echo "error: $game_dir/$f missing" >&2
     exit 1
@@ -158,6 +161,7 @@ makensis \
   -DDGVOODOO_DIR="$dgvoodoo" \
   -DLEVELS_NFO_FULL="$game_dir/full/levels.nfo" \
   -DLEVELS_NFO_DEMO="$game_dir/demo/levels.nfo" \
+  -DMENUPICS_DEMO="$game_dir/demo/menu/menupics.dat" \
   -DSTOCK_DIR="$here/stock" \
   -DLOWERCASE_PS1="$here/lowercase.ps1" \
   -DRIPMUSIC_EXE="$ripmusic_exe" \

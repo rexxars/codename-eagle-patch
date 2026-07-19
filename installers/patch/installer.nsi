@@ -13,6 +13,9 @@
 ;                   dgVoodoo.conf is write-if-absent, the rest are always copied
 ;   LEVELS_NFO_FULL levels.nfo for full-game installs (SP 1-12 + MP 128-134)
 ;   LEVELS_NFO_DEMO levels.nfo for old-MP-demo installs (MP 128-134 only)
+;   MENUPICS_DEMO   menu/menupics.dat with the menu textures the demo repack
+;                   trimmed added back (demo installs only; a full-game install
+;                   already has the complete file, so it is never overwritten)
 ;   STOCK_DIR       factory-stock config snapshots for the refresh check
 ;   LOWERCASE_PS1   the lowercase.ps1 next to this script (absolute path -
 ;                   File paths resolve against makensis' cwd, not the script)
@@ -33,7 +36,8 @@
 ;   3. deletes caches/runtime junk, the pre-1.50 No Mans Land leftovers and
 ;      level248\ (Fever valley is level134 now) - never touching hiscores,
 ;      saves or screenshots,
-;   4. writes the payload (common + full or the demo levels.nfo),
+;   4. writes the payload (common + full, or the demo levels.nfo + the fixed
+;      demo menu/menupics.dat),
 ;   5. writes configs only if absent or still factory-stock (customized
 ;      keybinds etc. are preserved; menuinfo.dat only if absent),
 ;   6. drops ripmusic.exe in the game folder,
@@ -62,6 +66,9 @@
 !endif
 !ifndef LEVELS_NFO_DEMO
   !error "LEVELS_NFO_DEMO not defined - build with build.sh"
+!endif
+!ifndef MENUPICS_DEMO
+  !error "MENUPICS_DEMO not defined - build with build.sh"
 !endif
 !ifndef STOCK_DIR
   !error "STOCK_DIR not defined - build with build.sh"
@@ -292,6 +299,14 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
     File "/oname=levels.nfo" "${LEVELS_NFO_FULL}"
   ${Else}
     File "/oname=levels.nfo" "${LEVELS_NFO_DEMO}"
+    ; The demo repack shipped a trimmed menu/menupics.dat missing six menu
+    ; textures the menu code still references (blank slots in-game). Ship the
+    ; fixed archive - demo only: a full-game install has the complete original
+    ; menupics.dat (~60 MB) and must keep it. SetOutPath creates menu\ if the
+    ; casing pass or an odd install left it absent, then restores $INSTDIR.
+    SetOutPath "$INSTDIR\menu"
+    File "${MENUPICS_DEMO}"
+    SetOutPath "$INSTDIR"
   ${EndIf}
 
   ; 5) Configs: write-if-absent, refresh-if-factory-stock (so ancient installs

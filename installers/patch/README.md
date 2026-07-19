@@ -49,7 +49,9 @@ the script prints the exact `cargo xwin` command to produce it.
    the default folder.
 2. Detects the variant: `level1\` present means a full-game install; absent
    means the old multiplayer demo (which then skips the single-player payload
-   and gets an MP-only `levels.nfo`, so no phantom level entries appear).
+   and gets an MP-only `levels.nfo`, so no phantom level entries appear, plus
+   the fixed `menu/menupics.dat` that adds back the menu textures the demo
+   repack trimmed - a full-game install keeps its own complete copy).
 3. Lowercases ALL_CAPS file and directory names left behind by old installers
    (`LEVEL1`, `GAME.EXE`, ...) via a bundled PowerShell script
    (`lowercase.ps1`). Cosmetic on Windows; failures only produce a warning.

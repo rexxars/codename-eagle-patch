@@ -48,6 +48,14 @@ before `textures.dat`, so it overrides the stock scope and crosshair without a
 modified `textures.dat`). Regenerate it with `node scripts/build-demo-texsec.js`;
 the textures themselves live in [`full-overrides/`](full-overrides/).
 
+The demo `menu/menupics.dat` gets one more fix-up: the repack trimmed it to 74
+entries, dropping six menu textures the menu code still references (`c_chn16`,
+`c_dr3df`, `c_gfno`, `c_gfmid`, `kc_invX`, `jg_tmA`), so those slots render blank.
+`node scripts/build-demo-menupics.js` adds them back from the pristine full-game
+copies committed in [`demo-additions/`](demo-additions/) (verbatim full-game
+content, so _not_ an authored override). The script is idempotent and rewrites
+the shipped archive in place.
+
 One cache file ships on purpose, the single exception to the rule that caches
 are runtime junk the game rebuilds by itself: `common/level133/wcache.bin`,
 the stock water/land pairing cache that Refraction built in August 2000

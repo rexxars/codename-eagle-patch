@@ -116,6 +116,9 @@ The sniper scope overlay is a 32-bit texture with real antialiased alpha, giving
 * dgVoodoo graphics wrapper included
 The dgVoodoo graphics wrapper is bundled to fix rendering issues on modern versions of Windows and to make options like anti-aliasing easy to enable. Run dgVoodooCpl.exe to configure it.
 
+* Multiplayer-demo menu options show their selected state
+On the old multiplayer demo, several menu options never showed a checkmark when selected, so you could not tell they were active. The demo was missing the graphics those states use; the patch adds them back from the full game, so the affected options display correctly again. The full game was never affected.
+
 Single player (full game)
 
 * The gas mask in "Demolition Man" shows in your inventory

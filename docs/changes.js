@@ -195,6 +195,16 @@ export const changes = [
   },
 
   {
+    id: 'demo-menu-graphics',
+    title: 'Multiplayer-demo menu options show their selected state',
+    category: 'graphics',
+    scope: 'mp',
+    summary:
+      'On the old multiplayer demo, several menu options never showed a checkmark when selected, so you could not tell they were active. The demo was missing the graphics those states use; the patch adds them back from the full game, so the affected options display correctly again. The full game was never affected.',
+    body: 'The old multiplayer-demo repack shipped a trimmed set of menu graphics that left out several of the images the menu draws for a selected option, so those options showed nothing when chosen and there was no way to tell they were active. The patch restores the missing images from the full game, fixing the selected-state graphic for: 16 channel audio, the 3Dfx display driver, the None and Medium GraphicFX settings, Invert Mouse, and the red team on the Join Game screen. This only affects installs of the old multiplayer demo; the full game always shipped the complete set.',
+  },
+
+  {
     id: 'gas-mask',
     title: 'The gas mask in "Demolition Man" shows in your inventory',
     category: 'singleplayer',
