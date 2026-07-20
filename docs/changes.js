@@ -155,6 +155,15 @@ export const changes = [
       'Saving the game no longer crashes on modern graphics cards. With the bundled dgVoodoo the save-slot thumbnail is captured as normal; the change is a safe guard that only steps in to prevent the crash if the capture ever fails.',
     body: 'Saving builds a small thumbnail by grabbing the screen, and on modern graphics cards a step of that grab could fail and crash the game. With the bundled dgVoodoo the grab succeeds and the thumbnail appears as normal. The change is a safe guard: it leaves the capture itself untouched and only removes the crash on the failure path, so in the rare case the grab does fail the game saves without a thumbnail instead of crashing.',
   },
+  {
+    id: 'fortress-terrain',
+    title: 'Fortress terrain mesh repaired',
+    category: 'stability',
+    scope: 'all',
+    summary:
+      'The Fortress terrain shipped with defects that made the level exit with a fatal error ("two land faces or two sea faces") whenever its wcache.bin cache file was missing. The terrain is repaired, so the game can now rebuild the cache itself.',
+    body: 'Fortress shipped with 19 defects in its terrain mesh: seven spots where two vertices sit less than one world unit apart, forming invisible slivers and near-vertical shoreline walls that the engine\'s water-pairing pass (InitWater) treats as fatal ("two land faces or two sea faces, nErrors=19") whenever it rebuilds the level\'s wcache.bin. Every stock install masked this by shipping the cache file, so deleting it made the level unloadable. The repair nudges 14 vertices by 0.05-0.13 world units, far too small to see; the mesh now validates cleanly, and the water/land pairing the game rebuilds from it is identical to the stock cache (2453 of 2453 pairs), so the level plays exactly as before. The cache file no longer ships: Fortress rebuilds it on first load, the same as every other level.',
+  },
 
   {
     id: 'crosshair-scaling',

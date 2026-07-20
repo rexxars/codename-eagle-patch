@@ -252,10 +252,10 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
 
   ; 3) Clean up caches and runtime junk. NEVER touch user data: hiscores.dat,
   ;    sg0.dat/saves, screenshots, custom configs.
-  ;    This also deletes level133\wcache.bin, which Fortress cannot rebuild
-  ;    (its stock terrain trips the fatal "two land faces or two sea faces"
-  ;    error in InitWater). The payload write in step 4 puts the stock copy
-  ;    back. See game/README.md.
+  ;    level133\wcache.bin goes too: 1.50 repairs the Fortress terrain (stock
+  ;    terrain tripped the fatal "two land faces or two sea faces" error in
+  ;    InitWater while rebuilding it), so the game recreates it on first load
+  ;    like every other cache. See game/README.md.
   DetailPrint "Removing stale caches and runtime junk..."
   !insertmacro CleanLevelDir "level1"
   !insertmacro CleanLevelDir "level2"

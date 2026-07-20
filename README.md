@@ -42,6 +42,7 @@ Want to run a server for others? There is a ready-made [dedicated server Docker 
 - **A sharper icon.** The game icon is now embedded directly in ce.exe, so Windows shows it in Explorer, the taskbar and shortcuts. It uses a high-resolution image that stays crisp on modern displays and still renders correctly on older systems such as Windows XP. A second, classic icon is embedded as an alternate you can pick from a shortcut.
 - **Single-player crash near enemy bases fixed (full game).** The long-standing "floating point error" crash that could hit when you approach an enemy base is fixed (a bug in the mounted-turret code introduced in v1.41).
 - **Save-game crash on modern graphics cards fixed (full game).** Saving the game no longer crashes on modern graphics cards. With the bundled dgVoodoo the save-slot thumbnail is captured as normal; the change is a safe guard that only steps in to prevent the crash if the capture ever fails.
+- **Fortress terrain mesh repaired.** The Fortress terrain shipped with defects that made the level exit with a fatal error ("two land faces or two sea faces") whenever its wcache.bin cache file was missing. The terrain is repaired, so the game can now rebuild the cache itself.
 
 ### Graphics and display
 

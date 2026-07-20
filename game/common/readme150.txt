@@ -105,6 +105,9 @@ The long-standing "floating point error" crash that could hit when you approach 
 * Save-game crash on modern graphics cards fixed (full game)
 Saving the game no longer crashes on modern graphics cards. With the bundled dgVoodoo the save-slot thumbnail is captured as normal; the change is a safe guard that only steps in to prevent the crash if the capture ever fails.
 
+* Fortress terrain mesh repaired
+The Fortress terrain shipped with defects that made the level exit with a fatal error ("two land faces or two sea faces") whenever its wcache.bin cache file was missing. The terrain is repaired, so the game can now rebuild the cache itself.
+
 Graphics and display
 
 * The aiming crosshair scales with resolution

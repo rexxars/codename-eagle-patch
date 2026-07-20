@@ -56,17 +56,22 @@ copies committed in [`demo-additions/`](demo-additions/) (verbatim full-game
 content, so _not_ an authored override). The script is idempotent and rewrites
 the shipped archive in place.
 
-One cache file ships on purpose, the single exception to the rule that caches
-are runtime junk the game rebuilds by itself: `common/level133/wcache.bin`,
-the stock water/land pairing cache that Refraction built in August 2000
-(byte-identical in pristine 1.42 and 1.43). Fortress cannot rebuild it: its
-stock terrain has 19 spots where two land faces or two water faces overlap,
-and `InitWater` treats those as a fatal error while building the cache, so a
-fresh install without the file exits on load with `two land faces or two sea
-faces, nErrors=19`. Every stock install shipped this cache, which is why the
-bad terrain never surfaced. It only describes the terrain mesh (`oldbf`),
-which 1.50 leaves untouched, so the stock file is still correct. All other
-caches (`*cache.bin`, `diacache.dat`) rebuild cleanly and must not ship.
+No cache files ship — caches (`*cache.bin`, `diacache.dat`) are runtime junk
+the game rebuilds by itself. Stock installs had one exception,
+`level133/wcache.bin`, the water/land pairing cache that Refraction built in
+August 2000 (byte-identical in pristine 1.42 and 1.43): stock Fortress could
+not rebuild it, because its terrain had 19 spots where two land faces or two
+water faces coincide within `InitWater`'s 1.0-unit vertex tolerance (sub-unit
+slivers and near-vertical shoreline walls), treated as a fatal error while
+building the cache — a stock install without the file exits on load with
+`two land faces or two sea faces, nErrors=19`. The pairing in the stock cache
+matches what a repaired mesh produces, so the defects crept in _after_
+Refraction generated it. 1.50 repairs the terrain
+(`common/level133/objects.dat`: 14 vertices in the `oldbf` project nudged
+0.05–0.13 world units apart, produced and verified by
+`scripts/check-initwater.ts` in the cnetool repo), so Fortress rebuilds the
+cache on first load like every other level, with a pairing identical to the
+stock cache (2453/2453 pairs).
 
 `full/` is what a full-game install needs on top of `common/`: the official
 1.0→1.43 patch delta sourced from a pristine 1.43 install (single-player
