@@ -14,10 +14,12 @@
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
 
-use textool::{build_archive, parse_archive, upsert, validate_tga, UpsertOutcome};
+use textool::{build_archive, parse_archive, upsert_opts, validate_tga_opts, UpsertOutcome};
 
-const USAGE: &str =
-    "usage: textool set <archive.dat> <texture.tga>...\n       textool list <archive.dat>";
+const USAGE: &str = "usage: textool set [--allow-any] <archive.dat> <texture.tga>...\n       \
+     textool list <archive.dat>\n\n\
+     --allow-any  accept non-square / non-power-of-two textures (menu archives\n\
+     \x20            like menupics.dat); textures.dat/texsec.dat need the default strict check";
 
 fn main() -> ExitCode {
     // args_os + into_string: a non-Unicode argument is a graceful usage error
@@ -32,8 +34,31 @@ fn main() -> ExitCode {
         return ExitCode::from(2);
     };
     let result = match args.split_first() {
+        Some((cmd, rest)) if cmd == "set" => {
+            // Split --flags from positional args so the flag can go anywhere.
+            let mut allow_any = false;
+            let mut positional: Vec<&String> = Vec::new();
+            for a in rest {
+                match a.strip_prefix("--") {
+                    Some("allow-any") => allow_any = true,
+                    Some(_) => {
+                        eprintln!("textool: unknown flag {a}\n{USAGE}");
+                        return ExitCode::from(2);
+                    }
+                    None => positional.push(a),
+                }
+            }
+            match positional.split_first() {
+                Some((archive, tgas)) if !tgas.is_empty() => {
+                    cmd_set(Path::new(archive.as_str()), tgas, allow_any)
+                }
+                _ => {
+                    eprintln!("{USAGE}");
+                    return ExitCode::from(2);
+                }
+            }
+        }
         Some((cmd, rest)) => match (cmd.as_str(), rest) {
-            ("set", [archive, tgas @ ..]) if !tgas.is_empty() => cmd_set(Path::new(archive), tgas),
             ("list", [archive]) => cmd_list(Path::new(archive)),
             _ => {
                 eprintln!("{USAGE}");
@@ -63,7 +88,7 @@ fn main() -> ExitCode {
 /// the archive with ONE atomic write — on any error nothing is written.
 /// Returns the report lines (`replaced NAME (WxHxDEPTH)` / `added ...`) in
 /// argument order, printed only after the write succeeded.
-fn cmd_set(archive_path: &Path, tga_paths: &[String]) -> Result<Vec<String>, String> {
+fn cmd_set(archive_path: &Path, tga_paths: &[&String], allow_any: bool) -> Result<Vec<String>, String> {
     let raw = std::fs::read(archive_path)
         .map_err(|e| format!("reading archive {}: {e}", archive_path.display()))?;
     let mut entries =
@@ -71,12 +96,13 @@ fn cmd_set(archive_path: &Path, tga_paths: &[String]) -> Result<Vec<String>, Str
 
     let mut lines = Vec::with_capacity(tga_paths.len());
     for tga_path in tga_paths {
-        let tga_path = Path::new(tga_path);
+        let tga_path = Path::new(tga_path.as_str());
         let name = ascii_basename(tga_path)?;
         let tga =
             std::fs::read(tga_path).map_err(|e| format!("reading {}: {e}", tga_path.display()))?;
-        let info = validate_tga(&tga).map_err(|e| format!("{}: {e}", tga_path.display()))?;
-        let outcome = upsert(&mut entries, &name, &tga)
+        let info =
+            validate_tga_opts(&tga, allow_any).map_err(|e| format!("{}: {e}", tga_path.display()))?;
+        let outcome = upsert_opts(&mut entries, &name, &tga, allow_any)
             .map_err(|e| format!("{}: {e}", tga_path.display()))?;
         let verb = match outcome {
             UpsertOutcome::Replaced => "replaced",

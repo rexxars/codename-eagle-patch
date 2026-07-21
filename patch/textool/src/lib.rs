@@ -24,19 +24,30 @@ pub struct TgaInfo {
     pub depth: u8,
 }
 
+/// Validate a standalone TGA for archive insertion, strictly (square
+/// power-of-two). Equivalent to [`validate_tga_opts`] with `allow_any = false`;
+/// this is the right check for the in-game archives `textures.dat`/`texsec.dat`.
+pub fn validate_tga(bytes: &[u8]) -> Result<TgaInfo, String> {
+    validate_tga_opts(bytes, false)
+}
+
 /// Validate a standalone TGA for archive insertion and return its info.
 ///
-/// The archives only hold uncompressed true-color TGAs, and the game engine
-/// only handles square power-of-two textures, so anything else is refused
-/// rather than risk corrupting the archive:
+/// The archives only hold uncompressed true-color TGAs, so anything else is
+/// refused rather than risk corrupting the archive:
 /// - header must match [`TGA_PREFIX`] (id_length 0, color_map_type 0,
 ///   image_type 2 — no RLE, no color map, no image ID);
 /// - depth 24 or 32; descriptor 0x00/0x08 (alpha bits) with optional 0x20
 ///   (top-to-bottom origin);
-/// - width == height, a power of two, 1..=1024;
+/// - dimensions: with `allow_any = false` the 3D renderer needs square
+///   power-of-two textures (`width == height`, a power of two in `1..=1024`);
+///   with `allow_any = true` — for the menu archives (e.g. `menupics.dat`),
+///   whose bitmaps are arbitrary sizes like 80×144 or 640×480 — that is relaxed
+///   to each side in `1..=4096`;
 /// - length exactly `18 + w*h*(depth/8)` — truncated pixel data or trailing
-///   junk (e.g. a TGA v2 footer) is rejected.
-pub fn validate_tga(bytes: &[u8]) -> Result<TgaInfo, String> {
+///   junk (e.g. a TGA v2 footer) is rejected. This exact-length rule always
+///   applies, so `allow_any` never lets a malformed blob into the archive.
+pub fn validate_tga_opts(bytes: &[u8], allow_any: bool) -> Result<TgaInfo, String> {
     if bytes.len() < TGA_HEADER_LEN {
         return Err(format!(
             "file is {} bytes, shorter than the {TGA_HEADER_LEN}-byte TGA header",
@@ -81,13 +92,21 @@ pub fn validate_tga(bytes: &[u8]) -> Result<TgaInfo, String> {
 
     let width = u16le(bytes, 12);
     let height = u16le(bytes, 14);
-    if width != height {
-        return Err(format!("image is {width}x{height}, expected square"));
-    }
-    if width == 0 || !width.is_power_of_two() || width > 1024 {
-        return Err(format!(
-            "width is {width}, expected a power of two in 1..=1024"
-        ));
+    if allow_any {
+        if width == 0 || height == 0 || width > 4096 || height > 4096 {
+            return Err(format!(
+                "image is {width}x{height}, expected each side in 1..=4096"
+            ));
+        }
+    } else {
+        if width != height {
+            return Err(format!("image is {width}x{height}, expected square"));
+        }
+        if width == 0 || !width.is_power_of_two() || width > 1024 {
+            return Err(format!(
+                "width is {width}, expected a power of two in 1..=1024"
+            ));
+        }
     }
 
     let expected = TGA_HEADER_LEN + width as usize * height as usize * (depth / 8) as usize;
@@ -329,7 +348,18 @@ pub enum UpsertOutcome {
 /// name or an already-full ([`TOC_SLOTS`] entries) archive. Replacing in a
 /// full archive is fine. On any error `entries` is left unchanged.
 pub fn upsert(entries: &mut Vec<Entry>, name: &str, tga: &[u8]) -> Result<UpsertOutcome, String> {
-    validate_tga(tga)?;
+    upsert_opts(entries, name, tga, false)
+}
+
+/// Like [`upsert`], but `allow_any` relaxes the dimension check for the menu
+/// archives (see [`validate_tga_opts`]); every other validation still applies.
+pub fn upsert_opts(
+    entries: &mut Vec<Entry>,
+    name: &str,
+    tga: &[u8],
+    allow_any: bool,
+) -> Result<UpsertOutcome, String> {
+    validate_tga_opts(tga, allow_any)?;
     let blob = tga[TGA_PREFIX.len()..].to_vec();
 
     if let Some(existing) = entries
@@ -444,6 +474,29 @@ mod tests {
     #[test]
     fn rejects_oversize() {
         assert!(validate_tga(&make_tga(2048, 2048, 24)).is_err());
+    }
+
+    #[test]
+    fn allow_any_accepts_non_square_non_pow2() {
+        // 80x144 is the menufont: refused strictly, accepted with allow_any.
+        let tga = make_tga(80, 144, 24);
+        assert!(validate_tga_opts(&tga, false).is_err());
+        let info = validate_tga_opts(&tga, true).unwrap();
+        assert_eq!((info.width, info.height, info.depth), (80, 144, 24));
+    }
+
+    #[test]
+    fn allow_any_still_enforces_exact_length_and_bounds() {
+        // The length rule that guards the archive still applies with allow_any.
+        let mut trailing = make_tga(80, 144, 24);
+        trailing.push(0);
+        assert!(validate_tga_opts(&trailing, true).is_err());
+        let mut truncated = make_tga(80, 144, 24);
+        truncated.pop();
+        assert!(validate_tga_opts(&truncated, true).is_err());
+        // Zero and > 4096 sides are still refused.
+        assert!(validate_tga_opts(&make_tga(0, 16, 24), true).is_err());
+        assert!(validate_tga_opts(&make_tga(4097, 1, 24), true).is_err());
     }
 
     #[test]

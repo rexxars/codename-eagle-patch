@@ -112,6 +112,51 @@ fn set_replaces_existing_entry() {
 }
 
 #[test]
+fn set_non_square_needs_allow_any_flag() {
+    let dir = temp_dir("allowany");
+    let archive = write_fixture(&dir);
+    // 80x144 like the menufont: refused by default, accepted with --allow-any.
+    let tga_path = dir.join("menufont.tga");
+    std::fs::write(&tga_path, make_tga(80, 144, 24)).unwrap();
+
+    let refused = run(&["set", archive.to_str().unwrap(), tga_path.to_str().unwrap()]);
+    assert_eq!(refused.status.code(), Some(1), "stderr: {}", stderr(&refused));
+    assert!(stderr(&refused).contains("expected square"));
+    // Nothing written: the fixture still has exactly its two entries.
+    assert_eq!(list_stdout(&archive).lines().count(), 2);
+
+    let ok = run(&[
+        "set",
+        "--allow-any",
+        archive.to_str().unwrap(),
+        tga_path.to_str().unwrap(),
+    ]);
+    assert!(ok.status.success(), "stderr: {}", stderr(&ok));
+    assert_eq!(stdout(&ok), "added menufont.tga (80x144x24)\n");
+    let lines: Vec<String> = list_stdout(&archive).lines().map(String::from).collect();
+    assert_eq!(lines.len(), 3);
+    assert_eq!(lines[2], format!("menufont.tga  80x144x24  {}", 10 + 80 * 144 * 3));
+    assert_no_tmp_leftover(&dir);
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
+fn set_rejects_unknown_flag() {
+    let dir = temp_dir("badflag");
+    let archive = write_fixture(&dir);
+    let tga_path = dir.join("x.tga");
+    std::fs::write(&tga_path, make_tga(8, 8, 24)).unwrap();
+    let out = run(&[
+        "set",
+        "--nope",
+        archive.to_str().unwrap(),
+        tga_path.to_str().unwrap(),
+    ]);
+    assert_eq!(out.status.code(), Some(2), "stderr: {}", stderr(&out));
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
 fn set_adds_new_entry_last() {
     let dir = temp_dir("add");
     let archive = write_fixture(&dir);
