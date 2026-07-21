@@ -248,8 +248,8 @@ export const changes = [
     category: 'music',
     scope: 'full',
     summary:
-      'The soundtrack can play from Ogg Vorbis files in a music\\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone.',
-    body: 'The game can play its soundtrack from music files in a music\\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies.',
+      'The soundtrack can play from Ogg Vorbis files in a music\\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone. Bonus: drop a file named after a map into music\\ and it becomes that map\'s theme song.',
+    body: "The game can play its soundtrack from music files in a music\\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies. Side quest for the curious: drop an Ogg file named after a map (e.g. music\\No mans land.ogg) and it loops as that map's personal theme song, single player or multiplayer, no config needed - go make No Man's Land absolutely slap.",
   },
 
   {

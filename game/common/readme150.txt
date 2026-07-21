@@ -136,7 +136,7 @@ With the CD cutscenes copied into the game folder, the game no longer replays th
 Music (full game)
 
 * No CD needed, and no CD crashes
-The soundtrack can play from Ogg Vorbis files in a music\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone.
+The soundtrack can play from Ogg Vorbis files in a music\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone. Bonus: drop a file named after a map into music\ and it becomes that map's theme song.
 
 Cutscenes (full game)
 

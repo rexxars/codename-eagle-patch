@@ -8,8 +8,19 @@ all. It is a small 32-bit Rust DLL that ce-patch bundles and installs alongside
 
 ## What it does
 
-- When the game asks for CD track `NN`, the DLL loops `music\trackNN.ogg`
-  (e.g. `music\track02.ogg`) instead.
+- When the game asks for CD track `NN`, the DLL loops a named file from
+  `music\` instead of the numbered `music\trackNN.ogg`, falling back to the
+  numbered file if the named one doesn't exist, and to silence if neither
+  does. This lets players drop in per-track music without renumbering
+  anything. The name depends on which part of the game is asking:
+  - **Single-player campaign** (tracks 2-13): a hardcoded title table, since
+    the CD's own music order doesn't consistently follow the mission order in
+    `levels.nfo` (e.g. mission "Betrayal" actually plays the CD track titled
+    "Wild goose chase"). Track `2` tries `music\The village fool.ogg`.
+  - **Everything else** (multiplayer): the level's name from `levels.nfo`,
+    whose `Val:` numbers are `NN - 1` (multiplayer levels were added later
+    with CD track = `Val:` + 1). Track `129` (level `Val:128`, "No mans
+    land") tries `music\No mans land.ogg`.
 - The in-game **music volume slider works, and controls only music**: playback
   runs on the DLL's own output stream with volume applied as a software gain on
   the music samples, so it never touches the game's DirectSound sound effects or
@@ -29,7 +40,7 @@ the DLL's three exports (falling through to the original CD code if the DLL or
 an export is missing). The exports are plain `extern "C"` (cdecl), undecorated:
 
 ```
-cemusic_play(track: u32)    // loop music\trackNN.ogg; NN = track, zero-padded to 2
+cemusic_play(track: u32)    // loop the resolved file for track (see above)
 cemusic_stop()              // stop and release the current track
 cemusic_volume(vol: f32)    // 0.0..1.0 software gain; persists across track changes
 ```
@@ -40,6 +51,9 @@ A few behaviors worth knowing:
   every frame and normally relies on an internal "already playing" guard that
   the detour bypasses, so the DLL dedupes on the track number itself. A new
   track number stops the old track and starts the new one.
+- **Track 0 never logs a skip.** It's the menu's CD track and most installs
+  have no matching file for it, so a missing `track00.ogg` stays silent
+  instead of spamming `logs\cemusic.log`.
 - All exports are non-blocking and safe to call from the game thread repeatedly.
   Panics are caught at the FFI boundary and never unwind into `ce.exe`.
 

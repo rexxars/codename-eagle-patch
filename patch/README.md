@@ -57,7 +57,7 @@ The [`iplist/`](iplist/), [`menudll/`](menudll/) and [`cemusic/`](cemusic/) subd
 
 ### Music (full game)
 
-- **No CD needed, and no CD crashes.** The game can play its soundtrack from music files in a music\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies.
+- **No CD needed, and no CD crashes.** The game can play its soundtrack from music files in a music\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies. Side quest for the curious: drop an Ogg file named after a map (e.g. music\No mans land.ogg) and it loops as that map's personal theme song, single player or multiplayer, no config needed - go make No Man's Land absolutely slap.
 
 ### Cutscenes (full game)
 

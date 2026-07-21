@@ -2,8 +2,16 @@
 //!
 //! ce-patch detours the engine's CD-music functions (FUN_00483020 play /
 //! FUN_00483170 stop / FUN_00486b10 volume) into these three exports, so music
-//! comes from `<gamedir>\music\trackNN.ogg` (patent-free Ogg Vorbis) instead of
-//! CD Redbook audio. See ../README.md.
+//! comes from `<gamedir>\music\` (patent-free Ogg Vorbis) instead of CD Redbook
+//! audio. See ../README.md.
+//!
+//! Track resolution prefers a named file over the numbered `music\trackNN.ogg`.
+//! Single-player campaign tracks (2-13) use a hardcoded title table (see
+//! [`SP_TRACK_TITLES`]), since the CD's music order doesn't line up with
+//! `levels.nfo`'s mission order for the whole campaign. Everything else
+//! (multiplayer) looks up the level name in `levels.nfo` by `Val:` number
+//! (the CD track number minus one), so track 129 (level `Val:128`, "No mans
+//! land") first tries `music\No mans land.ogg`. See [`resolve_track`].
 //!
 //! Independent volume: playback runs on our own output stream (cpal/WASAPI) and
 //! `Sink::set_volume` is a software gain on the music samples, so the in-game
@@ -86,8 +94,8 @@ fn music_thread(rx: Receiver<Cmd>) {
                 if let Some(s) = sink.take() {
                     s.stop();
                 }
-                let path = format!(r"music\track{track:02}.ogg");
-                match open_track(&path) {
+                let (path, opened) = resolve_track(track);
+                match opened {
                     Ok(source) => match rodio::Sink::try_new(&handle) {
                         Ok(s) => {
                             s.set_volume(volume);
@@ -99,7 +107,10 @@ fn music_thread(rx: Receiver<Cmd>) {
                         Err(e) => log(&format!("sink error for {path}: {e}")),
                     },
                     // Missing or undecodable file -> stay silent (already stopped above).
-                    Err(e) => log(&format!("skip {path}: {e}")),
+                    // Track 0 (menu music) has no level and is legitimately absent from
+                    // most installs, so don't spam the log for it.
+                    Err(e) if track != 0 => log(&format!("skip {path}: {e}")),
+                    Err(_) => {}
                 }
             }
         }
@@ -111,14 +122,80 @@ fn open_track(path: &str) -> Result<rodio::Decoder<BufReader<File>>, String> {
     rodio::Decoder::new(BufReader::new(file)).map_err(|e| e.to_string())
 }
 
+/// Single-player campaign CD tracks 2-13, in CD order (index 0 = track 2).
+/// The original disc's music track order doesn't consistently match the
+/// mission order in `levels.nfo` from track 8 on (e.g. mission "Betrayal" -
+/// `levels.nfo` level `Val:9` - actually plays the CD track titled "Wild
+/// goose chase"), so these titles are hardcoded here to mirror `ripmusic`'s
+/// own `TRACK_TITLES` rather than derived from `levels.nfo`.
+const SP_TRACK_TITLES: [&str; 12] = [
+    "The village fool",
+    "Ghost rockets",
+    "The assassin",
+    "The dam",
+    "A train to catch",
+    "Demolition man",
+    "A daring rescue",
+    "Dooms day device",
+    "Wild goose chase",
+    "Internal conflict",
+    "Into the eagle's nest",
+    "Eagle's flight",
+];
+
+/// Resolve a CD track to a playable file, preferring a named file over the
+/// numbered `music\trackNN.ogg` - letting players drop in per-track music
+/// without renumbering anything.
+///
+/// Tracks 2-13 (the single-player campaign) use [`SP_TRACK_TITLES`] directly,
+/// since their CD order doesn't line up with `levels.nfo`. Everything else
+/// (multiplayer, which added its levels later with CD track = `levels.nfo`
+/// `Val:` + 1, e.g. level `Val:128` / "No mans land" asks for track 129)
+/// looks up the level name in `levels.nfo` instead. Falls back to
+/// `trackNN.ogg` if there's no matching name, or no file, at that name.
+fn resolve_track(track: u32) -> (String, Result<rodio::Decoder<BufReader<File>>, String>) {
+    let named = match sp_track_title(track) {
+        Some(title) => Some(title.to_string()),
+        None => track.checked_sub(1).and_then(level_name),
+    };
+    if let Some(name) = named {
+        let named_path = format!(r"music\{name}.ogg");
+        if let Ok(source) = open_track(&named_path) {
+            return (named_path, Ok(source));
+        }
+    }
+    let path = format!(r"music\track{track:02}.ogg");
+    let opened = open_track(&path);
+    (path, opened)
+}
+
+/// The single-player campaign title for CD track `track` (2-13), if any.
+fn sp_track_title(track: u32) -> Option<&'static str> {
+    let idx = track.checked_sub(2)?;
+    SP_TRACK_TITLES.get(idx as usize).copied()
+}
+
+/// Look up a level's display name in `levels.nfo` (`Name:<name> Val:<num>` per
+/// line, one entry per level) by its `Val:` number.
+fn level_name(val: u32) -> Option<String> {
+    let content = std::fs::read_to_string("levels.nfo").ok()?;
+    content.lines().find_map(|line| {
+        let rest = line.trim().strip_prefix("Name:")?;
+        let (name, num) = rest.split_once("Val:")?;
+        (num.trim().parse::<u32>().ok()? == val).then(|| name.trim().to_string())
+    })
+}
+
 /// Run an export body, swallowing any panic so it never unwinds across the FFI
 /// boundary into ce.exe (which would be undefined behaviour).
 fn guard(f: impl FnOnce() + std::panic::UnwindSafe) {
     let _ = std::panic::catch_unwind(f);
 }
 
-/// Play `<gamedir>\music\trackNN.ogg` on a loop (NN = `track`, zero-padded to 2),
-/// replacing any current track. A missing file plays nothing.
+/// Play the resolved music for `track` on a loop, replacing any current
+/// track. See [`resolve_track`] for how the file is chosen; falls back to
+/// `<gamedir>\music\trackNN.ogg` (NN = `track`, zero-padded to 2). A missing
+/// file plays nothing.
 #[no_mangle]
 pub extern "C" fn cemusic_play(track: u32) {
     guard(move || {
