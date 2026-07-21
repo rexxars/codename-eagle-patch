@@ -194,6 +194,15 @@ export const changes = [
     },
   },
   {
+    id: 'screenshots',
+    title: 'Better screenshots: full resolution, timestamped names, and F11',
+    category: 'graphics',
+    scope: 'all',
+    summary:
+      'Screenshots are saved at the resolution the game renders at instead of a blurry 640x480, named by date and time so nothing is ever overwritten, and F11 works alongside Print Screen (which Windows 11 grabs for the Snipping Tool by default).',
+    body: "Screenshots used to be scaled down to 640x480 no matter what resolution the game was running at, and were named shot1.tga, shot2.tga and so on with a counter that restarted on every launch, overwriting the previous session's shots one by one. They are now saved at the actual render resolution - a 1080p game produces a 1920x1080 screenshot - and named by date and time (screenshots\\shot-20260720-153045-123.tga), so nothing is ever overwritten and shots from any number of sessions sort in the order they were taken. F11 also takes a screenshot: on Windows 11 the Print Screen key opens the Snipping Tool by default, which knocks the game out of fullscreen (if you prefer Print Screen, turn that off under Settings > Accessibility > Keyboard). F12 still opens the console, and savegame thumbnails are unaffected.",
+  },
+  {
     id: 'dgvoodoo',
     title: 'dgVoodoo graphics wrapper included',
     category: 'graphics',

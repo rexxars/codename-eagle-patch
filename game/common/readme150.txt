@@ -116,6 +116,9 @@ The screen-center crosshair now scales with screen height, so it stays visible a
 * The sniper scope is smoother
 The sniper scope overlay is a 32-bit texture with real antialiased alpha, giving a smooth lens edge and clean reticle lines instead of hard staircase pixels when upscaled.
 
+* Better screenshots: full resolution, timestamped names, and F11
+Screenshots are saved at the resolution the game renders at instead of a blurry 640x480, named by date and time so nothing is ever overwritten, and F11 works alongside Print Screen (which Windows 11 grabs for the Snipping Tool by default).
+
 * dgVoodoo graphics wrapper included
 The dgVoodoo graphics wrapper is bundled to fix rendering issues on modern versions of Windows and to make options like anti-aliasing easy to enable. Run dgVoodooCpl.exe to configure it.
 

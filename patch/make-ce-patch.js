@@ -51,7 +51,9 @@ const REPOINTS = [
   [0x3cec9, 'r_chat'],
   [0x3cefb, 'r_chat'],
   [0x3cf0a, 'r_chat'],
-  [0x443de, 'r_shot'], // push shot%d.tga
+  // NB: no r_shot repoint - the stock `push shot%d.tga` site (0x443de) sits
+  // inside the region the h_shotname detour displaces; the cave stub names
+  // screenshots itself (timestamp path + r_shot on the no-GetLocalTime path).
   [0x41d37, 'r_sg'], // push sg%d.dat  (delayed load, FUN_00441d20)
   [0x41dd4, 'r_sg'], // push sg%d.dat  (save, menu command 5)
   [0x41e7a, 'r_sg'], // push sg%d.dat  (load, menu command 6)
@@ -88,7 +90,6 @@ const ORIG_PTR = {
   r_host: 0x4d2870,
   r_slave: 0x4d2860,
   r_chat: 0x4c1f14,
-  r_shot: 0x4c31ec,
   r_sg: 0x4c2890,
   r_temp: 0x4c2884,
 }
@@ -214,6 +215,57 @@ const SERVLOG_RET = 0x4437b3 // site + 6 (pop edi, right after the call)
 const IAT_CREATEFILEA = 0x4a1184
 const IAT_WRITEFILE = 0x4a1100
 const IAT_CLOSEHANDLE = 0x4a10c0
+
+// Full-resolution screenshots. D3DGrabScreen (0x460180) captures at a hardcoded
+// 640x480: it mallocs 640*480*3 bytes, creates a 640x480 offscreen surface and
+// StretchBlts the front buffer (rendered at 0x5555b0 x 0x5555b4) down into it
+// before writing the TGA. Detour the 21-byte size+dims setup into a cave stub
+// that substitutes the live render resolution - but ONLY when the mode arg is 0
+// (a PrintScreen shot). Nonzero modes (savegame thumbnails) keep the stock
+// 640x480: their thumbnail comes from HalfScalePic (0x464770), which repeatedly
+// HALVES the capture until it fits the target box, so only a 640x480 source
+// lands exactly on the 80x60 the save/load menu expects.
+const SHOTRES_VA = 0x4601ab // push 0xe1000; mov [esp+0x14],640; mov [esp+0x18],480
+const SHOTRES_ORIG = '6800100e00' + 'c744241480020000' + 'c7442418e0010000'
+const SHOTRES_RET = 0x4601c0 // the capture-buffer malloc call the setup feeds
+const SCREEN_W_VA = 0x5555b0 // DAT_005555b0, render width (px)
+
+// Screenshot names + alternate key. Stock names shots with a counter that is a
+// zero-initialized stack local of the lifecycle function FUN_004438c0, so
+// every ce.exe run restarts at shot1.tga and silently overwrites older
+// screenshots (the TGA writer fopens "wb"). Detour the whole 34-byte
+// name-build (counter increment + `sprintf("shot%d.tga", n)` into the stack
+// buffer + the grab-call arg setup) into a cave stub that instead names the
+// shot by local time - screenshots\shot-YYYYMMDD-HHMMSS-mmm.tga - via
+// GetLocalTime (resolved at startup; ce.exe doesn't import it) and the CRT
+// sprintf, built in a cave buffer that is then passed to the grab: collision-
+// free across sessions, and names sort chronologically. And because Windows 11
+// binds PrintScreen to the Snipping Tool by default (the overlay steals focus
+// and knocks the game out of exclusive fullscreen), the three PrintScreen key
+// polls also accept F11: each 7-byte `mov cl,0xb7; call KEYDOWN` site becomes
+// a call into a cave stub that ORs the two keys' states. (F12 is taken: it
+// opens the in-game console - polled at 0x43b421 inside ConsoleKeyHandler
+// 0x43b310, which also opens it on LAlt+S and opens chat on F7/F8. F11 is
+// verified free in both 1.41 and 1.43 by byte-scanning every
+// `b1 <key> e8 -> KEYDOWN` poll site and every direct state-array read.)
+const SHOTNAME_VA = 0x4443cf // counter inc + sprintf + grab-arg setup
+const SHOTNAME_ORIG =
+  '8b44242c' + // mov eax, [esp+0x2c]  (the counter local)
+  '40' + // inc eax
+  '8944242c' + // mov [esp+0x2c], eax
+  '50' + // push eax             (sprintf vararg)
+  '8d442434' + // lea eax, [esp+0x34]  (the stack name buffer)
+  '68ec314c00' + // push 0x4c31ec        ("shot%d.tga"; was the fix-#4 repoint)
+  '50' + // push eax
+  'e89efd0400' + // call 0x494186        (sprintf)
+  '83c40c' + // add esp, 0xc
+  '33d2' + // xor edx, edx         (grab mode 0 = screenshot)
+  '8d4c2430' // lea ecx, [esp+0x30]  (grab arg: the name buffer)
+const SHOTNAME_RET = 0x4443f1 // call [0x53fae4] (the per-renderer grab)
+const SPRINTF_VA = 0x494186 // CRT sprintf(dst, fmt, ...) (cdecl)
+const KEYDOWN_VA = 0x483770 // key-down poll (cl = DIK code) -> eax = 0 / 0x80
+const SHOTKEY_SITES = [0x4443a9, 0x4443b4, 0x4443c4] // mov cl,0xb7; call KEYDOWN
+const SHOT_ALT_KEY = 0x57 // DIK_F11
 
 // Startup-cutscene relocation. Skip the boot reel (test esi,esi; je -> jmp @
 // 0x4416bd) and play the campaign opening (intro.smk + m1c2.smk) at the
@@ -371,6 +423,16 @@ const PROG = [
   I('push 0'),
   PUSHS('s_saves'),
   I('call esi'),
+
+  // resolve GetLocalTime (kernel32; ce.exe doesn't import it) for the
+  // timestamped screenshot names - left null on failure (h_shotname falls
+  // back to the stock counter naming)
+  PUSHS('s_kernel32'),
+  CALL('LoadLibraryA'),
+  PUSHS('s_getlocaltime'),
+  I('push eax'),
+  CALL('GetProcAddress'),
+  MOVST('g_getlocaltime'),
 
   // load cemusic.dll and resolve the three music exports into g_play/g_stop/g_vol
   PUSHS('s_cemusic'),
@@ -959,6 +1021,100 @@ const PROG = [
   BUF('sl_buf', 4), // scratch: lpBuffer, stashed before pushad
   BUF('sl_len', 4), // scratch: nChars
   BUF('sl_written', 4), // WriteFile's lpNumberOfBytesWritten
+
+  // --- full-res screenshot: reached by the .text detour at SHOTRES_VA ---
+  // Appended at the tail so every existing cave offset is unchanged. On entry
+  // esi = the mode arg (edx at D3DGrabScreen entry): 0 = PrintScreen shot,
+  // nonzero = savegame thumbnail. eax/ecx/edx are dead here (every later use
+  // reloads them); ebx (0) and esi must be preserved.
+  LBL('h_shotres'),
+  I('test esi, esi'),
+  JNE('L_sr_stock'), // savegame thumbnail -> stock 640x480
+  I(`mov eax, dword [${hex(SCREEN_W_VA)}]`), // render width
+  I(`mov edx, dword [${hex(SCREEN_H_VA)}]`), // render height
+  I('test eax, eax'),
+  JE('L_sr_stock'),
+  I('test edx, edx'),
+  JE('L_sr_stock'),
+  I('mov ecx, eax'),
+  I('imul ecx, edx'), // ecx = w*h
+  I('mov eax, ecx'),
+  I('add ecx, ecx'),
+  I('add ecx, eax'), // ecx = w*h*3  (no lea with scale - rasm2 drops it)
+  I('push ecx'), // the capture-buffer malloc size
+  I(`mov eax, dword [${hex(SCREEN_W_VA)}]`), // reload width (eax was scratch)
+  I('mov dword [esp+0x14], eax'), // dest surface / StretchBlt / TGA width
+  I('mov dword [esp+0x18], edx'), // dest surface / StretchBlt / TGA height
+  JMPVA(SHOTRES_RET),
+  LBL('L_sr_stock'),
+  RAW(SHOTRES_ORIG), // displaced: push 0xe1000; mov [esp+0x14],640; ..,480
+  JMPVA(SHOTRES_RET),
+
+  // --- screenshot naming: reached by the .text detour at SHOTNAME_VA ---
+  // Build screenshots\shot-YYYYMMDD-HHMMSS-mmm.tga from GetLocalTime in a cave
+  // buffer, then hand it to the grab (ecx = name, edx = 0). eax/ecx/edx are
+  // scratch at the site (the displaced code clobbers all three); the
+  // callee-saved registers are untouched. If GetLocalTime went unresolved,
+  // fall back to the displaced stock counter naming (relocated).
+  LBL('h_shotname'),
+  MOVLD('g_getlocaltime'),
+  I('test eax, eax'),
+  JE('L_dn_stock'),
+  PUSHS('sn_time'), // &SYSTEMTIME
+  I('call eax'), // GetLocalTime(&sn_time), stdcall
+  MOVCXL('sn_time'), // ecx = &SYSTEMTIME (WORD fields)
+  I('movzx eax, word [ecx+14]'), // wMilliseconds
+  I('push eax'),
+  I('movzx eax, word [ecx+12]'), // wSecond
+  I('push eax'),
+  I('movzx eax, word [ecx+10]'), // wMinute
+  I('push eax'),
+  I('movzx eax, word [ecx+8]'), // wHour
+  I('push eax'),
+  I('movzx eax, word [ecx+6]'), // wDay
+  I('push eax'),
+  I('movzx eax, word [ecx+2]'), // wMonth
+  I('push eax'),
+  I('movzx eax, word [ecx]'), // wYear
+  I('push eax'),
+  PUSHS('s_shotfmt'),
+  PUSHS('sn_name'),
+  CALLVA(SPRINTF_VA), // sprintf(sn_name, fmt, y, mo, d, h, mi, s, ms)
+  I('add esp, 0x24'), // cdecl: drop the 9 args
+  I('xor edx, edx'), // grab mode 0 = screenshot
+  MOVCXL('sn_name'), // grab arg: the cave name buffer
+  JMPVA(SHOTNAME_RET),
+  LBL('L_dn_stock'), // no GetLocalTime -> stock naming, relocated
+  I('mov eax, dword [esp+0x2c]'),
+  I('inc eax'),
+  I('mov dword [esp+0x2c], eax'),
+  I('push eax'),
+  I('lea eax, [esp+0x34]'), // the stack name buffer
+  PUSHS('r_shot'), // "screenshots\shot%d.tga" (fix-#4 redirect string)
+  I('push eax'),
+  CALLVA(SPRINTF_VA),
+  I('add esp, 0xc'),
+  I('xor edx, edx'),
+  I('lea ecx, [esp+0x30]'),
+  JMPVA(SHOTNAME_RET),
+  STR('s_getlocaltime', 'GetLocalTime'),
+  STR('s_shotfmt', 'screenshots\\shot-%04d%02d%02d-%02d%02d%02d-%03d.tga'),
+  BUF('g_getlocaltime', 4), // resolved at startup; 0 = unavailable
+  BUF('sn_time', 16), // SYSTEMTIME scratch
+  BUF('sn_name', 48), // "screenshots\shot-YYYYMMDD-HHMMSS-mmm.tga" + NUL
+
+  // --- screenshot key poll: CALLED (not jmp'd) from the three .text sites ---
+  // Reports PrintScreen (0xb7) OR F11 down, in the poll's own convention
+  // (returns eax = 0 / 0x80).
+  LBL('h_shotkey'),
+  I('mov cl, 0xb7'),
+  CALLVA(KEYDOWN_VA),
+  I('test al, al'),
+  JNE('L_sk_ret'),
+  I(`mov cl, ${hex(SHOT_ALT_KEY)}`),
+  CALLVA(KEYDOWN_VA),
+  LBL('L_sk_ret'),
+  I('ret'),
 ]
 
 function length(it) {
@@ -1123,6 +1279,22 @@ function ceEdits(cave, detour, strvas) {
   // dedicated-server log: detour FUN_00443740's WriteConsoleA (6-byte call) into
   // the cave stub that also appends the line to logs\server.log
   e.push([SERVLOG_VA - IMAGE_BASE, SERVLOG_ORIG, detourVa(SERVLOG_VA, strvas['h_servlog'], 6)])
+  // full-res screenshots: detour D3DGrabScreen's 21-byte 640x480 capture setup
+  // into the resolution-aware cave stub
+  e.push([SHOTRES_VA - IMAGE_BASE, SHOTRES_ORIG, detourVa(SHOTRES_VA, strvas['h_shotres'], 21)])
+  // screenshot naming: detour the 34-byte name-build into the timestamp stub
+  e.push([SHOTNAME_VA - IMAGE_BASE, SHOTNAME_ORIG, detourVa(SHOTNAME_VA, strvas['h_shotname'], 34)])
+  // screenshot key: each `mov cl,0xb7; call KEYDOWN` poll -> call the OR stub
+  for (const site of SHOTKEY_SITES) {
+    const orig =
+      'b1b7' + Buffer.concat([Buffer.from([0xe8]), packI(KEYDOWN_VA - (site + 7))]).toString('hex')
+    const nw = Buffer.concat([
+      Buffer.from([0xe8]),
+      packI(strvas['h_shotkey'] - (site + 5)),
+      Buffer.from([0x90, 0x90]),
+    ]).toString('hex')
+    e.push([site - IMAGE_BASE, orig, nw])
+  }
   e.push(...BOOTCUT_EDITS) // startup-cutscene relocation: skip the boot reel
   e.push(...BASECRASH_EDITS) // SP base-crash (NaN turret aim) + save-crash fixes
   e.push(...VERSION_EDITS) // version bump: CEBETA v1.43 -> CE v1.50 (display + wire)
