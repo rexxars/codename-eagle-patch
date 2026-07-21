@@ -1,0 +1,47 @@
+[package]
+name = "cevideo"
+version = "0.1.0"
+edition = "2021"
+description = "Modern video playback shim for Codename Eagle (drop-in smackw32.dll replacement)"
+
+[lib]
+name = "smackw32"
+crate-type = ["cdylib"]
+
+[dependencies]
+# AV1 video decoder (pure-Rust dav1d port). Both bit depths so 10-bit clips
+# still decode; the shim only ever hands the engine 8-bit RGB.
+rav1d = { version = "1.1.0", default-features = false, features = ["bitdepth_8", "bitdepth_16"] }
+# WebM/Matroska container demuxer (pure Rust).
+matroska-demuxer = "0.8.0"
+# Vorbis audio decoding (pure Rust). We feed it the demuxer's audio blocks
+# directly, so only the Vorbis codec is enabled (no container/format readers).
+symphonia = { version = "0.5", default-features = false, features = ["vorbis"] }
+# For the platform `EAGAIN` errno value, which dav1d's C-ABI returns (negated)
+# to signal "need more data / try again". Already in the tree via rav1d.
+libc = "0.2"
+# Cutscene audio output: rodio bundles cpal (WASAPI output). Same version as
+# cemusic. We feed it decoded PCM directly via SamplesBuffer, so no rodio
+# decoder features are needed - but the default feature set is harmless and
+# matches cemusic, so we keep it simple.
+rodio = "0.19"
+
+# Windows-only: the stock-DLL proxy loader (`LoadLibraryA`/`GetProcAddress`) and
+# the FFI layer. Same major version cemusic's sibling crates use. Not pulled in
+# on the dev host, so the host `cargo test` build is unaffected.
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_System_LibraryLoader"] }
+
+# The ABI integration test loads the built DLLs and calls their exports via
+# `GetProcAddress`, so it needs the loader APIs too (Windows CI / Phase 5 only).
+[target.'cfg(windows)'.dev-dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_System_LibraryLoader"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+# Note: not panic="abort" - it can't link cleanly against stable's prebuilt std on
+# *-windows-gnu (undefined _Unwind_Resume). The exports below catch_unwind instead,
+# so a panic never unwinds across the FFI boundary into ce.exe.

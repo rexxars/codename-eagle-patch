@@ -24,6 +24,7 @@ export const categories = [
   {key: 'graphics', title: 'Graphics and display'},
   {key: 'singleplayer', title: 'Single player'},
   {key: 'music', title: 'Music'},
+  {key: 'video', title: 'Cutscenes'},
 ]
 
 export const changes = [
@@ -249,5 +250,15 @@ export const changes = [
     summary:
       'The soundtrack can play from Ogg Vorbis files in a music\\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone.',
     body: 'The game can play its soundtrack from music files in a music\\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies.',
+  },
+
+  {
+    id: 'modern-cutscenes',
+    title: 'Cutscenes can play from WebM video, not just Smacker',
+    category: 'video',
+    scope: 'full',
+    summary:
+      'Cutscenes can now be played from modern WebM video (AV1 + Vorbis) as well as the original Smacker (.smk) format.',
+    body: "The patch adds a drop-in replacement for the game's video library (smackw32.dll) that can play a cutscene from a modern WebM video (AV1 with Vorbis audio) in addition to the original Smacker format. When a cutscene has a matching .webm file it plays that; otherwise it falls back to the original .smk through the stock library, so existing videos are unaffected. Full game only.",
   },
 ]

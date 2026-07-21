@@ -59,6 +59,10 @@ The [`iplist/`](iplist/), [`menudll/`](menudll/) and [`cemusic/`](cemusic/) subd
 
 - **No CD needed, and no CD crashes.** The game can play its soundtrack from music files in a music\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies.
 
+### Cutscenes (full game)
+
+- **Cutscenes can play from WebM video, not just Smacker.** The patch adds a drop-in replacement for the game's video library (smackw32.dll) that can play a cutscene from a modern WebM video (AV1 with Vorbis audio) in addition to the original Smacker format. When a cutscene has a matching .webm file it plays that; otherwise it falls back to the original .smk through the stock library, so existing videos are unaffected. Full game only.
+
 <!-- GENERATED:changes:end -->
 
 ## Applying it manually

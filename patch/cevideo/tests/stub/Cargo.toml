@@ -1,0 +1,16 @@
+[package]
+name = "smackw32-orig-stub"
+version = "0.0.0"
+edition = "2021"
+publish = false
+description = "Call-recording stand-in for the stock smackw32_orig.dll, used by the cevideo ABI integration test (Windows / Phase 5 only)."
+
+[lib]
+# Built as `smackw32_orig.dll` so cevideo's proxy loader (LoadLibraryA
+# "smackw32_orig.dll") resolves it in the ABI integration test.
+name = "smackw32_orig"
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "z"
+strip = true

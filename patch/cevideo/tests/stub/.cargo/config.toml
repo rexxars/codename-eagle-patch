@@ -1,0 +1,4 @@
+# Statically link the MSVC CRT into the stub DLL, matching the shim, so it loads
+# on a clean Windows install with no VC++ redistributable.
+[target.i686-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]

@@ -54,6 +54,7 @@ const SKIP = [
   /^default\.cfg$/i,
   /^keyconf\.dat$/i,
   /^readme142\.txt$/i,
+  /^smackw32\.dll$/i,
   /^level(12[89]|13[0-3]|248)\//i,
   /^levels\.nfo$/i,
 ]
@@ -84,11 +85,75 @@ if (!fs.existsSync(cemusicSrc)) {
   )
   process.exit(1)
 }
+
+// cevideo's smackw32.dll is the drop-in Smacker shim (plays transcoded AV1 WebM
+// cutscenes; see patch/cevideo). Like cemusic.dll it is built from its crate, not
+// sourced from a pristine install, so refuse to run (before deleting anything) if
+// the build artifact is missing. Override the artifact path with CE_CEVIDEO_DLL.
+const cevideoSrc =
+  process.env.CE_CEVIDEO_DLL ??
+  path.join(REPO, 'patch/cevideo/target/i686-pc-windows-msvc/release/smackw32.dll')
+if (!fs.existsSync(cevideoSrc)) {
+  console.error(
+    `smackw32.dll (cevideo) build artifact not found: ${cevideoSrc} - build it first (from patch/cevideo/: XWIN_ARCH=x86 cargo xwin build --release --target i686-pc-windows-msvc) or point CE_CEVIDEO_DLL at a built smackw32.dll; regenerating without it would produce an incomplete payload`,
+  )
+  process.exit(1)
+}
+
+// The cevideo shim forwards any un-shimmed Smacker calls to the stock DLL, which
+// it loads as smackw32_orig.dll. The stock SMACKW32.DLL is byte-identical across
+// 1.0-1.43, so we ship the copy already committed at game/demo/smackw32.dll
+// rather than depending on a pristine install for it. (The main copy loop below
+// skips smackw32.dll, so the shim written above is never clobbered.)
+const stockSmackw32 = path.join(REPO, 'game/demo/smackw32.dll')
+if (!fs.existsSync(stockSmackw32)) {
+  console.error(
+    `stock smackw32.dll missing at ${stockSmackw32} - needed as smackw32_orig.dll for the cevideo shim to forward to`,
+  )
+  process.exit(1)
+}
+
 // Start clean so the output is exactly the computed set (no stale leftovers).
 fs.rmSync(FULL, {recursive: true, force: true})
 fs.mkdirSync(FULL, {recursive: true})
 fs.copyFileSync(cemusicSrc, path.join(FULL, 'cemusic.dll'))
 console.log('cemusic.dll (from patch/cemusic build)')
+fs.copyFileSync(cevideoSrc, path.join(FULL, 'smackw32.dll'))
+console.log('smackw32.dll (cevideo shim, from patch/cevideo build)')
+fs.copyFileSync(stockSmackw32, path.join(FULL, 'smackw32_orig.dll'))
+console.log('smackw32_orig.dll (stock Smacker DLL, from game/demo)')
+
+// Transcoded cutscenes: cutscn/*.webm (AV1 + Vorbis), produced by
+// scripts/transcode-cutscenes.js from the CD's CUTSCN folder. These are
+// copyrighted game content transcoded at build time, never committed and not
+// present in a pristine install, so they are opt-in: point CE_CUTSCN_WEBM at the
+// transcode output dir to bundle them. Without it the payload still builds (the
+// shim just has no videos to play, same as a stock install with no cutscenes
+// copied in). The shim's subtitle sync relies on transcode-cutscenes.js having
+// preserved each clip's frame count and fps 1:1.
+const cutscnSrc = process.env.CE_CUTSCN_WEBM
+if (cutscnSrc) {
+  if (!fs.existsSync(cutscnSrc) || !fs.statSync(cutscnSrc).isDirectory()) {
+    console.error(`CE_CUTSCN_WEBM is set but is not a directory: ${cutscnSrc}`)
+    process.exit(1)
+  }
+  const webms = fs
+    .readdirSync(cutscnSrc)
+    .filter((name) => name.toLowerCase().endsWith('.webm'))
+    .sort()
+  if (webms.length === 0) {
+    console.error(`CE_CUTSCN_WEBM directory has no .webm files: ${cutscnSrc}`)
+    process.exit(1)
+  }
+  const cutscnDest = path.join(FULL, 'cutscn')
+  fs.mkdirSync(cutscnDest, {recursive: true})
+  for (const name of webms) {
+    fs.copyFileSync(path.join(cutscnSrc, name), path.join(cutscnDest, name.toLowerCase()))
+  }
+  console.log(`cutscn/ (${webms.length} transcoded .webm cutscene(s) from CE_CUTSCN_WEBM)`)
+} else {
+  console.log('cutscn/ skipped (set CE_CUTSCN_WEBM to a transcode output dir to bundle cutscenes)')
+}
 
 let copied = 0
 for (const [rel, src] of [...p143.entries()].sort()) {

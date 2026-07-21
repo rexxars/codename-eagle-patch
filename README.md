@@ -61,6 +61,10 @@ Want to run a server for others? There is a ready-made [dedicated server Docker 
 
 - **No CD needed, and no CD crashes.** The soundtrack can play from Ogg Vorbis files in a music\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone.
 
+### Cutscenes (full game)
+
+- **Cutscenes can play from WebM video, not just Smacker.** Cutscenes can now be played from modern WebM video (AV1 + Vorbis) as well as the original Smacker (.smk) format.
+
 <!-- GENERATED:changes:end -->
 
 The [full changelog](game/common/readme150.txt) lists every change.

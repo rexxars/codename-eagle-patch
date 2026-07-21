@@ -1,0 +1,12 @@
+; Re-export the stub's plain Rust symbols under the stock smackw32 DLL's exact
+; decorated stdcall names, so cevideo's proxy loader resolves them by name.
+EXPORTS
+    _SmackOpen@12 = stub_open
+    _SmackToBuffer@28 = stub_to_buffer
+    _SmackDoFrame@4 = stub_do_frame
+    _SmackNextFrame@4 = stub_next_frame
+    _SmackWait@4 = stub_wait
+    _SmackClose@4 = stub_close
+    _SmackSoundUseDirectSound@4 = stub_sound_use_direct_sound
+    _SmackDDSurfaceType@4 = stub_dd_surface_type
+    _SmackIsSoftwareCursor@8 = stub_is_software_cursor

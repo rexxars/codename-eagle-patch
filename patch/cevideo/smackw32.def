@@ -1,0 +1,18 @@
+; Module-definition file for the smackw32.dll shim (i686-pc-windows-msvc).
+;
+; Re-exports each plain `#[no_mangle]` Rust symbol under the engine's exact
+; decorated stdcall name (`_Name@<arg-bytes>`), matching the stock RAD Smacker
+; DLL's export table. `#[export_name]` cannot produce these names on i686-msvc
+; (the linker re-decorates a stdcall export_name into `__Name@N@M`), so this
+; alias table is the reliable mechanism. Applied by build.rs as a cdylib-only
+; `/DEF` link-arg. See src/ffi.rs.
+EXPORTS
+    _SmackOpen@12 = smack_open
+    _SmackToBuffer@28 = smack_to_buffer
+    _SmackDoFrame@4 = smack_do_frame
+    _SmackNextFrame@4 = smack_next_frame
+    _SmackWait@4 = smack_wait
+    _SmackClose@4 = smack_close
+    _SmackSoundUseDirectSound@4 = smack_sound_use_direct_sound
+    _SmackDDSurfaceType@4 = smack_dd_surface_type
+    _SmackIsSoftwareCursor@8 = smack_is_software_cursor
