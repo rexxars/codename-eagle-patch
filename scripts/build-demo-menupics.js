@@ -1,68 +1,62 @@
 #!/usr/bin/env node
-// Rebuild game/demo/menu/menupics.dat: the demo's menu-screen texture archive
-// with the full-game menu textures the demo repack dropped added back in.
+// Patch game/demo/menu/menupics.dat: the multiplayer demo's menu-screen texture
+// archive.
 //
-// Dafoosa's 1.43 MP demo repack shipped a trimmed menupics.dat (74 entries) that
-// is missing a handful of textures the menu code still references, so those slots
-// render blank in the demo. This adds the missing full-game textures back:
+// The official Codename Eagle multiplayer demo (going back to the 1.33 MP demo)
+// ships a trimmed menupics.dat - 74 entries, missing six menu textures the menu
+// code still references, so those slots render blank. Dafoosa's 1.43 repack
+// (the demo this patch builds on) inherited that same trimmed archive; the
+// trimming is the official demo's, not his. This adds the missing full-game
+// textures back:
 //
 //   c_chn16, c_dr3df, c_gfno, c_gfmid, kc_invX, jg_tmA
 //
-// menupics.dat is a plain named-blob archive (parseArchive/buildArchive), and
-// each entry's stored blob is the engine's internal texture format - a standard
-// TGA with its constant first 8 header bytes stripped. The source TGAs in
-// game/demo-additions/menu/ are standalone (viewable) files extracted verbatim
-// from the full game's MENU/menupics.dat; we strip that 8-byte prefix here to
-// recover the stored blob and append it. See game/demo-additions/README.md.
+// and replaces the menu font (menufont) with the one carrying the extra
+// name-punctuation glyphs, so player and server names with punctuation display
+// correctly in the demo's menus.
 //
-// The additions are pristine full-game content, not authored edits, so they are
-// NOT in game/full-overrides/ (which is authored overrides only).
+// Unlike the full game - where the ~120 MB menupics.dat is patched on the
+// player's machine at install time - the demo SHIPS its menupics.dat, so it is
+// patched here in the repo and shipped as-is by the demo installer and zip.
 //
-// Idempotent: it strips any existing copy of the six names before re-adding them,
-// so it converges to the same bytes whether run on the trimmed original or on an
-// already-augmented file.
+// This uses the repo's own Rust texture tool (patch/textool), the same tool the
+// full installer runs, rather than cnetool. `--allow-any` is required because
+// menu bitmaps are not square / power-of-two like the in-game 24bits textures.
+// textool upserts (replace-if-present, else append) in one atomic write, so this
+// script is idempotent: re-running converges to the same archive whether it
+// starts from the pristine trimmed demo or an already-patched copy.
+//
+// Needs a Rust toolchain (the tool is built and run for the host via `cargo
+// run`). Usage: node scripts/build-demo-menupics.js
+import {execFileSync} from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 
-import {parseArchive, extractFile, buildArchive} from 'cnetool'
-
-// The constant first 8 bytes cnetool strips from a stored blob to make a valid
-// standalone TGA (imagetype 2, empty id/colormap). We re-strip it to go back.
-const TGA_PREFIX = Uint8Array.from([0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00])
-
-// Names to add, in the order they should be appended (matches the tested build).
-const ADDITIONS = ['c_chn16', 'c_dr3df', 'c_gfno', 'c_gfmid', 'kc_invX', 'jg_tmA'].map(
-  (n) => `${n}.tga`,
-)
-
 const REPO = path.join(import.meta.dirname, '..')
 const dest = path.join(REPO, 'game/demo/menu/menupics.dat')
-const srcDir = path.join(REPO, 'game/demo-additions/menu')
 
-// Recover the stored blob from a standalone source TGA by stripping the 8-byte prefix.
-function storedBlob(name) {
-  const tga = new Uint8Array(fs.readFileSync(path.join(srcDir, name)))
-  if (!TGA_PREFIX.every((b, i) => tga[i] === b)) {
-    throw new Error(`${name}: unexpected TGA header prefix, refusing to strip`)
-  }
-  return tga.subarray(TGA_PREFIX.length)
-}
-
-const base = new Uint8Array(fs.readFileSync(dest))
-const archive = parseArchive(base)
-
-const additionSet = new Set(ADDITIONS.map((n) => n.toLowerCase()))
-const entries = archive.entries
-  // Drop any existing copy of the additions so re-runs stay idempotent.
-  .filter((e) => !additionSet.has(e.name.toLowerCase()))
-  .map((e) => ({name: e.name, data: extractFile(base, e)}))
-
-for (const name of ADDITIONS) {
-  entries.push({name, data: storedBlob(name)})
-}
-
-const out = buildArchive(entries)
-fs.writeFileSync(dest, out)
-console.log(
-  `wrote ${dest} (${entries.length} entries, +${ADDITIONS.length}: ${ADDITIONS.join(', ')})`,
+// Full-game menu textures the demo archive is missing (blank slots in-game),
+// staged as standalone TGAs extracted verbatim from the full game.
+const additions = ['c_chn16', 'c_dr3df', 'c_gfno', 'c_gfmid', 'kc_invX', 'jg_tmA'].map((n) =>
+  path.join(REPO, 'game/demo-additions/menu', `${n}.tga`),
 )
+// The menu font with the extra name-punctuation glyphs (the same authored TGA
+// the full installer patches in). See game/full-overrides/README.md.
+const menufont = path.join(REPO, 'game/full-overrides/menu/menufont.tga')
+
+const tgas = [...additions, menufont]
+for (const f of [dest, ...tgas]) {
+  if (!fs.existsSync(f)) throw new Error(`missing: ${f}`)
+}
+
+// Build + run textool for the host via cargo (its .cargo/config only sets the
+// Windows cross-linker, so a plain `cargo run` targets the host and executes
+// here). --manifest-path so cargo resolves the crate regardless of cwd.
+const manifest = path.join(REPO, 'patch/textool/Cargo.toml')
+console.log(`textool set --allow-any ${path.relative(REPO, dest)}  (+${tgas.length} TGAs)`)
+const out = execFileSync(
+  'cargo',
+  ['run', '--quiet', '--manifest-path', manifest, '--', 'set', '--allow-any', dest, ...tgas],
+  {encoding: 'utf8'},
+)
+process.stdout.write(out)

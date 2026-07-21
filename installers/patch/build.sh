@@ -75,7 +75,7 @@ for f in common/ce.exe common/lobby.exe common/default.cfg \
   common/keyconf.dat common/menuinfo.dat \
   full/levels.nfo full/24bits/texsec.dat demo/levels.nfo demo/menu/menupics.dat \
   full-overrides/24bits/INTERFC1.tga full-overrides/24bits/snipemod32.tga \
-  full-overrides/24bits/target32.tga; do
+  full-overrides/24bits/target32.tga full-overrides/menu/menufont.tga; do
   [[ -f "$game_dir/$f" ]] || {
     echo "error: $game_dir/$f missing" >&2
     exit 1
@@ -194,6 +194,7 @@ makensis \
   -DTEX_INTERFC1="$game_dir/full-overrides/24bits/INTERFC1.tga" \
   -DTEX_SNIPEMOD="$game_dir/full-overrides/24bits/snipemod32.tga" \
   -DTEX_TARGET="$game_dir/full-overrides/24bits/target32.tga" \
+  -DTEX_MENUFONT="$game_dir/full-overrides/menu/menufont.tga" \
   -DOUTFILE="$out" \
   -DVERSION="$version" \
   -DVIVERSION="$viversion" \

@@ -29,6 +29,7 @@ Want to run a server for others? There is a ready-made [dedicated server Docker 
 - **No more black screen from a stuck session.** Starting a game clears out any leftover ce.exe and lobby.exe processes from a crashed or abandoned session, so hosting or joining no longer leaves you on a black screen.
 - **Dedicated servers idle quietly.** An empty dedicated server no longer pegs a CPU core; the game loop is throttled while nobody is connected and switches back to full speed the instant a player joins.
 - **Dedicated servers keep a log of who joins and leaves.** A dedicated server now records its events (server loaded, players joining, leaving and losing connection) to logs\server.log, so you have a record even when the server console is not visible.
+- **Player and server names show more characters in the menus.** The menu font now includes the punctuation the game allows in player names, so names with characters like / : @ [ ] { } | show correctly on the name and server-browser screens instead of turning into dots.
 
 ### Gameplay and balance
 

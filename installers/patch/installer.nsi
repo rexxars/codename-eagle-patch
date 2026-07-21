@@ -28,6 +28,8 @@
 ;   TEX_INTERFC1    the 1.50 INTERFC1.tga, patched into 24bits\texsec.dat
 ;   TEX_SNIPEMOD    the 1.50 SNIPEMOD.tga, patched into 24bits\textures.dat
 ;   TEX_TARGET      the 1.50 Target.tga, patched into 24bits\textures.dat
+;   TEX_MENUFONT    the menu font (menufont.tga) with the extra name-punctuation
+;                   glyphs, patched into menu\menupics.dat (full game only)
 ;   OUTFILE         where to write the patch exe
 ;   VERSION         display version, e.g. "1.50.0" or "1.50.0-beta.1"
 ;   VIVERSION       strictly-numeric X.X.X.X form of VERSION for the exe's
@@ -105,6 +107,9 @@
 !endif
 !ifndef TEX_TARGET
   !error "TEX_TARGET not defined - build with build.sh"
+!endif
+!ifndef TEX_MENUFONT
+  !error "TEX_MENUFONT not defined - build with build.sh"
 !endif
 !ifndef OUTFILE
   !error "OUTFILE not defined - build with build.sh"
@@ -311,6 +316,7 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
   ; behind (textool cleans up on its own error paths; this heals hard kills on
   ; the next run).
   Delete "$INSTDIR\24bits\*.tmp"
+  Delete "$INSTDIR\menu\*.tmp"
   ; 1.50 removed these from No Mans Land - a 1.43 install still has them, and
   ; leaving them would contradict the reworked level data.
   Delete "$INSTDIR\level128\cactus1.scr"
@@ -354,6 +360,7 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
     File "/oname=$PLUGINSDIR\INTERFC1.tga" "${TEX_INTERFC1}"
     File "/oname=$PLUGINSDIR\SNIPEMOD.tga" "${TEX_SNIPEMOD}"
     File "/oname=$PLUGINSDIR\Target.tga" "${TEX_TARGET}"
+    File "/oname=$PLUGINSDIR\menufont.tga" "${TEX_MENUFONT}"
     ; A stock 1.0 install has no 24bits\texsec.dat at all, and it can't be
     ; skipped (most of its textures exist in no other archive), so write the
     ; stock 1.43 one when absent. 1.41/1.43 installs keep their own copy -
@@ -382,6 +389,21 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
       ${EndIf}
     ${Else}
       DetailPrint "24bits\textures.dat not found - skipping its texture fixes"
+    ${EndIf}
+    ; The menu font gains the extra name-punctuation glyphs (player/server names
+    ; in the menus). The full game's menu\menupics.dat is ~120 MB, so instead of
+    ; shipping it we patch the player's own copy in place with textool.
+    ; --allow-any: menu bitmaps are not square / power-of-two like the in-game
+    ; 24bits textures.
+    ${If} ${FileExists} "$INSTDIR\menu\menupics.dat"
+      SetFileAttributes "$INSTDIR\menu\menupics.dat" NORMAL
+      nsExec::ExecToLog '"$PLUGINSDIR\textool.exe" set --allow-any "$INSTDIR\menu\menupics.dat" "$PLUGINSDIR\menufont.tga"'
+      Pop $0
+      ${If} $0 != 0
+        DetailPrint "Warning: could not patch menu\menupics.dat (code $0) - the current menu font is kept."
+      ${EndIf}
+    ${Else}
+      DetailPrint "menu\menupics.dat not found - skipping the menu-font fix"
     ${EndIf}
   ${EndIf}
 

@@ -248,7 +248,7 @@ export const changes = [
     category: 'music',
     scope: 'full',
     summary:
-      'The soundtrack can play from Ogg Vorbis files in a music\\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone. Bonus: drop a file named after a map into music\\ and it becomes that map\'s theme song.',
+      "The soundtrack can play from Ogg Vorbis files in a music\\ folder instead of the CD, with its own volume on the in-game music slider, and the crash on launch with a CD in the drive is gone. Bonus: drop a file named after a map into music\\ and it becomes that map's theme song.",
     body: "The game can play its soundtrack from music files in a music\\ folder instead of the CD, with its own volume that the in-game music slider controls without affecting sound effects. It also fixes a crash on launch that could happen with a Codename Eagle CD in the drive (notably when running the multiplayer demo with a CD inserted), so the game no longer depends on or trips over the disc. The music playback (cemusic.dll) is part of the full game only; the crash fix always applies. Side quest for the curious: drop an Ogg file named after a map (e.g. music\\No mans land.ogg) and it loops as that map's personal theme song, single player or multiplayer, no config needed - go make No Man's Land absolutely slap.",
   },
 
@@ -260,5 +260,14 @@ export const changes = [
     summary:
       'Cutscenes can now be played from modern WebM video (AV1 + Vorbis) as well as the original Smacker (.smk) format.',
     body: "The patch adds a drop-in replacement for the game's video library (smackw32.dll) that can play a cutscene from a modern WebM video (AV1 with Vorbis audio) in addition to the original Smacker format. When a cutscene has a matching .webm file it plays that; otherwise it falls back to the original .smk through the stock library, so existing videos are unaffected. Full game only.",
+  },
+  {
+    id: 'menu-name-characters',
+    title: 'Player and server names show more characters in the menus',
+    category: 'multiplayer',
+    scope: 'all',
+    summary:
+      'The menu font now includes the punctuation the game allows in player names, so names with characters like / : @ [ ] { } | show correctly on the name and server-browser screens instead of turning into dots.',
+    body: 'Codename Eagle accepts a range of punctuation in player and server names, but the menu font only had glyphs for letters, digits and a few symbols - everything else rendered as a small dot in the menus. The font now carries a glyph for every character the name sanitiser allows, so player names and server names display correctly on the name-entry and server-browser screens. It is a menu-display change only and does not change which characters a name may contain.',
   },
 ]
