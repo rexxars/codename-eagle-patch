@@ -121,7 +121,24 @@ fn sanitize_truncates_to_ten() {
 #[test]
 fn sanitize_strips_non_ascii_and_quotes() {
     assert_eq!(sanitize_nickname("Bj\u{f8}rn"), "Bjrn");
-    assert_eq!(sanitize_nickname("a\"b"), "ab");
+    assert_eq!(sanitize_nickname("ab\"cd"), "abcd");
+}
+
+#[test]
+fn sanitize_strips_chars_the_engine_would_x_out() {
+    // ce.exe's session sanitizer replaces these with a literal 'X'; we drop
+    // them instead so the profile name plays back as typed.
+    assert_eq!(sanitize_nickname("a.b,c-d_e"), "abcde");
+    assert_eq!(sanitize_nickname("w^x~y`z"), "wxyz");
+    assert_eq!(sanitize_nickname("joe black"), "joeblack");
+    assert_eq!(sanitize_nickname("foo\\bar"), "foobar");
+}
+
+#[test]
+fn sanitize_short_results_fall_back_to_default() {
+    // 1-2 char names get "(XXXXXX)" appended by the engine in a session.
+    assert_eq!(sanitize_nickname("Ed"), DEFAULT_NAME);
+    assert_eq!(sanitize_nickname("a-b"), DEFAULT_NAME); // only 2 chars survive
 }
 
 #[test]

@@ -52,6 +52,8 @@ Unicode true
 !include "WinMessages.nsh"
 !include "WordFunc.nsh"
 !include "nsDialogs.nsh"
+!include "StrFunc.nsh"
+${StrStr} ; declare StrFunc's StrStr for install-time use (nickname filtering)
 
 !define APPNAME "Codename Eagle Multiplayer Demo"
 !define PUBLISHER "Codename Eagle Nation"
@@ -119,6 +121,15 @@ FunctionEnd
 Var Nickname
 Var NickTextBox
 
+; Characters the game renders in player names as typed. Everything else the
+; in-game sanitizer (ce.exe 0x476ef0) overwrites with a literal 'X' when a
+; player enters a session, so the text box refuses them up front. Same set as
+; menuinfo-nick's is_engine_legal() - keep the two in sync. (`"` and `\` are
+; engine-legal but excluded so the name can't break the quoted command line
+; passed to menuinfo-nick.exe; `$` is legal but the in-game font draws it as
+; a euro sign.)
+!define NICK_ALLOWED "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$$%&'()*+/:;<=>?@[]{|}"
+
 Function NickPageCreate
   !insertmacro MUI_HEADER_TEXT "Multiplayer name" "Choose the name other players see when you join or host games."
   nsDialogs::Create 1018
@@ -127,23 +138,56 @@ Function NickPageCreate
     Abort
   ${EndIf}
 
-  ${NSD_CreateLabel} 0 0 100% 24u "Up to 10 characters (letters and numbers). Leave it as CEDemo if you're not sure - you can change it in-game later."
+  ${NSD_CreateLabel} 0 0 100% 32u "3-10 characters: letters, numbers and most punctuation. Characters the game can't show in player names (spaces, dots, commas, dashes, underscores) can't be typed here. Leave it as CEDemo if you're not sure - you can change it in-game later."
   Pop $0
 
-  ${NSD_CreateText} 0 30u 100% 12u "$Nickname"
+  ${NSD_CreateText} 0 38u 100% 12u "$Nickname"
   Pop $NickTextBox
-  ; Cap typed input at the 10 chars the game broadcasts into multiplayer.
+  ; Cap typed input at the 10 chars the game broadcasts into multiplayer, and
+  ; filter every change (typing, paste) down to the game-renderable set.
   SendMessage $NickTextBox ${EM_SETLIMITTEXT} 10 0
+  ${NSD_OnChange} $NickTextBox NickOnChange
 
   nsDialogs::Show
 FunctionEnd
 
+; Rebuild the box's text from its engine-legal characters on every change. When
+; nothing was filtered the text is left untouched (this also terminates the
+; recursion from our own NSD_SetText, which re-fires the change event).
+Function NickOnChange
+  Pop $0 ; control hwnd (unused; we read via NSD_GetText)
+  ${NSD_GetText} $NickTextBox $0
+  StrCpy $1 "" ; filtered result
+  StrCpy $2 0  ; char index
+  ${Do}
+    StrCpy $3 $0 1 $2
+    ${If} $3 == ""
+      ${ExitDo}
+    ${EndIf}
+    ${StrStr} $4 "${NICK_ALLOWED}" $3
+    ${If} $4 != ""
+      StrCpy $1 "$1$3"
+    ${EndIf}
+    IntOp $2 $2 + 1
+  ${Loop}
+  ${If} $1 != $0
+    ${NSD_SetText} $NickTextBox $1
+    StrLen $2 $1
+    SendMessage $NickTextBox ${EM_SETSEL} $2 $2 ; SetText parks the caret at 0
+  ${EndIf}
+FunctionEnd
+
 Function NickPageLeave
   ${NSD_GetText} $NickTextBox $Nickname
-  ; Strip double-quotes so the name can't break the quoted command-line argument
-  ; passed to menuinfo-nick.exe; the exe does the rest of the normalization
-  ; (non-ASCII, length, empty -> CEDemo).
-  ${WordReplace} "$Nickname" '"' "" "+" $Nickname
+  StrLen $0 $Nickname
+  ${If} $0 == 0
+    ; A cleared box means "no preference" - accept the shipped default.
+    StrCpy $Nickname "CEDemo"
+  ${ElseIf} $0 < 3
+    ; The game pads 1-2 char names to <name>(XXXXXX); make the player pick.
+    MessageBox MB_OK|MB_ICONINFORMATION "Please use at least 3 characters - the game pads shorter names to $Nickname(XXXXXX)."
+    Abort ; stay on this page
+  ${EndIf}
 FunctionEnd
 
 Function .onInit

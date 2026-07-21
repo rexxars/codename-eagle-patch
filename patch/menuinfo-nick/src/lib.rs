@@ -24,6 +24,11 @@ pub const MAX_NAME: usize = 10;
 /// Default name when none is supplied — the value the demo ships with.
 pub const DEFAULT_NAME: &str = "CEDemo";
 
+/// Shortest name worth writing: the engine appends a literal `(XXXXXX)` to 1-2
+/// char names (and turns an empty one into `no name`) when the player enters a
+/// session, so anything shorter falls back to [`DEFAULT_NAME`] instead.
+pub const MIN_NAME: usize = 3;
+
 const BLOCK_LEN: usize = 272;
 const TAG_LEN: usize = 16;
 const PLAYINFO_TAG: &[u8] = b"PlayInfo";
@@ -131,19 +136,31 @@ pub fn set_nickname(plain: &mut [u8], name: &str) -> Result<(), String> {
     Ok(())
 }
 
-/// Normalize raw user input into an acceptable name: printable ASCII only,
-/// no double-quotes, trimmed to `MAX_NAME`, falling back to [`DEFAULT_NAME`].
+/// True for characters the game will display as typed. The engine's in-game
+/// name sanitizer (`ce.exe` `0x476ef0`, run on every name entering a session)
+/// overwrites everything outside `!`..=`}` — space, control bytes and, via a
+/// signed compare, every byte >= 0x80 — plus the explicit blocklist
+/// `_ - . , ^ ~ `` ` `` with a literal `X`. We drop those instead of shipping a
+/// name that plays as `XXX`. `"` and `\` are engine-legal but stripped here
+/// too, so the name can't break the quoted command line the installer passes
+/// to this tool. (`$` is legal but the in-game font draws it as `€`.)
+///
+/// The demo installer's name page live-filters input to the same set — keep
+/// `NICK_ALLOWED` in `installers/demo/installer.nsi` in sync with this.
+fn is_engine_legal(c: char) -> bool {
+    matches!(c, '!'..='}') && !matches!(c, '"' | '\\' | ',' | '-' | '.' | '^' | '_' | '`')
+}
+
+/// Normalize raw user input into a name the game will display as typed:
+/// engine-legal characters only (see [`is_engine_legal`]), trimmed to
+/// [`MAX_NAME`], falling back to [`DEFAULT_NAME`] when fewer than [`MIN_NAME`]
+/// characters survive.
 pub fn sanitize_nickname(raw: &str) -> String {
-    let cleaned: String = raw
-        .chars()
-        .filter(|&c| c.is_ascii_graphic() && c != '"' || c == ' ')
-        .take(MAX_NAME)
-        .collect();
-    let cleaned = cleaned.trim();
-    if cleaned.is_empty() {
+    let cleaned: String = raw.chars().filter(|&c| is_engine_legal(c)).take(MAX_NAME).collect();
+    if cleaned.len() < MIN_NAME {
         DEFAULT_NAME.to_string()
     } else {
-        cleaned.to_string()
+        cleaned
     }
 }
 

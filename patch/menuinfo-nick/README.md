@@ -16,12 +16,19 @@ release time and nothing is committed — see the release workflow.
 menuinfo-nick.exe <path-to-menuinfo.dat> <nickname>
 ```
 
-The name is normalized: printable ASCII only, `"` removed, trimmed to 10
-characters (the length the host broadcasts into multiplayer), falling back to
-`CEDemo` when empty. The file is rewritten in place via a temp file + rename, so
-a crash mid-write can't leave a corrupt profile. Exit status is non-zero (with a
-message on stderr) on any failure; the installer treats that as non-fatal and
-keeps the default name.
+The name is normalized to what the game actually renders. When a player enters
+a session, `ce.exe` runs every name through a sanitizer (`0x476ef0`) that
+replaces each character outside `!`–`}` (space, control bytes and — via a
+signed compare — all non-ASCII) plus the blocklist `` _ - . , ^ ~ ` `` with a
+literal `X`, pads 1–2 char names to `<name>(XXXXXX)`, and truncates to the 10
+chars the host broadcasts into multiplayer. So this tool keeps only characters
+that survive that intact (also dropping the engine-legal `"` and `\`, which
+would break the installer's quoted command line), trims to 10, and falls back
+to `CEDemo` when fewer than 3 characters remain. One display quirk remains: the
+in-game font draws `$` as `€`. The file is rewritten in place via a temp file +
+rename, so a crash mid-write can't leave a corrupt profile. Exit status is
+non-zero (with a message on stderr) on any failure; the installer treats that
+as non-fatal and keeps the default name.
 
 ## The file format
 

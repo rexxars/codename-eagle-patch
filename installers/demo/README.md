@@ -57,9 +57,15 @@ A **Multiplayer name** wizard page (between the directory and install pages)
 asks for a name of up to 10 characters, prefilled with `CEDemo`. After the
 payload is copied, `menuinfo-nick.exe` (run from `$PLUGINSDIR`, never installed
 into the game folder) writes that name into `menuinfo.dat`, so a fresh install
-shows the player's own name in-game. The name is normalized (printable ASCII,
-`"` removed, trimmed to 10, empty falls back to `CEDemo`), and a failure here is
-non-fatal — the install continues with the default name.
+shows the player's own name in-game. The text box enforces what the game
+actually renders in a session, visibly: input is live-filtered (typing and
+paste) to the characters the engine displays as typed — it turns spaces,
+`` _ - . , ^ ~ ` `` and all non-ASCII into literal `X`s, see the
+[menuinfo-nick README](../../patch/menuinfo-nick/README.md) — capped at 10
+chars, and a 1-2 char name is refused on Next with a note (the game pads those
+to `<name>(XXXXXX)`); clearing the box accepts the `CEDemo` default.
+`menuinfo-nick.exe` re-applies the same normalization as a backstop. A failure
+here is non-fatal — the install continues with the default name.
 
 The components page offers the **dgVoodoo graphics wrapper (recommended)** as a
 separate component, checked by default. It bundles the six dgVoodoo files

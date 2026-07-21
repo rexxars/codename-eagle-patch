@@ -2,8 +2,10 @@
 //!
 //! Sets the Codename Eagle multiplayer player name inside `menuinfo.dat`. The
 //! demo installer runs this once, post-copy, with the name the player typed.
-//! The nickname is normalized here (printable ASCII, <=10 chars, no quotes),
-//! so an empty or junk argument still yields a valid profile.
+//! The nickname is normalized here to what the game actually renders in a
+//! session (the engine X-es out spaces, `_ - . , ^ ~ `` ` `` and all
+//! non-ASCII; <=10 chars survive online), so an empty or junk argument still
+//! yields a valid profile.
 
 use std::path::{Path, PathBuf};
 use std::process::ExitCode;
