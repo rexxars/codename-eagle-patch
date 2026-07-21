@@ -18,11 +18,12 @@ name: Release
 # see is untouched. The stable auto-increment ignores beta tags (its regex is
 # anchored), so betas never consume a stable build number.
 #
-# The game payload ships pre-patched from game/ (LFS), so the only compile step
-# is ripmusic.exe (the CD->ogg ripper bundled inside the patch installer),
-# cross-built for 32-bit Windows with cargo-xwin. The provenance tests are NOT
-# run here - they need pristine local game installs; run them locally before
-# releasing.
+# The game payload ships pre-patched from game/ (LFS), so the compile steps
+# are just the bundled helpers: ripmusic.exe (the CD->ogg ripper bundled
+# inside the patch installer), cross-built for 32-bit Windows with cargo-xwin,
+# plus the seconds-fast mingw builds of menuinfo-nick.exe (demo installer) and
+# textool.exe (patch installer). The provenance tests are NOT run here - they
+# need pristine local game installs; run them locally before releasing.
 
 on:
   workflow_dispatch:
@@ -131,6 +132,22 @@ jobs:
 
       - name: Build menuinfo-nick.exe (64-bit Windows, via mingw)
         working-directory: patch/menuinfo-nick # per-crate .cargo/config.toml
+        run: |
+          rustup target add x86_64-pc-windows-gnu
+          cargo build --release --target x86_64-pc-windows-gnu
+
+      # textool.exe is the pure-Rust texture-archive patcher the patch
+      # installer bundles to apply the 1.50 texture fixes to the player's own
+      # 24bits archives at install time; the patch-installer build fast-fails
+      # without it. Cross-built via mingw like menuinfo-nick, it compiles in
+      # seconds.
+      - name: Cache Rust registry and textool builds
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: patch/textool
+
+      - name: Build textool.exe (64-bit Windows, via mingw)
+        working-directory: patch/textool # per-crate .cargo/config.toml
         run: |
           rustup target add x86_64-pc-windows-gnu
           cargo build --release --target x86_64-pc-windows-gnu

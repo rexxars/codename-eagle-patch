@@ -1,21 +1,24 @@
 # Full-game authored overrides
 
 Files here are **not** derivable from a pristine install. They are our own edits to
-shipped full-game assets. `scripts/build-full-payload.js` applies them **last**, on top
-of the pristine-derived `game/full/`, so they survive a payload regeneration. (Everything
-else in `game/full/` is exactly "pristine 1.43 minus what a base install already has";
-these are the exception.)
+shipped full-game assets. `level6/red.scr` is applied by `scripts/build-full-payload.js`
+**last**, on top of the pristine-derived `game/full/`, so it survives a payload
+regeneration. The three texture overrides are **not** baked into the payload: the full
+installer ships them alongside a pristine `texsec.dat` and runs
+[`textool`](../../patch/textool/) at **install time** to patch the player's archives.
+(Everything else in `game/full/` is exactly "pristine 1.43 minus what a base install
+already has"; these are the exception.)
 
 Layout mirrors the payload:
 
 | Override | What / why |
 | --- | --- |
 | `level6/red.scr` | LEVEL6 ("Demolition Man") player script, recompiled to grant a **visible gas-mask inventory item** when the professor's rescuer hands the mask over. Stock only calls `REFGasMask` (attaches the worn model) + a sound, so the mask never appeared in the inventory (a spoken-only prop). |
-| `24bits/interfc1-cell39.bgra` | The gas-mask HUD icon: 32×32 BGRA pixels spliced into `texsec.dat`'s `INTERFC1` atlas **cell 39** (col 7, row 4) at build time. Cell 39 is the one atlas cell no item, weapon, vehicle, or health icon uses; only cell 39's pixels change, every other byte of `texsec.dat` stays pristine. |
-| `24bits/snipemod32.tga` | The sniper-scope overlay regenerated as a **32-bit texture with real antialiased alpha** (stock is 24-bit, so its transparency is the engine's binary black color-key - hard staircase edges when upscaled). Appended to `texsec.dat` as a **new entry** at build time (blob at EOF + next free TOC slot; every pristine byte survives); the engine's archive-precedence search finds it there before the stock one in `textures.dat`. Demo installs get the same TGA via `game/demo/24bits/texsec.dat`, built by `scripts/build-demo-texsec.js`. |
-| `24bits/target32.tga` | The aiming crosshair as a **centered 32×32** texture (original orange), appended to `texsec.dat` as `Target.tga`. Stock `Target.tga` is 8×8 with its cross content in a 7×7 block, so its centre sits ~0.5 texel off; this replaces it with a crisp, exactly-centred 32×32. Pairs with the crosshair-scaling patch, which draws it at a resolution-relative size. Demo installs get it via `game/demo/24bits/texsec.dat`. |
+| `24bits/INTERFC1.tga` | The full 256×256×32 `INTERFC1` inventory-icon atlas with the gas-mask HUD icon painted into **cell 39** (col 7, row 4). Cell 39 is the one atlas cell no item, weapon, vehicle, or health icon uses; every other pixel is byte-identical to the pristine 1.43 atlas. `textool` replaces `INTERFC1.tga` inside the player's `texsec.dat` at install time. |
+| `24bits/snipemod32.tga` | The sniper-scope overlay regenerated as a **32-bit texture with real antialiased alpha** (stock is 24-bit, so its transparency is the engine's binary black color-key - hard staircase edges when upscaled). `textool` replaces `SNIPEMOD.tga` directly inside the player's `textures.dat` at install time. Demo installs get the same TGA via `game/demo/24bits/texsec.dat`, built by `scripts/build-demo-texsec.js`. |
+| `24bits/target32.tga` | The aiming crosshair as a **centered 32×32** texture (original orange), replacing `Target.tga`. Stock `Target.tga` is 8×8 with its cross content in a 7×7 block, so its centre sits ~0.5 texel off; this replaces it with a crisp, exactly-centred 32×32. Pairs with the crosshair-scaling patch, which draws it at a resolution-relative size. `textool` replaces it in the player's `textures.dat` at install time; demo installs get it via `game/demo/24bits/texsec.dat`. |
 | `src/red.scr.txt` | The cnetool script source `level6/red.scr` was compiled from (provenance). |
-| `src/interfc1.png` | The full mask atlas (256×256) `interfc1-cell39.bgra` was cut from (provenance). |
+| `src/interfc1.png` | The full mask atlas (256×256) `INTERFC1.tga` encodes, in human orientation (provenance/QC). |
 | `src/snipemod32.png` | The human-oriented QC image `snipemod32.tga` was encoded from (provenance). |
 | `src/target32.png` | The 32×32 crosshair `target32.tga` was encoded from. Regenerate the TGA with cnetool's `pngToTga(png, {topDown: true})`. |
 
@@ -49,11 +52,13 @@ pristine (the compiler lowers multiple `return`s to a single exit and normalizes
 case), but it is behaviorally identical: handler lookup is case-insensitive (`ce.exe`
 `0x49ff30` uppercases both sides) and the control-flow lowering is equivalent.
 
-**`24bits/interfc1-cell39.bgra`**: decode `src/interfc1.png` (top-down RGBA, the human-correct
-orientation `cnetool extract -p` produces), take cell 39 (x 224–255, y 128–159), write it as
-32×32 BGRA. The build script splices these bytes into the `INTERFC1` blob's cell 39 in
-engine row order (the blob stores rows top-down behind a bottom-origin descriptor, the same
-orientation as the source PNG, so no flip).
+**`24bits/INTERFC1.tga`**: extracted (8-byte constant TGA prefix + stored blob) from the
+fixed `texsec.dat` this repo previously committed, which was pristine 1.43 plus a 32×32
+cell-39 splice of the gas-mask icon cut from `src/interfc1.png` (the splice source,
+`interfc1-cell39.bgra`, is in git history). Verified: byte-identical to the pristine 1.43
+`INTERFC1.tga` outside cell 39 (x 224–255, y 128–159). The TGA is in **engine row order**
+(the blob stores rows top-down behind a bottom-origin descriptor, the same orientation as
+`src/interfc1.png`, so no flip).
 
 **`24bits/snipemod32.tga`**: generated by `scripts/make-snipemod32.js` from a stock
 `textures.dat`:
@@ -67,4 +72,4 @@ ellipse, the artist's 320×240 screen-space circle squeezed by the 4:3 aspect; ~
 residual), measures the reticle bars/ticks from the stock pixels, and re-renders everything
 with supersampled coverage AA, except the four graduation ticks, which stay stock-exact and
 hard-edged on purpose. The TGA is in **engine row order** (cnetool `pngToTga({topDown: true})`),
-ready to append verbatim; the PNG is the same image in human orientation for QC.
+ready to insert verbatim; the PNG is the same image in human orientation for QC.

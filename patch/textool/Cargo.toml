@@ -1,0 +1,23 @@
+# Install-time helper that adds/replaces TGA textures inside Codename Eagle
+# texture archives (24bits/textures.dat, 24bits/texsec.dat). Pure std - no
+# dependencies - so it cross-compiles cleanly to x86_64-pc-windows-gnu.
+[package]
+name = "ce-textool"
+version = "0.1.0"
+edition = "2021"
+description = "Add/replace TGA textures inside Codename Eagle texture archives (install-time tool)"
+
+[[bin]]
+name = "textool"
+path = "src/main.rs"
+
+[lib]
+name = "textool"
+path = "src/lib.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1

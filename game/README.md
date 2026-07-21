@@ -81,11 +81,20 @@ files: the full-game `levels.nfo`, which renumbers Fever valley from its
 pre-1.50 slot 248 to 134 so the MP level table matches across variants, and
 `cemusic.dll`, the file-based music playback used by full-game installs.
 
-A handful of `full/` files are **authored overrides**, not pristine-derived: our
-own edits to shipped assets, kept in [`full-overrides/`](full-overrides/) and
-applied last by the build script (see below). Currently the LEVEL6 gas-mask
-inventory item, a recompiled `level6/red.scr` plus a one-cell splice into
-`24bits/texsec.dat`'s `INTERFC1` HUD atlas. See
+One `full/` file is an **authored override**, not pristine-derived: `level6/red.scr`
+(the LEVEL6 gas-mask inventory item), kept in [`full-overrides/`](full-overrides/)
+and applied last by the build script (see below). The three authored **texture**
+fixes (the gas-mask `INTERFC1` HUD atlas, the 32-bit sniper scope, the centered
+crosshair) are _not_ baked into the payload: `24bits/texsec.dat` ships pristine
+1.43, and the installer runs `textool` (from [`patch/textool/`](../patch/textool/))
+at install time to patch `INTERFC1.tga` into the player's `texsec.dat` and
+`SNIPEMOD.tga`/`Target.tga` into the player's `textures.dat`. The pristine
+`texsec.dat` is written only when the target install has none: stock 1.0 shipped
+without one, and it cannot simply be skipped there (14 of its 27 textures exist
+in no other archive), while a 1.41/1.43 install keeps its own copy, which
+`textool` patches in place - so a player's own texture mods survive in both
+archives. None of this touches the demo's own tiny `texsec.dat` (above); the
+patch installer applies no texture fixes to MP-demo installs at all. See
 [`full-overrides/README.md`](full-overrides/README.md).
 
 ## What is deliberately nobody's payload
@@ -101,8 +110,8 @@ copy the cutscene folder themselves.
 (requires pristine 1.0 and 1.43 installs; set `CE_PRISTINE` to a directory
 containing `1.0/` and `1.43/` subdirectories). The script also re-crafts
 `levels.nfo`, preserves the committed `cemusic.dll`, and applies the authored
-overrides in [`full-overrides/`](full-overrides/) last (drop-in files plus the
-`texsec.dat` gas-mask-icon splice).
+drop-in overrides in [`full-overrides/`](full-overrides/) last (currently just
+`level6/red.scr`; the texture overrides are applied at install time instead).
 
 `scripts/classify-game-files.js` is the one-shot tool that produced the
 `common/`/`demo/` split from the pre-split layout. It is kept for historical

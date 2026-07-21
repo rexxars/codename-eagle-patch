@@ -5,7 +5,7 @@ This repository holds the tooling and source that produce the Codename Eagle 1.5
 ## Repository layout
 
 - [`game/`](game/) is the payload that the releases ship. It splits into `common/` (shipped by everything), `demo/` (multiplayer demo builds and the Docker image), and `full/` (the full-game patcher only). See [`game/README.md`](game/README.md) for the details of the split.
-- [`patch/`](patch/) is the development tool that produces the pre-patched binaries in `game/common/`. It is never run on user machines. It also houses the `iplist/`, `menudll/` and `cemusic/` subprojects, which only work together with its byte patches, and the standalone [`menuinfo-nick/`](patch/menuinfo-nick/) install-time helper that sets the multiplayer name inside `menuinfo.dat` (bundled by the demo installer, compiled fresh like `ripmusic`, never committed). See [`patch/README.md`](patch/README.md).
+- [`patch/`](patch/) is the development tool that produces the pre-patched binaries in `game/common/`. It is never run on user machines. It also houses the `iplist/`, `menudll/` and `cemusic/` subprojects, which only work together with its byte patches, and two standalone install-time helpers (each bundled by an installer, compiled fresh like `ripmusic`, never committed): [`menuinfo-nick/`](patch/menuinfo-nick/), which sets the multiplayer name inside `menuinfo.dat` for the demo installer, and [`textool/`](patch/textool/), which patches the 1.50 texture fixes into the player's `24bits` archives for the full-game patch installer. See [`patch/README.md`](patch/README.md).
 - [`ripmusic/`](ripmusic/) is the CD-to-Ogg soundtrack ripper. See [`ripmusic/README.md`](ripmusic/README.md).
 - [`installers/`](installers/) holds the NSIS setup wizards (`demo/` and `patch/`) and the extract-and-play `demo-zip/`.
 - [`dgvoodoo/`](dgvoodoo/) holds the bundled dgVoodoo graphics wrapper (third-party), kept on its own so it can be updated as a drop-in.
@@ -33,6 +33,14 @@ This repository holds the tooling and source that produce the Codename Eagle 1.5
 The large assets live in Git LFS, so run `git lfs pull` first.
 
 **Installers** need `makensis`. Build them with `installers/demo/build.sh` and `installers/patch/build.sh`. Pass `--stage-only` to stage and verify the payload without running `makensis`.
+
+The installers bundle compiled-fresh tools and fail fast when one is missing. The demo installer needs `menuinfo-nick.exe` (see [`patch/menuinfo-nick/`](patch/menuinfo-nick/)). The full-game patch installer needs `ripmusic.exe` (see [`ripmusic/README.md`](ripmusic/README.md); cargo-xwin) and `textool.exe`, the install-time texture-archive patcher (see [`patch/textool/README.md`](patch/textool/README.md); needs mingw-w64):
+
+```bash
+cd patch/textool && rustup target add x86_64-pc-windows-gnu && cargo build --release --target x86_64-pc-windows-gnu
+```
+
+`textool` has its own tests: `cargo test` in `patch/textool/` runs them natively, and its ignored pristine-archive tests need a pristine install, like the provenance tests: `CE_PRISTINE_143=/path/to/pristine/1.43 cargo test -- --ignored --test-threads=1`.
 
 **Demo zip** needs only `zip`: `installers/demo-zip/build.sh`.
 

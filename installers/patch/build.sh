@@ -11,10 +11,15 @@
 #
 # The payload is game/common/ (both variants) plus game/full/ (written only
 # when the target is a full-game install), shipped as-is: the binaries are
-# already patched, so there is no patch step here or at install time. The
+# already patched, so there is no binary-patch step here or at install time.
+# The texture fixes are the one exception: the installer patches the player's
+# own 24bits archives in place with textool.exe and the delta TGAs from
+# game/full-overrides/24bits/, instead of shipping whole multi-MB archives. The
 # three config files (default.cfg, keyconf.dat, menuinfo.dat), the two
-# levels.nfo variants, and the demo menu/menupics.dat are staged separately
-# because the installer writes them conditionally, not via the blanket File /r.
+# levels.nfo variants, the stock 24bits/texsec.dat (written only when the
+# target install has none), and the demo menu/menupics.dat are staged
+# separately because the installer writes them conditionally, not via the
+# blanket File /r.
 # (menupics.dat is written to demo installs only, to add back the menu textures
 # the demo repack trimmed; a full-game install keeps its own complete copy.)
 # The dgVoodoo files come from the repo's dgvoodoo/ dir and are staged
@@ -23,7 +28,9 @@
 # installs them instead of the blanket copy.
 #
 # RIPMUSIC_EXE (env) overrides the bundled soundtrack ripper; the default is
-# the ripmusic crate's cargo-xwin release build.
+# the ripmusic crate's cargo-xwin release build. TEXTOOL_EXE (env) overrides
+# the bundled texture-archive patcher; the default is the textool crate's
+# mingw-w64 release build.
 #
 # Requires makensis (brew install makensis).
 set -euo pipefail
@@ -56,6 +63,7 @@ IFS='.' read -ra viparts <<< "$numeric"
 while [[ ${#viparts[@]} -lt 4 ]]; do viparts+=(0); done
 viversion="${viparts[0]}.${viparts[1]}.${viparts[2]}.${viparts[3]}"
 ripmusic_exe="${RIPMUSIC_EXE:-$repo/ripmusic/target/i686-pc-windows-msvc/release/ripmusic.exe}"
+textool_exe="${TEXTOOL_EXE:-$repo/patch/textool/target/x86_64-pc-windows-gnu/release/textool.exe}"
 
 if [[ $stage_only -eq 0 ]]; then
   command -v makensis >/dev/null || {
@@ -65,7 +73,9 @@ if [[ $stage_only -eq 0 ]]; then
 fi
 for f in common/ce.exe common/lobby.exe common/default.cfg \
   common/keyconf.dat common/menuinfo.dat \
-  full/levels.nfo demo/levels.nfo demo/menu/menupics.dat; do
+  full/levels.nfo full/24bits/texsec.dat demo/levels.nfo demo/menu/menupics.dat \
+  full-overrides/24bits/INTERFC1.tga full-overrides/24bits/snipemod32.tga \
+  full-overrides/24bits/target32.tga; do
   [[ -f "$game_dir/$f" ]] || {
     echo "error: $game_dir/$f missing" >&2
     exit 1
@@ -85,6 +95,14 @@ if [[ ! -f "$ripmusic_exe" ]]; then
   echo '    cargo xwin build --release --target i686-pc-windows-msvc' >&2
   echo "(see ripmusic/.cargo/config.toml + ripmusic/README.md for details)" >&2
   echo "or point RIPMUSIC_EXE at an existing build" >&2
+  exit 1
+fi
+if [[ ! -f "$textool_exe" ]]; then
+  echo "error: $textool_exe missing - build it with:" >&2
+  echo '  cd patch/textool && rustup target add x86_64-pc-windows-gnu \' >&2
+  echo '    && cargo build --release --target x86_64-pc-windows-gnu' >&2
+  echo "(see patch/textool/README.md; needs mingw-w64)" >&2
+  echo "or point TEXTOOL_EXE at an existing build" >&2
   exit 1
 fi
 
@@ -115,6 +133,12 @@ for f in dgVoodoo.conf dgVoodoo.txt dgVoodooCpl.exe D3D8.dll D3D9.dll D3DImm.dll
   cp "$dgvoodoo_src/$f" "$dgvoodoo/$f"
 done
 rm "$full/levels.nfo"
+# texsec.dat is written conditionally too (only when the target install has
+# none - stock 1.0 shipped without it), so pull it out of the blanket File /r
+# and stage it on its own. An existing texsec.dat is the player's - textool
+# patches it in place at install time, so texture mods survive.
+mv "$full/24bits/texsec.dat" "$stage/texsec-stock.dat"
+rmdir "$full/24bits" 2>/dev/null || true # drop the dir if that emptied it
 
 # In stage-only mode, say where the kept dir is up front so a failed check
 # below still tells you what to inspect.
@@ -165,6 +189,11 @@ makensis \
   -DSTOCK_DIR="$here/stock" \
   -DLOWERCASE_PS1="$here/lowercase.ps1" \
   -DRIPMUSIC_EXE="$ripmusic_exe" \
+  -DTEXTOOL_EXE="$textool_exe" \
+  -DTEXSEC_STOCK="$stage/texsec-stock.dat" \
+  -DTEX_INTERFC1="$game_dir/full-overrides/24bits/INTERFC1.tga" \
+  -DTEX_SNIPEMOD="$game_dir/full-overrides/24bits/snipemod32.tga" \
+  -DTEX_TARGET="$game_dir/full-overrides/24bits/target32.tga" \
   -DOUTFILE="$out" \
   -DVERSION="$version" \
   -DVIVERSION="$viversion" \

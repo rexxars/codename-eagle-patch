@@ -12,6 +12,8 @@ The installers under [`installers/`](../installers/) (the multiplayer-demo insta
 
 The [`iplist/`](iplist/), [`menudll/`](menudll/) and [`cemusic/`](cemusic/) subdirectories live inside `patch/` because the server-browser and music fixes only work in combination with the `ce.exe`/`lobby.exe` byte patches this tool applies: the patched menu code launches `iplist.exe` and renders its output, and the patched engine loads `cemusic.dll` for CD-free music. They are built and shipped together as one unit.
 
+[`textool/`](textool/) is the install-time texture patcher: the full-game patch installer bundles it to patch the 1.50 texture fixes (the gas-mask `INTERFC1` HUD atlas, the 32-bit sniper scope, the centered crosshair) into the player's own `24bits` texture archives, instead of shipping whole multi-MB rebuilt archives. Unlike the three components above it does not depend on the byte patches; like [`menuinfo-nick/`](menuinfo-nick/) it is compiled fresh at release time, runs only during install, and never lands in the game folder.
+
 ## What it changes and adds
 
 <!-- GENERATED:changes:start -->

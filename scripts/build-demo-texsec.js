@@ -9,8 +9,8 @@
 // searches it BEFORE textures.dat in the by-name texture lookup - so this tiny
 // archive overrides the stock 24-bit SNIPEMOD / 8x8 Target inside the demo's
 // textures.dat without shipping a modified copy of that 134 MB file. Full-game
-// installs get the same overrides appended to their real texsec.dat by
-// build-full-payload.js.
+// installs get the same overrides patched into their textures.dat by textool
+// at install time.
 //
 // The TGAs are the authored artifacts in game/full-overrides/ (provenance and
 // regeneration: game/full-overrides/README.md).

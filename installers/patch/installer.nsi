@@ -4,7 +4,8 @@
 ;
 ; Required defines:
 ;   PAYLOAD_BASE    staged game/common/ minus the conditionally-written configs
-;   PAYLOAD_FULL    staged game/full/ minus levels.nfo (full-game installs only)
+;   PAYLOAD_FULL    staged game/full/ minus levels.nfo and 24bits\texsec.dat
+;                   (full-game installs only)
 ;   CONFIGS_DIR     the config files written conditionally, never via File /r:
 ;                   default.cfg, keyconf.dat (write-if-absent + stock-refresh)
 ;                   and menuinfo.dat (write-if-absent only)
@@ -20,6 +21,13 @@
 ;   LOWERCASE_PS1   the lowercase.ps1 next to this script (absolute path -
 ;                   File paths resolve against makensis' cwd, not the script)
 ;   RIPMUSIC_EXE    the CD->ogg soundtrack ripper, always dropped in $INSTDIR
+;   TEXTOOL_EXE     the texture-archive patcher; runs from $PLUGINSDIR at
+;                   install time and never lands in the game folder
+;   TEXSEC_STOCK    stock 1.43 24bits\texsec.dat, written only when the target
+;                   install has none (stock 1.0 shipped without it)
+;   TEX_INTERFC1    the 1.50 INTERFC1.tga, patched into 24bits\texsec.dat
+;   TEX_SNIPEMOD    the 1.50 SNIPEMOD.tga, patched into 24bits\textures.dat
+;   TEX_TARGET      the 1.50 Target.tga, patched into 24bits\textures.dat
 ;   OUTFILE         where to write the patch exe
 ;   VERSION         display version, e.g. "1.50.0" or "1.50.0-beta.1"
 ;   VIVERSION       strictly-numeric X.X.X.X form of VERSION for the exe's
@@ -38,10 +46,14 @@
 ;      saves or screenshots,
 ;   4. writes the payload (common + full, or the demo levels.nfo + the fixed
 ;      demo menu/menupics.dat),
-;   5. writes configs only if absent or still factory-stock (customized
+;   5. patches the 1.50 texture fixes into the player's own 24bits archives
+;      with textool.exe (full game only; writes the stock texsec.dat first
+;      when none is present - the binaries still ship pre-patched, the
+;      texture archives are the one thing patched at install time),
+;   6. writes configs only if absent or still factory-stock (customized
 ;      keybinds etc. are preserved; menuinfo.dat only if absent),
-;   6. drops ripmusic.exe in the game folder,
-;   7. adds the firewall rules and the machine-wide cneagle:// registration
+;   7. drops ripmusic.exe in the game folder,
+;   8. adds the firewall rules and the machine-wide cneagle:// registration
 ;      (same blocks and rule names as the demo installer - same game).
 ; A dgVoodoo section (checked by default) installs the graphics wrapper; the
 ; user can uncheck it, and its dgVoodoo.conf is write-if-absent so a tuned
@@ -78,6 +90,21 @@
 !endif
 !ifndef RIPMUSIC_EXE
   !error "RIPMUSIC_EXE not defined - build with build.sh"
+!endif
+!ifndef TEXTOOL_EXE
+  !error "TEXTOOL_EXE not defined - build with build.sh"
+!endif
+!ifndef TEXSEC_STOCK
+  !error "TEXSEC_STOCK not defined - build with build.sh"
+!endif
+!ifndef TEX_INTERFC1
+  !error "TEX_INTERFC1 not defined - build with build.sh"
+!endif
+!ifndef TEX_SNIPEMOD
+  !error "TEX_SNIPEMOD not defined - build with build.sh"
+!endif
+!ifndef TEX_TARGET
+  !error "TEX_TARGET not defined - build with build.sh"
 !endif
 !ifndef OUTFILE
   !error "OUTFILE not defined - build with build.sh"
@@ -280,6 +307,10 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
   Delete "$INSTDIR\lobby.log"
   Delete "$INSTDIR\player*.txt"
   Delete "$INSTDIR\*.bak"
+  ; A textool run killed mid-write can leave texsec.dat.tmp/textures.dat.tmp
+  ; behind (textool cleans up on its own error paths; this heals hard kills on
+  ; the next run).
+  Delete "$INSTDIR\24bits\*.tmp"
   ; 1.50 removed these from No Mans Land - a 1.43 install still has them, and
   ; leaving them would contradict the reworked level data.
   Delete "$INSTDIR\level128\cactus1.scr"
@@ -309,7 +340,52 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
     SetOutPath "$INSTDIR"
   ${EndIf}
 
-  ; 5) Configs: write-if-absent, refresh-if-factory-stock (so ancient installs
+  ; 5) Texture fixes, full game only: patch the changed textures into the
+  ;    player's OWN 24bits archives with textool.exe instead of shipping the
+  ;    whole multi-MB archives, so any other textures the player modded
+  ;    survive. Non-fatal: a failed patch just leaves the stock textures in
+  ;    place. (Demo installs need none of this - the demo payload ships its
+  ;    own tiny texsec.dat.)
+  ${If} $FullGame == "1"
+    ; textool runs from $PLUGINSDIR and is never installed into the game
+    ; folder (an install-time tool, not a game file - same treatment as
+    ; menuinfo-nick.exe in the demo installer).
+    File "/oname=$PLUGINSDIR\textool.exe" "${TEXTOOL_EXE}"
+    File "/oname=$PLUGINSDIR\INTERFC1.tga" "${TEX_INTERFC1}"
+    File "/oname=$PLUGINSDIR\SNIPEMOD.tga" "${TEX_SNIPEMOD}"
+    File "/oname=$PLUGINSDIR\Target.tga" "${TEX_TARGET}"
+    ; A stock 1.0 install has no 24bits\texsec.dat at all, and it can't be
+    ; skipped (most of its textures exist in no other archive), so write the
+    ; stock 1.43 one when absent. 1.41/1.43 installs keep their own copy -
+    ; textool patches it in place, so texture mods survive.
+    ${IfNot} ${FileExists} "$INSTDIR\24bits\texsec.dat"
+      DetailPrint "Writing 24bits\texsec.dat (none present)"
+      SetOutPath "$INSTDIR\24bits"
+      File "/oname=texsec.dat" "${TEXSEC_STOCK}"
+      SetOutPath "$INSTDIR"
+    ${EndIf}
+    ; Files copied off a CD often carry the read-only attribute, which would
+    ; make textool's atomic rename fail - clear it before patching.
+    SetFileAttributes "$INSTDIR\24bits\texsec.dat" NORMAL
+    DetailPrint "Patching the 1.50 texture fixes into the 24bits archives..."
+    nsExec::ExecToLog '"$PLUGINSDIR\textool.exe" set "$INSTDIR\24bits\texsec.dat" "$PLUGINSDIR\INTERFC1.tga"'
+    Pop $0
+    ${If} $0 != 0
+      DetailPrint "Warning: could not patch 24bits\texsec.dat (code $0) - the current textures are kept."
+    ${EndIf}
+    ${If} ${FileExists} "$INSTDIR\24bits\textures.dat"
+      SetFileAttributes "$INSTDIR\24bits\textures.dat" NORMAL
+      nsExec::ExecToLog '"$PLUGINSDIR\textool.exe" set "$INSTDIR\24bits\textures.dat" "$PLUGINSDIR\SNIPEMOD.tga" "$PLUGINSDIR\Target.tga"'
+      Pop $0
+      ${If} $0 != 0
+        DetailPrint "Warning: could not patch 24bits\textures.dat (code $0) - the current textures are kept."
+      ${EndIf}
+    ${Else}
+      DetailPrint "24bits\textures.dat not found - skipping its texture fixes"
+    ${EndIf}
+  ${EndIf}
+
+  ; 6) Configs: write-if-absent, refresh-if-factory-stock (so ancient installs
   ;    get the current binds while customized configs survive).
   !insertmacro RefreshConfig "keyconf.dat" "keyconf-1.0.dat" "keyconf-1.36.dat"
   !insertmacro RefreshConfig "default.cfg" "default-1.33.cfg" ""
@@ -327,7 +403,7 @@ Section "Codename Eagle 1.50 patch (required)" SecPatch
   ; dgVoodoo is handled by its own optional section below, so it is not written
   ; here.
 
-  ; 6) The soundtrack ripper always lands in the game dir so the optional rip
+  ; 7) The soundtrack ripper always lands in the game dir so the optional rip
   ;    can be run later by hand (readme150.txt documents it).
   File "/oname=ripmusic.exe" "${RIPMUSIC_EXE}"
 
