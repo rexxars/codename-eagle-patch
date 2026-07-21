@@ -1,6 +1,6 @@
-//! ripmusic - rip the Codename Eagle CD's audio tracks to
-//! `<out>\music\trackNN.ogg` (Ogg Vorbis, loudness-normalized) for use with the
-//! `cemusic.dll` in-game music patch.
+//! ripmusic - rip the Codename Eagle CD's audio tracks to `<out>\music\` (Ogg
+//! Vorbis, loudness-normalized) for use with the `cemusic.dll` in-game music
+//! patch.
 //!
 //! Usage: ripmusic [OUT_DIR] [--drive X | --image FILE]
 //!   OUT_DIR     where to create the `music\` folder (default: current dir)
@@ -8,8 +8,14 @@
 //!   --image F   rip from a disc image (.cue, or .img/.bin beside a .cue) instead
 //!               of a physical drive. (A .iso has no audio - use the .cue/.img.)
 //!
-//! Track NN is the CD track number, so the data track (1) is skipped and audio
-//! tracks land as track02.ogg, etc.
+//! `cemusic.dll` resolves single-player campaign CD tracks (2-13) to a named
+//! file using its own hardcoded title table (`SP_TRACK_TITLES` in
+//! `patch/cemusic/src/lib.rs`, kept in sync with `TRACK_TITLES` below - the
+//! CD's music order doesn't consistently follow the mission order in
+//! `levels.nfo`), falling back to the numbered `music\trackNN.ogg`. Tracks
+//! here are written straight to `music\<title>.ogg` for that same reason
+//! (e.g. track02 -> "The Village Fool" -> `music\The Village Fool.ogg`), or
+//! `music\trackNN.ogg` for a track past the title table.
 
 use ripmusic::encode::encode_ogg;
 use ripmusic::{cdrom, image, loudness};
@@ -158,15 +164,18 @@ fn run() -> Result<(), Box<dyn Error>> {
     println!("Ripping {} audio tracks to {}", audio.len(), music_dir.display());
 
     for t in &audio {
-        let path = music_dir.join(format!("track{:02}.ogg", t.number));
-        print!("  track {:02} ... ", t.number);
-        let pcm = source.read(t).map_err(|e| format!("read track {} failed: {e}", t.number))?;
-        let channels = loudness::normalize_stereo(&pcm, RATE);
-
         // CD track 1 is data, so album track number = CD number - 1, and the title
         // table is indexed from CD track 2 (index 0). Untitled if beyond the table.
         let track_no = t.number.saturating_sub(1).to_string();
         let title = (t.number as usize).checked_sub(2).and_then(|i| TRACK_TITLES.get(i)).copied();
+        let path = match title {
+            Some(title) => music_dir.join(format!("{title}.ogg")),
+            None => music_dir.join(format!("track{:02}.ogg", t.number)),
+        };
+        print!("  track {:02} ... ", t.number);
+        let pcm = source.read(t).map_err(|e| format!("read track {} failed: {e}", t.number))?;
+        let channels = loudness::normalize_stereo(&pcm, RATE);
+
         let mut tags = vec![("ARTIST", ARTIST), ("ALBUM", ALBUM), ("TRACKNUMBER", track_no.as_str())];
         if let Some(title) = title {
             tags.push(("TITLE", title));
@@ -230,8 +239,10 @@ fn print_help() {
     println!(
         "usage: ripmusic [OUT_DIR] [--drive X | --image FILE]\n\
          \n\
-         Rips the Codename Eagle CD's audio tracks to <OUT_DIR>\\music\\trackNN.ogg\n\
-         (Ogg Vorbis, loudness-normalized) for the cemusic.dll in-game music patch.\n\
+         Rips the Codename Eagle CD's audio tracks to <OUT_DIR>\\music\\ (Ogg Vorbis,\n\
+         loudness-normalized) for the cemusic.dll in-game music patch. Named after\n\
+         each track's title (e.g. track02.ogg -> \"The Village Fool.ogg\"), else\n\
+         trackNN.ogg for tracks with no title.\n\
          \n\
          Options:\n\
          \x20 OUT_DIR       where to create the `music` folder (default: current dir)\n\

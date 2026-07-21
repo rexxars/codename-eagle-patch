@@ -1,9 +1,9 @@
 # ripmusic
 
 Optional companion tool: rips the **Codename Eagle CD's audio tracks** to
-`music\trackNN.ogg` for use with the in-game music patch (`cemusic.dll`). For
-people who have the original CD and want the soundtrack in-game without keeping the
-disc mounted.
+`music\` for use with the in-game music patch (`cemusic.dll`). For people who
+have the original CD and want the soundtrack in-game without keeping the disc
+mounted.
 
 ## Usage
 
@@ -11,12 +11,14 @@ disc mounted.
 ripmusic [OUT_DIR] [--drive X | --image FILE]
 ```
 
-Writes `OUT_DIR\music\trackNN.ogg` (NN = the CD track number, so audio tracks land
-as `track02.ogg`, `track03.ogg`, ...). `OUT_DIR` defaults to the current directory;
+Writes each ripped track to `OUT_DIR\music\<title>.ogg`, using the track's own
+title (e.g. `music\The Village Fool.ogg` for CD track 2), or `music\trackNN.ogg`
+for any track past the title list. `OUT_DIR` defaults to the current directory;
 point it at your game folder to drop the files in place:
-`ripmusic "C:\Games\Codename Eagle"`. Then launch the patched game - it plays
-`music\trackNN.ogg` on loop. (If double-clicked, the window pauses at the end so you
-can read the result.)
+`ripmusic "C:\Games\Codename Eagle"`. Then launch the patched game - `cemusic.dll`
+looks up single-player campaign tracks (2-13) by this exact title, so the
+ripped files just work with no renaming. (If double-clicked, the window pauses
+at the end so you can read the result.)
 
 **From a physical CD:** insert the disc and run with no source flag - it
 auto-detects the CD-ROM drive holding Codename Eagle (by `codename.ico` / `cutscn\`).
@@ -44,7 +46,8 @@ ripmusic "C:\Games\Codename Eagle" --image D:\rips\CodenameEagle.cue
 4. **Loudness-normalizes** to -14 LUFS with a -1.5 dBTP look-ahead limiter (the CE
    masters are quiet; this matches the hand-made `.ogg` tracks - measured via the
    pure-Rust `ebur128`).
-5. Encodes Ogg Vorbis (`vorbis_rs`, VBR ~q6) to `music\trackNN.ogg`.
+5. Encodes Ogg Vorbis (`vorbis_rs`, VBR ~q6) to `music\<level name>.ogg`, or
+   `music\trackNN.ogg` as a fallback (see Usage above).
 
 ## Building
 
