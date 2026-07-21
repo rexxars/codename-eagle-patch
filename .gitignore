@@ -1,7 +1,9 @@
 .DS_Store
 target/
 node_modules
+.worktrees/
 
 # temp dir used by scripts/generate-docs.js while formatting output
 .generate-docs-*
 
+docs/plans/
