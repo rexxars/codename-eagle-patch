@@ -156,7 +156,11 @@ fn is_engine_legal(c: char) -> bool {
 /// [`MAX_NAME`], falling back to [`DEFAULT_NAME`] when fewer than [`MIN_NAME`]
 /// characters survive.
 pub fn sanitize_nickname(raw: &str) -> String {
-    let cleaned: String = raw.chars().filter(|&c| is_engine_legal(c)).take(MAX_NAME).collect();
+    let cleaned: String = raw
+        .chars()
+        .filter(|&c| is_engine_legal(c))
+        .take(MAX_NAME)
+        .collect();
     if cleaned.len() < MIN_NAME {
         DEFAULT_NAME.to_string()
     } else {
